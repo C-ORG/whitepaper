@@ -291,7 +291,7 @@ So, in our example: `C=10*10/2=50`.
 <h4 id="dat">The Decentralized Autonomous Trust</h4>
 
 
-In the case of _Continuous Organizations_, we introduce _cash-flow based bonding curve_: a bonding curve that uses 2 different functions, one for the buy curve and another for the sell curve: **B** (for _<span style="text-decoration:underline;">b</span>_uy) and **S** (for _<span style="text-decoration:underline;">s</span>_ell) with <img src="https://latex.codecogs.com/gif.latex?B(x)>S(x)\forallx\in[0;\infty[" />.
+In the case of _Continuous Organizations_, we introduce _cash-flow based bonding curve_: a bonding curve that uses 2 different functions, one for the buy curve and another for the sell curve: **B** (for _<span style="text-decoration:underline;">b</span>_uy) and **S** (for _<span style="text-decoration:underline;">s</span>_ell) with <img src="https://latex.codecogs.com/gif.latex?B(x)>S(x)&space;\forall&space;x&space;\in&space;[0;\infty[" />.
 
 <img src="images/Introducing-Continuous2.png" width="580" title="Buy and Sell curves" alt="Buy and Sell curves" />
 
