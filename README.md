@@ -301,12 +301,12 @@ The function _B_ defines the price at which _FAIRs_ can be bought from the _DAT_
 
 If you want your investors to have a lot of tokens, pick a very small value for b (like 1x10^(-9)). It has no financial impact, it only allows higher granularity for fractional ownership.
 
-The function _S_ defines the price at which _FAIRs_ are bought back by the _DAT_. _S_ is a linear function as well and has a slope **_s_** such that `S(x)=s*x` where <img src="https://latex.codecogs.com/gif.latex?s\in&spaceR" /> and `s>0`. However, in a _Continuous Organization,_ the value of _s_ increases discretely over time ie <img src="https://latex.codecogs.com/gif.latex?s_{t+1}\geqslant&space;s_{t}" />. To explain how the value of _s_ increases over time, it is important to understand that a _DAT _receives and processes the cash-flows it receives.
+The function _S_ defines the price at which _FAIRs_ are bought back by the _DAT_. _S_ is a linear function as well and has a slope **_s_** such that `S(x)=s*x` where <img src="https://latex.codecogs.com/gif.latex?s\in&space;R" /> and `s>0`. However, in a _Continuous Organization,_ the value of _s_ increases discretely over time ie <img src="https://latex.codecogs.com/gif.latex?s_{t+1}\geqslant&space;s_{t}" />. To explain how the value of _s_ increases over time, it is important to understand that a _DAT_ receives and processes the cash-flows it receives.
 
 <h5>📈 Investments - Buy</h5>
 
 
-The first (in "time", not in "proportion") source of cash-flow for a Continuous Organization are investors who want to invest in the _Continuous Organization_. Whenever an investor sends funds to the _DAT,_ a fraction of the funds sent is being held in the "buyback" reserve by the _DAT_ and the rest of the funds are being transferred to the organization's wallet. We'll call **I **(for _<span style="text-decoration:underline;">i</span>_nvest) the percentage of the funds being held with 
+The first (in "time", not in "proportion") source of cash-flow for a Continuous Organization are investors who want to invest in the _Continuous Organization_. Whenever an investor sends funds to the _DAT_, a fraction of the funds sent is being held in the "buyback" reserve by the _DAT_ and the rest of the funds are being transferred to the organization's wallet. We'll call **I** (for **i**nvest) the percentage of the funds being held with 
 
 <p id="gdcalert32" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert33">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
