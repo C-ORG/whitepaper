@@ -279,9 +279,11 @@ A token bonding curve model has interesting properties, among which:
 *   **Guaranteed and immediate liquidity**. The bonding curve contract is the counterparty of the transaction and always holds enough ETH in reserve to buyback tokens. So tokens can be bought or sold instantaneously at any time, the bonding curve acting as an automated market maker.
 *   **Continuous price**. The price of token n being inferior to the token n+1 and superior to the token n-1, calculating the number of tokens minted for a given amount of ETH (or the number of ETH sent back for a given amount tokens) require some integral calculus.
 
-It is important to note that in a bonding curve model, the x-axis represents the **number of tokens issued**. To give a simple example, let's say `B(x)=x` and `S(x)=0`. The cost `C` to buy the first 10 tokens is given by the surface between the buy curve and the sell curve that we can be expressed as the following integral: <img src="https://latex.codecogs.com/gif.latex?\int_{0}^{x}(B(x)-S(x))dx" title="Cost C to buy the 1st 10 tokens" />.
+It is important to note that in a bonding curve model, the x-axis represents the **number of tokens issued**. To give a simple example, let's say `B(x)=x` and `S(x)=0`. The cost `C` to buy the first 10 tokens is given by the surface between the buy curve and the sell curve that we can be expressed as the following integral:
 
-<img src="images/Introducing-Continuous1.png" width="340" title="Cost C to buy the 1st 10 tokens" alt="Cost C to buy the 1st 10 tokens" />
+<img src="https://latex.codecogs.com/gif.latex?\int_{0}^{x}(B(x)-S(x))dx" title="Cost C to buy the 1st 10 tokens" />.
+
+<img src="images/Introducing-Continuous1.png" width="300" title="Cost C to buy the 1st 10 tokens" alt="Cost C to buy the 1st 10 tokens" />
 
 So, in our example: `C=10*10/2=50`.
 
@@ -289,7 +291,7 @@ So, in our example: `C=10*10/2=50`.
 <h4 id="dat">The Decentralized Autonomous Trust</h4>
 
 
-In the case of _Continuous Organizations_, we introduce _cash-flow based bonding curve_: a bonding curve that uses 2 different functions, one for the buy curve and another for the sell curve: **B** (for _<span style="text-decoration:underline;">b</span>_uy) and **S** (for _<span style="text-decoration:underline;">s</span>_ell) with <img src="https://latex.codecogs.com/gif.latex?B(x)>S(x) \forall x \in [0;\infty[" />.
+In the case of _Continuous Organizations_, we introduce _cash-flow based bonding curve_: a bonding curve that uses 2 different functions, one for the buy curve and another for the sell curve: **B** (for _<span style="text-decoration:underline;">b</span>_uy) and **S** (for _<span style="text-decoration:underline;">s</span>_ell) with <img src="https://latex.codecogs.com/gif.latex?B(x)>S(x)\forallx\in[0;\infty[" />.
 
 <img src="images/Introducing-Continuous2.png" width="580" title="Buy and Sell curves" alt="Buy and Sell curves" />
 
