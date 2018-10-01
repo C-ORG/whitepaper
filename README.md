@@ -1,6 +1,6 @@
 <h1>Continuous Organizations</h1>
 
-Aligning stakeholders' financial interests in the Digital Economy
+<h4>_FAIR Securities to better align stakeholders' financial interests_</h4>
 
 _Author: [Thibauld Favre](https://twitter.com/thibauld)_
 
@@ -270,7 +270,7 @@ A _bonding curve contract_ is a specific type of smart-contract that issues its 
 
 In the case of _Continuous Organizations_, the Buy and Sell functions are distinct:
 
-![alt_text](images/Introducing-Continuous0.png "image_tooltip")
+![The Bonding Curves of a Continuous Organization](images/Introducing-Continuous0.png "The Bonding Curves of a Continuous Organization")
 
 A token bonding curve model has interesting properties, among which:
 
