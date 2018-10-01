@@ -279,7 +279,7 @@ A token bonding curve model has interesting properties, among which:
 *   **Guaranteed and immediate liquidity**. The bonding curve contract is the counterparty of the transaction and always holds enough ETH in reserve to buyback tokens. So tokens can be bought or sold instantaneously at any time, the bonding curve acting as an automated market maker.
 *   **Continuous price**. The price of token n being inferior to the token n+1 and superior to the token n-1, calculating the number of tokens minted for a given amount of ETH (or the number of ETH sent back for a given amount tokens) require some integral calculus.
 
-It is important to note that in a bonding curve model, the x-axis represents the **number of tokens issued**. To give a simple example, let's say `B(x)=x` and `S(x)=0`. The cost `C` to buy the first 10 tokens is given by the surface between the buy curve and the sell curve that we can be expressed as the following integral: <img src="https://latex.codecogs.com/gif.latex?\int_{a}^{b}x^2dx" title="Cost C to buy the 1st 10 tokens" />.
+It is important to note that in a bonding curve model, the x-axis represents the **number of tokens issued**. To give a simple example, let's say `B(x)=x` and `S(x)=0`. The cost `C` to buy the first 10 tokens is given by the surface between the buy curve and the sell curve that we can be expressed as the following integral: <img src="https://latex.codecogs.com/gif.latex?\int_{0}^{x}(B(x)-S(x))dx" title="Cost C to buy the 1st 10 tokens" />.
 
 <img src="images/Introducing-Continuous1.png" width="340" title="Cost C to buy the 1st 10 tokens" alt="Cost C to buy the 1st 10 tokens" />
 
@@ -289,19 +289,9 @@ So, in our example: `C=10*10/2=50`.
 <h4 id="dat">The Decentralized Autonomous Trust</h4>
 
 
-In the case of _Continuous Organizations_, we introduce _cash-flow based bonding curve_: a bonding curve that uses 2 different functions, one for the buy curve and another for the sell curve: **B** (for _<span style="text-decoration:underline;">b</span>_uy) and **S** (for _<span style="text-decoration:underline;">s</span>_ell) with 
+In the case of _Continuous Organizations_, we introduce _cash-flow based bonding curve_: a bonding curve that uses 2 different functions, one for the buy curve and another for the sell curve: **B** (for _<span style="text-decoration:underline;">b</span>_uy) and **S** (for _<span style="text-decoration:underline;">s</span>_ell) with <img src="https://latex.codecogs.com/gif.latex?B(x)>S(x) \forall x \in [0;\infty[" />.
 
-<p id="gdcalert23" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert24">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-.
-
-
-
-<p id="gdcalert24" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous2.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert25">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Introducing-Continuous2.png "image_tooltip")
-
+<img src="images/Introducing-Continuous2.png" width="580" title="Buy and Sell curves" alt="Buy and Sell curves" />
 
 The bonding curve contract of a _Decentralized Autonomous Trust_ issues _FAIR Securities_ (_FAIR_s). These _FAIR Securities_ represent a claim on the _DAT_'s future cash-flows. It is important to note that, unlike a stock, a _FAIR_ does not represent a claim on the organization ownership, it only carries a financial right on the future cash-flows managed by the _DAT_.
 
