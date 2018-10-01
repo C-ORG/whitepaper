@@ -270,7 +270,7 @@ A _bonding curve contract_ is a specific type of smart-contract that issues its 
 
 In the case of _Continuous Organizations_, the Buy and Sell functions are distinct:
 
-![The Bonding Curves of a Continuous Organization](images/Introducing-Continuous0.png "The Bonding Curves of a Continuous Organization")
+<img src="images/Introducing-Continuous0.png" width="580" title="The Bonding Curves of a Continuous Organization" alt="The Bonding Curves of a Continuous Organization" />
 
 A token bonding curve model has interesting properties, among which:
 
@@ -279,13 +279,9 @@ A token bonding curve model has interesting properties, among which:
 *   **Guaranteed and immediate liquidity**. The bonding curve contract is the counterparty of the transaction and always holds enough ETH in reserve to buyback tokens. So tokens can be bought or sold instantaneously at any time, the bonding curve acting as an automated market maker.
 *   **Continuous price**. The price of token n being inferior to the token n+1 and superior to the token n-1, calculating the number of tokens minted for a given amount of ETH (or the number of ETH sent back for a given amount tokens) require some integral calculus.
 
-It is important to note that in a bonding curve model, the x-axis represents the **number of tokens issued**. To give a simple example, let's say `B(x)=x` and `S(x)=0`. The cost `C` to buy the first 10 tokens is given by the surface between the buy curve and the sell curve that we can be expressed as the following integral:
+It is important to note that in a bonding curve model, the x-axis represents the **number of tokens issued**. To give a simple example, let's say `B(x)=x` and `S(x)=0`. The cost `C` to buy the first 10 tokens is given by the surface between the buy curve and the sell curve that we can be expressed as the following integral: <img src="https://latex.codecogs.com/gif.latex?\int_{a}^{b}x^2dx" title="Cost C to buy the 1st 10 tokens" />.
 
-<img src="https://latex.codecogs.com/gif.latex?\int_{a}^{b}x^2dx" title="Cost C to buy the 1st 10 tokens" />
-
-![Cost C to buy the 1st 10 tokens](images/Introducing-Continuous1.png "Cost C to buy the 1st 10 tokens") 
-
-<img src="images/Introducing-Continuous1.png" width="100">
+<img src="images/Introducing-Continuous1.png" width="340" title="Cost C to buy the 1st 10 tokens" alt="Cost C to buy the 1st 10 tokens" />
 
 So, in our example: `C=10*10/2=50`.
 
