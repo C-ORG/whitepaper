@@ -285,6 +285,8 @@ It is important to note that in a bonding curve model, the x-axis represents the
 
 ![Cost C to buy the 1st 10 tokens](images/Introducing-Continuous1.png "Cost C to buy the 1st 10 tokens") 
 
+<img src="images/Introducing-Continuous1.png" width="100">
+
 So, in our example: `C=10*10/2=50`.
 
 
