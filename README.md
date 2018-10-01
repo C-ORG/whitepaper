@@ -1,6 +1,6 @@
 <h1>Continuous Organizations</h1>
 
-<h4>_FAIR Securities to better align stakeholders' financial interests_</h4>
+_**FAIR Securities To Better Align Stakeholders' Financial Interests**_
 
 _Author: [Thibauld Favre](https://twitter.com/thibauld)_
 
