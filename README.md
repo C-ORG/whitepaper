@@ -297,11 +297,11 @@ In the case of _Continuous Organizations_, we introduce _cash-flow based bonding
 
 The bonding curve contract of a _Decentralized Autonomous Trust_ issues _FAIR Securities_ (_FAIRs_). These _FAIR Securities_ represent a claim on the _DAT_'s future cash-flows. It is important to note that, unlike a stock, a _FAIR_ does not represent a claim on the organization ownership, it only carries a financial right on the future cash-flows managed by the _DAT_.
 
-The function _B_ defines the price at which _FAIRs_ can be bought from the _DAT_. _B_ is a linear function and has a positive slope **_b_** such that `B(x)=b*x` where <img src="https://latex.codecogs.com/gif.latex?b\in\R&space;and&space;b>0" />. The slope _b_ can be chosen arbitrarily. The higher _b is_, the more value unit tokens will have and vice-versa the lower _b is_, the less value unit tokens will have.
+The function _B_ defines the price at which _FAIRs_ can be bought from the _DAT_. _B_ is a linear function and has a positive slope **_b_** such that `B(x)=b*x` where <img src="https://latex.codecogs.com/gif.latex?b\in&space;\R&space;and&space;b>0" />. The slope _b_ can be chosen arbitrarily. The higher _b is_, the more value unit tokens will have and vice-versa the lower _b is_, the less value unit tokens will have.
 
 If you want your investors to have a lot of tokens, pick a very small value for b (like 1x10^(-9)). It has no financial impact, it only allows higher granularity for fractional ownership.
 
-The function _S_ defines the price at which _FAIRs_ are bought back by the _DAT_. _S_ is a linear function as well and has a slope **_s_** such that `S(x)=s*x` where <img src="https://latex.codecogs.com/gif.latex?s\in\R&space;and&space;s>0" />. However, in a _Continuous Organization,_ the value of _s_ increases discretely over time ie <img src="https://latex.codecogs.com/gif.latex?s_{t+1}\geqslant&space;s_{t}" />. To explain how the value of _s_ increases over time, it is important to understand that a _DAT _receives and processes the cash-flows it receives.
+The function _S_ defines the price at which _FAIRs_ are bought back by the _DAT_. _S_ is a linear function as well and has a slope **_s_** such that `S(x)=s*x` where <img src="https://latex.codecogs.com/gif.latex?s\in&space;\R&space;and&space;s>0" />. However, in a _Continuous Organization,_ the value of _s_ increases discretely over time ie <img src="https://latex.codecogs.com/gif.latex?s_{t+1}\geqslant&space;s_{t}" />. To explain how the value of _s_ increases over time, it is important to understand that a _DAT _receives and processes the cash-flows it receives.
 
 <h5>📈 Investments - Buy</h5>
 
