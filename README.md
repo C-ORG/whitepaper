@@ -1,4 +1,4 @@
-<h2>Continuous Organizations</h2>
+<h1>Continuous Organizations</h1>
 
 Aligning stakeholders' financial interests in the Digital Economy
 
@@ -14,7 +14,7 @@ Many thanks to the persons who kindly contributed to this research through their
 
 <h3>Abstract</h3>
 
-The digital economy has radically changed the nature of the relationship between customers and corporations. Today's individuals have switched from being passive consumers to being an essential force in creating value, either by their actual work (think AirBnb, Uber, Apple app store, Amazon marketplace...) or through their data (Facebook, Google...). By leveraging their users' work, organizations in the digital economy have the ability to create  products with personalized user experiences that can sustain increasing [returns to scale](https://en.wikipedia.org/wiki/Returns_to_scale) while requiring little capital.
+The digital economy has radically changed the nature of the relationship between customers and corporations. Today's individuals have switched from being passive consumers to being an essential force in creating value, either by their actual work (think AirBnb, Uber, Apple app store, Amazon marketplace...) or through their data (Facebook, Google...). By leveraging their users' work, organizations in the digital economy have the ability to create  products with personalized user experiences that can sustain increasing returns to scale[1] while requiring little capital.
 
 Unfortunately, today's organizations have no simple and efficient way to strongly align the interests of their users' workforce with the financial success of their organization. This is mostly due to today's securities' laws that impose high constraints and frictions when it comes to selling and distributing securities, especially to non-accredited investors.
 
@@ -33,21 +33,29 @@ Even though the "security" nature of _FAIR Securities_ (FAIR Securities undeniab
 
 <h3>Table of Contents</h3>
 
-
 1. [Context](#context)
-  1. [Organizations have evolved to adapt to the digital economy](#evolution)
-  2. [The rise of the multitude](#multitude)
-  3. [New challenges](#challenges)
-  4. [ICOs: a first (insufficient) answer to a real challenge](#ico)
-2. [Continuous Organizations](#continuousorganization)
-  1. [Understanding the token bonding curve model](#bondingcurve)
-  2. [The Decentralized Autonomous Trust](#dat)
-  3. [Properties and incentives of a Continuous Organization](#properties)
-  4. [Benefits](#benefits)
+   1. [Organizations have evolved to adapt to the digital economy](#evolution)
+   2. [The rise of the multitude](#multitude)
+   3. [New challenges](#challenges)
+      1. [For founders](#founders)
+      2. [For employees](#employees)
+      3. [For the multitude](#multitude)
+      4. [For investors](#investors)
+      5. [For the planet](#planet)
+   4. [ICOs: a first (insufficient) answer to a real challenge](#ico)
+      1. [The principle](#principle)
+      2. [The good](#thegood)
+      3. [The bad](#thebad)
+      4. [The ugly](#theugly)
+2. [Continuous Organizations](#continuousorganizations)
+   1. [Understanding the token bonding curve model](#bondingcurve)
+   2. [The Decentralized Autonomous Trust](#dat)
+   3. [Properties and incentives of a Continuous Organization](#properties)
+   4. [Benefits](#benefits)
 3. [Use cases](#usecases)
 4. [Legal & Regulatory considerations](#legal)
 5. [Attack vectors](#attacks)
-  1. [Front-running attack](#frontrunning)
+   1. [Front-running attack](#frontrunning)
 6. [Conclusion](#conclusion)
 
 <h3 id="context">Context</h3>
@@ -153,7 +161,7 @@ In the digital economy, organizations rely on the multitude (ie. "Uber drivers",
 
 The radical transformation of our organizations to adapt to the digital economy has created important challenges for all stakeholders that need to be addressed:
 
-<h5>🏃🏽‍For founders</h5>
+<h5 id="founders">🏃🏽‍For founders</h5>
 
 > _"How can I incentivize my community to the long term success of my organization?"_
 
@@ -167,25 +175,25 @@ The previous quote is from Brian Chesky, CEO of AirBnb, in statement about a [co
 
 **Trust**. To forge a long lasting a solid alliance with the multitude, organizations need to earn the trust of the multitude. However, as people understand more and more how the VC financial model works, it is becoming harder and harder for VC backed organizations to gain the trust of their community. Indeed, VCs interests are only aligned with that of the organization until investors need liquidity. Indeed, when investors need liquidity, the alignment of interests suddenly weakens as investors suddenly have the very short term interest of selling their share at the best price possible. As in [most cases](https://avc.com/2016/11/founder-dilution/), founders got heavily diluted and lost control of the organization, there is not very much they can do to prevent it.
 
-<h5>👩‍💻For employees</h5>
+<h5 id="employees">👩‍💻For employees</h5>
 
 > "_I want a financial reward proportional to the risk I took and the value I create_"
 
 **Fair value creation capture**. Unlike investors who have their investments diversified across a portfolio of organizations, employees are not diversified and only derive revenues from the organization they work for. Many schemes exists to align employees' interests to the financial success of the organization but most of them consists in providing illiquid and alienable conditioned securities or options on securities. The lack of liquidity in private organizations very often means that employees have to leave a lot of value (that they contributed to create) on the table when they leave the organization. 
 
-<h5>🙋🏻‍For the multitude</h5>
+<h5 id="multitude">🙋🏻‍For the multitude</h5>
 
 > _"I wish I could be financially rewarded from this organization that I contribute to"_
 
 **Long term wealth building & social security**. When a community (be they users, workers, partners, suppliers, customers...) fall in love with the product or service provided by an organization, they wish they could have the possibility to be financially rewarded for their active contributions to the product and build long term wealth as they help the organization grow. One-off referrals, coupons, goodies can only do so much… people want money! This is especially true in today's context where well-paid jobs with social security and 401Ks are becoming [the exception](https://www.wsj.com/articles/the-end-of-employees-1486050443?mod=djmc_pkt_ff&tier_1=21128300&tier_2=dcm&tier_3=21128300&tier_4=0&tier_5=4508749).
 
-<h5>👩🏿‍💼For investors</h5>
+<h5 id="investors">👩🏿‍💼For investors</h5>
 
 > _"I want the best return on investment for the risk I took"_
 
 **Highest Return on Investment**. Investors really want one thing: the ability to sell their stake at the highest valuation possible. The investors' need for governance only comes from the fact their investments are illiquid and they need governance to protect it until a liquidity event comes. As long as they can sell their stake at the best price and in the timing they see fit, it is what [truly matters](https://austinstartups.com/venture-capital-economics-with-public-market-liquidity-c2dd5cd29ab6). Without liquidity, venture capital investment is a hit game, which consists in finding the one investment that will make exceptional returns and over-compensate for the vast majority of other investments who did not perform well or at all.
 
-<h5>👨‍⚖️For regulators</h5>
+<h5 id="regulators">👨‍⚖️For regulators</h5>
 
 > _"I want to help innovators, protect investors and collect my fair share of tax"_
 
@@ -193,7 +201,7 @@ The previous quote is from Brian Chesky, CEO of AirBnb, in statement about a [co
 
 > _«The digital economy systematically disconnects the place of business from the place of consumption. Consequently, it is increasingly difficult to fix the location of the value created by this economy and to apply the rules of tax laws that are now outmoded.» source [Taxation of the Digital Economy - Pierre Collin & Nicolas Colin - 2013](https://www.hldataprotection.com/files/2013/06/Taxation_Digital_Economy.pdf)_
 
-<h5>🌎For the planet</h5>
+<h5 id="planet">🌎For the planet</h5>
 
 > _"I want long-term thinking organizations"_
 
@@ -203,13 +211,13 @@ The previous quote is from Brian Chesky, CEO of AirBnb, in statement about a [co
 
 In the recent years, the rise of cryptocurrencies has given birth to a new funding model for organizations: the Initial Coin Offering, an alternative to the traditional ways of financing.
 
-<h5>📝The principle</h5>
+<h5 id="principle">📝The principle</h5>
 
 Simply put (and grossly generalized), organizations doing an ICO have more or less the following generic pitch:
 
 > _«We created a (sometimes fixed) supply of millions of tokens on a blockchain. This tokens are not securities as we don't give investors any financial or voting rights. However, you can expect these tokens to have future value because we designed a system in which they will have the following utility. We are putting a certain number of tokens on sale to finance the development of the project. These tokens will be liquid very soon because we are going to be listed on exchange X. Buy our tokens.»_
 
-<h5>👍The Good</h5>
+<h5 id="thegood">👍The Good</h5>
 
 The good part of ICOs is that, on the surface, they seem to very well align the interests of the main stakeholders in the organization:
 
@@ -219,7 +227,7 @@ The good part of ICOs is that, on the surface, they seem to very well align the 
 
 The problem of this model is that it works only if the token does have value… unfortunately, it is rarely the case!
 
-<h5>👎The Bad</h5>
+<h5 id="thebad">👎The Bad</h5>
 
 The problem is that it is very hard for the unsophisticated investor (and even the so-called 'sophisticated' ones!) to assess whether tokens will have any value at all. As a result, many retail investors, lured by the exceptional returns of a handful of well thought-out projects, burned themselves very badly.
 
@@ -238,15 +246,15 @@ Given the above, it is expected that most projects will fail and are [bad](https
 1.  **Retail investors get scammed** due the way the [_Shitcoin Waterfall_](https://soundcloud.com/unchainedpodcast/meltem-demirors-and-jill#t=51:03) works in ICOs
 2.  **Regulators don't know how to regulate ICOs**. On the one hand, they welcome innovations that attract talents and investors but on the other hand, they don't like when retail investors get scammed.
 
-<h5>💩The Ugly</h5>
+<h5 id="theugly">💩The Ugly</h5>
 
 At the time of writing this paper (September 2018), it is now established that, unless an ICO takes place within the context of a reputable platform (i.e. CoinList which is very selective or TokenFoundry to a lesser degree...), odds are that the ICO you are being pitched is a scam and you should be very cautious before investing in it. Indeed, due to the legal uncertainty around ICOs, the most promising projects now raise money privately and only use ICOs (or just pure Airdrops) as a way to boost their community building efforts.
 
 It is sad to see that many ICOs actually on the market are scams. In the best case scenario, they are promoted by well intentioned founders who mistook an ICO for a Series A fundraising. In the worst case scenario, these ICOs are simply engineered by scammers trying to abuse unsophisticated investors to get rich quick. Needless to say that, in this context, it is hard not to see the ICO market for utility tokens [dying](https://coincentral.com/multibillion-dollar-ico-market-down/).
 
-<h3>Continuous Organizations</h3>
+<h3 id="continuousorganizations">Continuous Organizations</h3>
 
-A _Continuous Organization_ is an organization that issues fully digital securities called _FAIR Securities_ by funneling part or all of its cash-flows to a _Decentralized Autonomous Trust_ (_DAT_). A _DAT_ is a smart-contract that automatically mints, burns and distribute _FAIR Securities_ (_FAIRs_) following a token bonding curve contract[^21] with sponsored burning[^22].
+A _Continuous Organization_ is an organization that issues fully digital securities called _FAIR Securities_ by funneling part or all of its cash-flows to a _Decentralized Autonomous Trust_ (_DAT_). A _DAT_ is a smart-contract that automatically mints, burns and distribute _FAIR Securities_ (_FAIRs_) following a token [bonding curve contract](https://medium.com/@justingoro/token-bonding-curves-explained-7a9332198e0e) with [sponsored burning](https://medium.com/@avsa/sponsored-burning-for-tcr-c0ab08eef9d4).
 
 Important note about the currency used to interact with Continuous Organizations
 
@@ -256,24 +264,15 @@ In the following examples, we are using ETH (the currency of the Ethereum blockc
 
 <h4>Understanding the token bonding curve model</h4>
 
+Many individuals have explored [the](https://blog.oceanprotocol.com/introducing-the-equilibrium-bonding-market-e7db528e0eff) [bonding](https://tokeneconomy.co/token-bonding-curves-in-practice-3eb904720cb8) [curve](https://medium.com/@hayeah/code-analysis-of-fomo3d-pricing-and-dividends-6fb267bbf3a7) [model](https://medium.com/thoughtchains/on-single-bonding-curves-for-continuous-token-models-a167f5ffef89) since [Simon De La Rouvière](https://twitter.com/simondlr) first came up with [the idea](https://medium.com/@simondlr/tokens-2-0-curved-token-bonding-in-curation-markets-1764a2e0bee5) in 2017.
 
-Many individuals have explored the bonding curve model[^23] since Simon De La Rouvière[^24] first came up with the idea in 2017[^25]. 
-
-A _bonding curve contract_ is a specific type of smart-contract that issues its own tokens through **B**uy and **S**ell functions. To buy tokens, the buyer sends ETH to the Buy function which calculates the average price of the token in ETH terms and issues you with with the correct amount. The Sell function works in reverse: The contract will calculate the current average selling price and will send you the correct amount of ETH[^26].
+A _bonding curve contract_ is a specific type of smart-contract that issues its own tokens through **B**uy and **S**ell functions. To buy tokens, the buyer sends ETH to the Buy function which calculates the average price of the token in ETH terms and issues you with with the correct amount. The Sell function works in reverse: The contract will calculate the current average selling price and will send you the correct amount of ETH (excerpt taken from [Token Bonding Curves Explained](https://medium.com/@justingoro/token-bonding-curves-explained-7a9332198e0e)).
 
 In the case of _Continuous Organizations_, the Buy and Sell functions are distinct:
 
-
-
-<p id="gdcalert16" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous0.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert17">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/Introducing-Continuous0.png "image_tooltip")
 
-
 A token bonding curve model has interesting properties, among which:
-
-
 
 *   **Limitless supply**. There is no limit to the number of tokens that can be minted.
 *   **Deterministic price calculation**. The buy and sell prices of tokens increase and decrease with the number of tokens minted.
@@ -955,97 +954,63 @@ How to recalculate s, from R after each new transaction:
 
 
 
-<!-- Footnotes themselves at the bottom. -->
+
 ## Notes
 
-[^1]:
-     the definition of Returns to Scale on [Wikipedia](https://en.wikipedia.org/wiki/Returns_to_scale)
+[1]: the definition of Returns to Scale on [Wikipedia](https://en.wikipedia.org/wiki/Returns_to_scale)
 
-[^2]:
-     FAIR: Frictionless Agreement for Investments and Returns
+[2]: FAIR: Frictionless Agreement for Investments and Returns
 
-[^3]:
-     FAIR Securities undeniably pass the [Howey test](https://en.wikipedia.org/wiki/SEC_v._W._J._Howey_Co.)
+[3]: FAIR Securities undeniably pass the [Howey test](https://en.wikipedia.org/wiki/SEC_v._W._J._Howey_Co.)
 
-[^4]:
-    To illustrate: an Uber driver is at the same time a user of Uber and a worker for Uber. Same goes for the renter of a flat on Airbnb. A Facebook user is also a Facebook (non-paid) worker.
+[4]: To illustrate: an Uber driver is at the same time a user of Uber and a worker for Uber. Same goes for the renter of a flat on Airbnb. A Facebook user is also a Facebook (non-paid) worker.
 
-[^5]:
-     Nicolas Colin is a regular contributor to the [Financial Times](https://www.ft.com/stream/3fd492f4-09b7-3f07-a744-b322b5bd015c) and [Forbes](https://www.forbes.com/sites/nicolascolin/#7ae88301c3b1) 
+[5]: Nicolas Colin is a regular contributor to the [Financial Times](https://www.ft.com/stream/3fd492f4-09b7-3f07-a744-b322b5bd015c) and [Forbes](https://www.forbes.com/sites/nicolascolin/#7ae88301c3b1) 
 
-[^6]:
-     [The Family](https://thefamily.co) is a european organization educating, protecting, and financing ambitious Entrepreneurs
+[6]: [The Family](https://thefamily.co) is a european organization educating, protecting, and financing ambitious Entrepreneurs
 
-[^7]:
-     [Hedge, A Greater Safety Net for the Entrepreneurial Age](https://www.amazon.com/Hedge-Greater-Safety-Net-Entrepreneurial/dp/1718917082/) 
+[7]: [Hedge, A Greater Safety Net for the Entrepreneurial Age](https://www.amazon.com/Hedge-Greater-Safety-Net-Entrepreneurial/dp/1718917082/) 
 
-[^8]:
-     [L'age de la multitude - Entreprendre et gouverner après la révolution numérique](https://www.amazon.com/gp/product/B00XDVC5X8/ref=dbs_a_def_rwt_bibl_vppi_i2) (not translated in english)
+[8]: [L'age de la multitude - Entreprendre et gouverner après la révolution numérique](https://www.amazon.com/gp/product/B00XDVC5X8/ref=dbs_a_def_rwt_bibl_vppi_i2) (not translated in english)
 
-[^9]:
-     [Airbnb asks SEC to let it give hosts equity](https://www.axios.com/airbnb-asks-sec-to-let-it-give-hosts-equity-a7d99495-0782-4bce-92bb-4c692ef1b621.html)
+[9]: [Airbnb asks SEC to let it give hosts equity](https://www.axios.com/airbnb-asks-sec-to-let-it-give-hosts-equity-a7d99495-0782-4bce-92bb-4c692ef1b621.html)
 
-[^10]:
-     In the 'best case scenario' liquidity event which is the IPO, "[the average founder ownership at IPO was 17% and the average VC ownership at IPO was 56%](https://avc.com/2016/11/founder-dilution/)"
+[10]: In the 'best case scenario' liquidity event which is the IPO, "[the average founder ownership at IPO was 17% and the average VC ownership at IPO was 56%](https://avc.com/2016/11/founder-dilution/)"
 
-[^11]:
-     [The End of Employees](https://www.wsj.com/articles/the-end-of-employees-1486050443?mod=djmc_pkt_ff&tier_1=21128300&tier_2=dcm&tier_3=21128300&tier_4=0&tier_5=4508749)
+[11]: [The End of Employees](https://www.wsj.com/articles/the-end-of-employees-1486050443?mod=djmc_pkt_ff&tier_1=21128300&tier_2=dcm&tier_3=21128300&tier_4=0&tier_5=4508749)
 
-[^12]:
-     See Multicoin Capital "[Venture Capital Economics with Public Market Liquidity](https://austinstartups.com/venture-capital-economics-with-public-market-liquidity-c2dd5cd29ab6)"
+[12]: See Multicoin Capital "[Venture Capital Economics with Public Market Liquidity](https://austinstartups.com/venture-capital-economics-with-public-market-liquidity-c2dd5cd29ab6)"
 
-[^13]:
-     Quote from [Taxation of the Digital Economy](https://www.hldataprotection.com/files/2013/06/Taxation_Digital_Economy.pdf) - Pierre Collin & Nicolas Colin - 2013
+[13]: Quote from [Taxation of the Digital Economy](https://www.hldataprotection.com/files/2013/06/Taxation_Digital_Economy.pdf) - Pierre Collin & Nicolas Colin - 2013
 
-[^14]:
-     See [Tragedy of The Commons definition on wikipedia](https://en.wikipedia.org/wiki/Tragedy_of_the_commons)
+[14]: See [Tragedy of The Commons definition on wikipedia](https://en.wikipedia.org/wiki/Tragedy_of_the_commons)
 
-[^15]:
+[15]: Some projects have on-chain governance or used a DAICOs to raise funds which gave token holders some governance rights, but there are more the exception than the rule
 
-     Some projects have on-chain governance or used a DAICOs to raise funds which gave token holders some governance rights, but there are more the exception than the rule
+[16]: ...and also for the so-called sophisticated investors!
 
-[^16]:
-     ...and also for the so-called sophisticated investors!
+[17]: [ICOs raised a record $8.3B in Q2 2018 but most of them were abject failures](https://www.ccn.com/icos-raise-8-3-billion-last-quarter-and-most-of-them-were-abject-failures)
 
-[^17]:
-     [ICOs raised a record $8.3B in Q2 2018 but most of them were abject failures](https://www.ccn.com/icos-raise-8-3-billion-last-quarter-and-most-of-them-were-abject-failures)
+[18]: [Public - ICO Returns 2014-2018](https://docs.google.com/spreadsheets/d/1ioxvJgJiZui9ZD1nud2oLpClYCFcnzvgvMucI56uy-g/edit#gid=1772156349)
 
-[^18]:
-     [Public - ICO Returns 2014-2018](https://docs.google.com/spreadsheets/d/1ioxvJgJiZui9ZD1nud2oLpClYCFcnzvgvMucI56uy-g/edit#gid=1772156349)
+[19]: [Meltem Demirors explains the ShitCoin Waterfall on Laura Shin's podcast](https://soundcloud.com/unchainedpodcast/meltem-demirors-and-jill#t=51:03)
 
-[^19]:
+[20]: [Multibillion dollar ICO market down to a few hundred million](https://coincentral.com/multibillion-dollar-ico-market-down/)
 
-     [Meltem Demirors explains the ShitCoin Waterfall on Laura Shin's podcast](https://soundcloud.com/unchainedpodcast/meltem-demirors-and-jill#t=51:03)
+[21]: [Token Bonding Curves Explained](https://medium.com/@justingoro/token-bonding-curves-explained-7a9332198e0e)
 
-[^20]:
-     [Multibillion dollar ICO market down to a few hundred million](https://coincentral.com/multibillion-dollar-ico-market-down/)
+[22]: [Sponsored Burning for TCRs](https://medium.com/@avsa/sponsored-burning-for-tcr-c0ab08eef9d4)
 
-[^21]:
-     [Token Bonding Curves Explained](https://medium.com/@justingoro/token-bonding-curves-explained-7a9332198e0e)
+[23]: [equilibrium bonding market](https://blog.oceanprotocol.com/introducing-the-equilibrium-bonding-market-e7db528e0eff), [dynamic bonding curve](https://tokeneconomy.co/token-bonding-curves-in-practice-3eb904720cb8), [fomo3d](https://medium.com/@hayeah/code-analysis-of-fomo3d-pricing-and-dividends-6fb267bbf3a7) [etc](https://medium.com/thoughtchains/on-single-bonding-curves-for-continuous-token-models-a167f5ffef89)...
 
-[^22]:
-     [Sponsored Burning for TCRs](https://medium.com/@avsa/sponsored-burning-for-tcr-c0ab08eef9d4)
+[24]: [Simon De La Rouvrière](https://twitter.com/simondlr)
 
-[^23]:
-     [equilibrium bonding market](https://blog.oceanprotocol.com/introducing-the-equilibrium-bonding-market-e7db528e0eff), [dynamic bonding curve](https://tokeneconomy.co/token-bonding-curves-in-practice-3eb904720cb8), [fomo3d](https://medium.com/@hayeah/code-analysis-of-fomo3d-pricing-and-dividends-6fb267bbf3a7) [etc](https://medium.com/thoughtchains/on-single-bonding-curves-for-continuous-token-models-a167f5ffef89)...
+[25]: [Tokens 2.0 - Curved Token Bonding in Curation Markets](https://medium.com/@simondlr/tokens-2-0-curved-token-bonding-in-curation-markets-1764a2e0bee5) 
 
-[^24]:
-     [Simon De La Rouvrière](https://twitter.com/simondlr)
+[26]: Excerpt adapted from the article [Token Bonding Curves Explained](https://medium.com/@justingoro/token-bonding-curves-explained-7a9332198e0e)
 
-[^25]:
-     [Tokens 2.0 - Curved Token Bonding in Curation Markets](https://medium.com/@simondlr/tokens-2-0-curved-token-bonding-in-curation-markets-1764a2e0bee5) 
+[27]: See the definition of [Irrevocable Trust](https://www.investopedia.com/terms/i/irrevocabletrust.asp) on investopedia
 
-[^26]:
-     Excerpt adapted from the article [Token Bonding Curves Explained](https://medium.com/@justingoro/token-bonding-curves-explained-7a9332198e0e)
+[28]: [How to make bonding curves for continuous tokens](https://blog.relevant.community/how-to-make-bonding-curves-for-continuous-token-models-3784653f8b17)
 
-[^27]:
-     See the definition of [Irrevocable Trust](https://www.investopedia.com/terms/i/irrevocabletrust.asp) on investopedia
-
-[^28]:
-     [How to make bonding curves for continuous tokens](https://blog.relevant.community/how-to-make-bonding-curves-for-continuous-token-models-3784653f8b17)
-
-[^29]:
-     [The main benefits of the DutchX mechanism](https://blog.gnosis.pm/the-main-benefits-of-the-dutchx-mechanism-6fc2ef6ee8b4)
-
-
-<!-- GD2md-html version 1.0β13 -->
+[29]: [The main benefits of the DutchX mechanism](https://blog.gnosis.pm/the-main-benefits-of-the-dutchx-mechanism-6fc2ef6ee8b4)
