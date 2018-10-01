@@ -1,10 +1,8 @@
-
 <h2>Continuous Organizations</h2>
-
 
 <p>Aligning stakeholders' financial interests in the Digital Economy
 
-_[Thibauld Favre](https://twitter.com/thibauld) _
+Author: [Thibauld Favre](https://twitter.com/thibauld)
 
 _Version 0.9_
 
