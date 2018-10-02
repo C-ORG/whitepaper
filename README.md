@@ -33,7 +33,7 @@ _Continuous Organizations_ present very interesting properties for all stakehold
 
 Even though the "security" nature of _FAIR Securities_ (FAIR Securities undeniably pass the [Howey test](https://en.wikipedia.org/wiki/SEC_v._W._J._Howey_Co.)) prevent organizations creating _Decentralized Autonomous Trusts_ today, we are confident that the _Continuous Organization_ model provides a strong enough value proposition that forward thinking jurisdictions around the world will be quick to adopt this new model.
 
-<h3>Table of Contents</h3>
+<h3 id="toc">Table of Contents</h3>
 
 1. [Context](#context)
    1. [Organizations have evolved to adapt to the digital economy](#evolution)
@@ -71,7 +71,7 @@ Even though the "security" nature of _FAIR Securities_ (FAIR Securities undeniab
    1. [Front-running attack](#frontrunning)
 6. [Conclusion](#conclusion)
 
-<h3 id="context">Context</h3>
+<h3 id="context">Context</h3>[⬆](#toc)
 
 <h4 id="evolution">Organizations have evolved to adapt to the digital economy</h4>
 
