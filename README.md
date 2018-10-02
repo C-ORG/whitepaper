@@ -418,14 +418,10 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
   </tr>
   <tr>
    <td>
-
-<p id="gdcalert63" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous11.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert64">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
+       
 <img src="images/Introducing-Continuous11.png" width="" alt="alt_text" title="image_tooltip">
 
-<p>
-<em>Investment (buy)</em>
+<p style="align:center;"><em>Investment (buy)</em></p>
    </td>
    <td>▪ The <em>DAT</em> receives ETH from the buying investor
 <p>
