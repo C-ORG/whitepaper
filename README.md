@@ -305,7 +305,7 @@ The function _S_ defines the price at which _FAIRs_ are bought back by the _DAT_
 
 <h5>📈 Investments - Buy</h5>
 
-The first (in "time", not in "proportion") source of cash-flow for a Continuous Organization are investors who want to invest in the _Continuous Organization_. Whenever an investor sends funds to the _DAT_, a fraction of the funds sent is being held in the "buyback" reserve by the _DAT_ and the rest of the funds are being transferred to the organization's wallet. We'll call **I** (for **i**nvest) the percentage of the funds being held with <img src="https://latex.codecogs.com/gif.latex?I=\frac{s_{0}}{b}" />. Please note that `I` is a function of `s<sub>0</sub>`, the slope of `S` at `t=0`, and not `s<sub>t</sub>` so `I` is constant.
+The first (in "time", not in "proportion") source of cash-flow for a Continuous Organization are investors who want to invest in the _Continuous Organization_. Whenever an investor sends funds to the _DAT_, a fraction of the funds sent is being held in the "buyback" reserve by the _DAT_ and the rest of the funds are being transferred to the organization's wallet. We'll call **I** (for **i**nvest) the percentage of the funds being held with <img src="https://latex.codecogs.com/gif.latex?I=\frac{s_{0}}{b}" />. Please note that I is a function of s<sub>0</sub>, the slope of S at `t=0`, and not s<sub>t</sub> so I is constant.
 
 <img src="images/Introducing-Continuous3.png" width="580" title="Investments - Buy" alt="Investments - Buy" />
 
@@ -317,105 +317,41 @@ _Impact on the Bonding Curve Contract of the DAT when an investment occurs_
 
 The investors buying tokens are doing so to invest money in the underlying organization. Investors don't want their money to be held in reserve by the _DAT_, they want their money to be put to good use by the organization. Consequently, the value of _s_ must be an order of magnitude lower than _b_.
 
-_Example_: let's say that an investor sends 10 ETH to the _DAT_, if 
-
-<p id="gdcalert36" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert37">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-then the _DAT_ will transfer 9 ETH to the organization's wallet and will keep 1 ETH in its "buyback" reserve.
+_Example_: let's say that an investor sends 10 ETH to the _DAT_, if `I=10%` then the _DAT_ will transfer 9 ETH to the organization's wallet and will keep 1 ETH in its "buyback" reserve.
 
 <h5>💰 Investments - Sell</h5>
 
-
-Investors can at any time decide to sell their FAIRs to get ETH back. When the DAT receives _FAIR_s, it burns the received _FAIR_s and sends ETH back to the selling investor according to a function **S** (for **s**ell). _S_ has a slope _s_ that increase discretely over time, every time the _DAT_ receives a payment. The ETH sent back to the investor is taken from the _DAT_ "buyback" reserve and does **not** affect the organization's cash reserve.
-
+Investors can at any time decide to sell their FAIRs to get ETH back. When the DAT receives _FAIRs_, it burns the received _FAIRs_ and sends ETH back to the selling investor according to a function **S** (for **s**ell). _S_ has a slope _s_ that increase discretely over time, every time the _DAT_ receives a payment. The ETH sent back to the investor is taken from the _DAT_ "buyback" reserve and does **not** affect the organization's cash reserve.
 
 
-<p id="gdcalert37" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous5.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert38">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Introducing-Continuous5.png "image_tooltip")
-
+<img src="images/Introducing-Continuous5.png" width="580" title="Investments - Sell" alt="Investments - Sell" />
 
 _Value flow when a FAIR sale occurs_
 
-
-
-<p id="gdcalert38" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous6.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert39">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Introducing-Continuous6.png "image_tooltip")
-
+<img src="images/Introducing-Continuous6.png" width="300" title="Investments - Sell - Impact on bonding curve" alt="Investments - Sell - Impact on bonding curve" />
 
 _Impact on the Bonding Curve Contract of the DAT when an investor sells its tokens_
 
 <h5>💵 Dividends</h5>
 
 
-The second source of cash-flow for the _DAT_ are dividends. At any point in time, the organization can decide to pay dividends to its _FAIR_s holders. To do so, the organization sends ETH to the _dividend_ function of the _DAT_. Two things happen:
+The second source of cash-flow for the _DAT_ are dividends. At any point in time, the organization can decide to pay dividends to its _FAIRs_ holders. To do so, the organization sends ETH to the _dividend_ function of the _DAT_. Two things happen:
 
+1.  **The _DAT_ buyback reserve is increased**. All the funds sent are used in to mint new _FAIRs_ with a _contribution ratio_ of 100%, meaning that 100% of the funds sent are being saved in the _DAT_ buyback reserve, thus creating value to _FAIR_s holders by increasing the slope of the selling curve (see detailed explanation below).
+2.  **_FAIRs_ holders receive dividends in _FAIRs_**. The newly minted FAIRs are distributed as dividends to the current _FAIRs_ holders pro-rata of their holdings and taking into account any "_dividend bonus_" they might have (see below for the definition of "_dividend bonus_").
 
-
-1.  **The _DAT_ buyback reserve is increased**. All the funds sent are used in to mint new _FAIR_s with a _contribution ratio_ of 100%, meaning that 100% of the funds sent are being saved in the _DAT_ buyback reserve, thus creating value to _FAIR_s holders by increasing the slope of the selling curve (see detailed explanation below).
-1.  **_FAIR_s holders receive dividends in _FAIR_s**. The newly minted FAIRs are distributed as dividends to the current _FAIR_s holders pro-rata of their holdings and taking into account any "_dividend bonus"_ they might have (see below for the definition of "_dividend bonus_").
-
-
-
-<p id="gdcalert39" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous7.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert40">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Introducing-Continuous7.png "image_tooltip")
-
+<img src="images/Introducing-Continuous7.png" width="580" title="Dividends" alt="Dividends" />
 
 _Value flow when a dividend payment occurs_
 
 The biggest difference between an investment cash-flow and a dividend cash-flow is their respective _contribution ratio_ to the _DAT_'s reserve:
 
+1.  **investment**: an amount M contributes `I*M` to the _DAT_'s reserve while minting the value equivalent of M, thus a contribution ratio of `(I*M)/M=I` and by construction `I<<100%`
+2.  **dividend**: an amount M contributes `M` to the _DAT_'s reserve while minting the value equivalent of `M`, thus a contribution ratio of `M/M=100%`
+
+So we have <img src="https://latex.codecogs.com/gif.latex?I\leq&space;s_{t}\leq1" /> (remember from above that s<sub>t</sub> is the slope of the sell function at time _t_). As we saw that s<sub>0</sub>=I it means that, everytime a dividend is received by the _DAT_, _s_ increases in value. After each transaction, _s_ can be recalculated from the amount in reserve R<sub>t</sub>:
 
 
-1.  **investment**: an amount M contributes 
-
-<p id="gdcalert40" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert41">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
- to the _DAT_'s reserve while minting the value equivalent of M, thus a contribution ratio of 
-
-<p id="gdcalert41" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert42">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-and by construction 
-
-<p id="gdcalert42" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert43">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-1.  **dividend**: an amount M contributes 
-
-<p id="gdcalert43" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert44">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
- to the _DAT_'s reserve while minting the value equivalent of 
-
-<p id="gdcalert44" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert45">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-, thus a contribution ratio of 
-
-<p id="gdcalert45" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert46">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-
-So we have 
-
-<p id="gdcalert46" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert47">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
- (remember from above that 
-
-<p id="gdcalert47" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert48">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
- is the slope of the sell function at time _t_). As we saw that 
-
-<p id="gdcalert48" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert49">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
- it means that, everytime a dividend is received by the _DAT_, _s_ increases in value. After each transaction, _s_ can be recalculated from the amount in reserve R<sub>t</sub>:
-
-
-
-<p id="gdcalert49" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert50">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 
