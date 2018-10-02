@@ -1,10 +1,10 @@
 <h1>Continuous Organizations</h1>
 
-_**FAIR Securities To Better Align Stakeholders' Financial Interests**_
+_**Aligning stakeholders’ financial interests in the Digital Economy**_
 
-_Author: [Thibauld Favre](https://twitter.com/thibauld)_
-
-_Version 0.9_
+* _Author: [Thibauld Favre](https://twitter.com/thibauld)_
+* _Version: 0.9_
+* _Keywords: FAIR Securities, Decentralized Autonomous Trust, Bonding Curve Smart-Contract, Multitude_
 
 <h3>Acknowledgments </h3>
 
@@ -14,7 +14,7 @@ Many thanks to the persons who kindly contributed to this research through their
 
 <h3>Abstract</h3>
 
-The digital economy has radically changed the nature of the relationship between customers and corporations. Today's individuals have switched from being passive consumers to being an essential force in creating value, either by their actual work (think AirBnb, Uber, Apple app store, Amazon marketplace...) or through their data (Facebook, Google...). By leveraging their users' work, organizations in the digital economy have the ability to create  products with personalized user experiences that can sustain increasing returns to scale[1] while requiring little capital.
+The digital economy has radically changed the nature of the relationship between customers and corporations. Today's individuals have switched from being passive consumers to being an essential force in creating value, either by their actual work (think AirBnb, Uber, Apple app store, Amazon marketplace...) or through their data (Facebook, Google...). By leveraging their users' work, organizations in the digital economy have the ability to create  products with personalized user experiences that can sustain increasing [returns to scale](https://en.wikipedia.org/wiki/Returns_to_scale) while requiring little capital.
 
 Unfortunately, today's organizations have no simple and efficient way to strongly align the interests of their users' workforce with the financial success of their organization. This is mostly due to today's securities' laws that impose high constraints and frictions when it comes to selling and distributing securities, especially to non-accredited investors.
 
@@ -79,78 +79,54 @@ As the world is transitioning from the industrial age to the digital age, the le
   <tr>
    <td>
    </td>
-   <td><strong>Industrial Age</strong>
-<p>
-<em>think "General Motors"</em>
+   <td>
+       <strong>Industrial Age</strong><br/>
+       <em>think "General Motors"</em>
    </td>
-   <td><strong>Digital Age</strong>
-<p>
-<em>think "Airbnb"</em>
-   </td>
-  </tr>
-  <tr>
-   <td><em>Capital intensity</em>
-   </td>
-   <td>High 💲💲💲
-   </td>
-   <td>Low 💲
+   <td>
+       <strong>Digital Age</strong><br/>
+       <em>think "Airbnb"</em>
    </td>
   </tr>
   <tr>
-   <td><em>Returns to scale</em>
-   </td>
-   <td>Decreasing <strong>↘</strong>
-   </td>
-   <td>Increasing <strong>↗</strong>
-   </td>
+   <td><em>Capital intensity</em></td>
+   <td>High 💲💲💲</td>
+   <td>Low 💲</td>
   </tr>
   <tr>
-   <td><em>Main assets</em>
-   </td>
-   <td>Tangible 🏭
-   </td>
-   <td>Intangible 💻
-   </td>
+   <td><em>Returns to scale</em></td>
+   <td>Decreasing <strong>↘</strong></td>
+   <td>Increasing <strong>↗</strong></td>
   </tr>
   <tr>
-   <td><em>Size of workforce</em>
-   </td>
-   <td>Large 🙋‍🙋‍🙋‍
-   </td>
-   <td>Small 🙋‍
-   </td>
+   <td><em>Main assets</em></td>
+   <td>Tangible 🏭</td>
+   <td>Intangible 💻</td>
   </tr>
   <tr>
-   <td><em>Location of workforce</em>
-   </td>
-   <td>Concentrated 🌆
-   </td>
-   <td>Distributed 🌎
-   </td>
+   <td><em>Size of workforce</em></td>
+   <td>Large 🙋‍🙋‍🙋‍</td>
+   <td>Small 🙋‍</td>
   </tr>
   <tr>
-   <td><em>Type of jobs</em>
-   </td>
-   <td>Manual 🔧
-   </td>
-   <td>Intellectual 🧠
-   </td>
+   <td><em>Location of workforce</em></td>
+   <td>Concentrated 🌆</td>
+   <td>Distributed 🌎</td>
   </tr>
   <tr>
-   <td><em>Main growth driver</em>
-   </td>
-   <td>Cost 💵
-   </td>
-   <td>User experience 👌
-   </td>
+   <td><em>Type of jobs</em></td>
+   <td>Manual 🔧</td>
+   <td>Intellectual 🧠</td>
   </tr>
   <tr>
-   <td><em>Tax contribution</em>
-   </td>
-   <td>High 💲💲💲
-   </td>
-   <td>Low 💲
-   </td>
+   <td><em>Main growth driver</em></td>
+   <td>Cost 💵</td>
+   <td>User experience 👌</td>
+  </tr>
+  <tr>
+   <td><em>Tax contribution</em></td>
+   <td>High 💲💲💲</td>
+   <td>Low 💲</td>
   </tr>
 </table>
 
