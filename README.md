@@ -317,7 +317,7 @@ _Impact on the Bonding Curve Contract of the DAT when an investment occurs_
 
 The investors buying tokens are doing so to invest money in the underlying organization. Investors don't want their money to be held in reserve by the _DAT_, they want their money to be put to good use by the organization. Consequently, the value of _s_ must be an order of magnitude lower than _b_.
 
-_Example_: let's say that an investor sends 10 ETH to the _DAT_, if `I=10%` then the _DAT_ will transfer 9 ETH to the organization's wallet and will keep 1 ETH in its "buyback" reserve.
+_Example_: let's say that an investor sends 10 ETH to the _DAT_, if I=10% then the _DAT_ will transfer 9 ETH to the organization's wallet and will keep 1 ETH in its "buyback" reserve.
 
 <h5>💰 Investments - Sell</h5>
 
@@ -337,120 +337,62 @@ _Impact on the Bonding Curve Contract of the DAT when an investor sells its toke
 
 The second source of cash-flow for the _DAT_ are dividends. At any point in time, the organization can decide to pay dividends to its _FAIRs_ holders. To do so, the organization sends ETH to the _dividend_ function of the _DAT_. Two things happen:
 
-1.  **The _DAT_ buyback reserve is increased**. All the funds sent are used in to mint new _FAIRs_ with a _contribution ratio_ of 100%, meaning that 100% of the funds sent are being saved in the _DAT_ buyback reserve, thus creating value to _FAIR_s holders by increasing the slope of the selling curve (see detailed explanation below).
+1.  **The _DAT_ buyback reserve is increased**. All the funds sent are used in to mint new _FAIRs_ with a _contribution ratio_ of 100%, meaning that 100% of the funds sent are being saved in the _DAT_ buyback reserve, thus creating value to _FAIRs_ holders by increasing the slope of the selling curve (see detailed explanation below).
 2.  **_FAIRs_ holders receive dividends in _FAIRs_**. The newly minted FAIRs are distributed as dividends to the current _FAIRs_ holders pro-rata of their holdings and taking into account any "_dividend bonus_" they might have (see below for the definition of "_dividend bonus_").
 
-<img src="images/Introducing-Continuous7.png" width="580" title="Dividends" alt="Dividends" />
+<img src="images/Introducing-Continuous7.png" width="380" title="Dividends" alt="Dividends" />
 
 _Value flow when a dividend payment occurs_
 
 The biggest difference between an investment cash-flow and a dividend cash-flow is their respective _contribution ratio_ to the _DAT_'s reserve:
 
-1.  **investment**: an amount M contributes `I*M` to the _DAT_'s reserve while minting the value equivalent of M, thus a contribution ratio of `(I*M)/M=I` and by construction `I<<100%`
+1.  **investment**: an amount M contributes `I*M` to the _DAT_'s reserve while minting the value equivalent of M, thus a contribution ratio of `(I*M)/M=I` and by construction I<<100%
 2.  **dividend**: an amount M contributes `M` to the _DAT_'s reserve while minting the value equivalent of `M`, thus a contribution ratio of `M/M=100%`
 
 So we have <img src="https://latex.codecogs.com/gif.latex?I\leq&space;s_{t}\leq1" /> (remember from above that s<sub>t</sub> is the slope of the sell function at time _t_). As we saw that s<sub>0</sub>=I it means that, everytime a dividend is received by the _DAT_, _s_ increases in value. After each transaction, _s_ can be recalculated from the amount in reserve R<sub>t</sub>:
 
-
-
-
+<img src="https://latex.codecogs.com/gif.latex?R_{t}=\int_{0}^{x}S_{t}(x)dx=\int_{0}^{x}s_{t}xdx=\frac{s_{t}x^{2}}{2}" />
 
 so 
 
-<p id="gdcalert50" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert51">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+<img src="https://latex.codecogs.com/gif.latex?s_{t}=\frac{2R_{t}}{x^{2}}=\frac{2R}{\frac{2d}{b}+a^{2}}" />
 
  _(proof available in Annex)_ 
 
-_Example_: Say 
-
-<p id="gdcalert51" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert52">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-, 
-
-<p id="gdcalert52" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert53">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-and 
-
-<p id="gdcalert53" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert54">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-. Assume an investor buys the first 10 tokens for 50 ETH, so the _DAT_ now has 
-
-<p id="gdcalert54" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert55">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-ETH in reserve. Then, the _DAT_ receives a payment of 10 ETH from revenues. From this payment, 
-
-<p id="gdcalert55" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert56">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
- ETH is used to mint 0.0995 token (we leave this as an exercise to the reader. Hint: the equation to solve is 
-
-<p id="gdcalert56" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert57">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-), which gives 
-
-<p id="gdcalert57" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert58">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
- which is indeed superior to I.
+_Example_: Say I=10%, D=10% and b=1. Assume an investor buys the first 10 tokens for 50 ETH, so the _DAT_ now has 50*10%=5 ETH in reserve. Then, the _DAT_ receives a payment of 10 ETH from revenues. From this payment, 10*10%=1 ETH is used to mint 0.0995 token (we leave this as an exercise to the reader. Hint: the equation to solve is <img src="https://latex.codecogs.com/gif.latex?x^{2}+20x-2=0" />), which gives s<sub>1</sub>=0.1176 which is indeed superior to I.
 
 <h6>Dividend bonus</h6>
-
 
 Finally, to incentivize long term _FAIR_ holders, the _DAT_ also has a dividend bonus mechanism that enables long-term token holders to enjoy a higher dividend than short term token holders. The mechanism is the following: every month an investor holding a _FAIR _sees its dividend bonus increase until the maximum dividend bonus **M** is reached after holding your _FAIR_ for **H** months. When a FAIR is sold or transferred, M is reset to 0.
 
 <h5>💲 Revenues</h5>
 
-
 For some _Continuous Organizations_ (_COs_ with no underlying legal entity for example), it can make sense to perceive their customers' payments (i.e. the _CO_'s revenues) through the _DAT_. It is important to note, that it is not mandatory to funnel the organization's revenues through the _DAT_ as the organization can also decide to _only_ reward _FAIR_s holders through dividends.
 
 For organizations that already have a running business, they will very likely prefer to _first_ perceive the payment from their customer in fiat (as they usually do, without changing their selling process) and will _then_ transfer a fraction D of their perceived revenues to the DAT in the form of dividends like illustrated on the following schema:
 
+<img src="images/Introducing-Continuous8.png" width="400" title="Revenues for real organizations" alt="Revenues for real organizations" />
 
+This way, the _DAT_ is made completely invisible for the customer (no change in UX) and the organization does **not** have to modify any of its highly optimized selling processes.
 
-<p id="gdcalert58" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous8.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert59">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+Whenever the _DAT_ receives a payment **P**, a fraction of the payment received is being used to _mint new FAIRs_. We'll call **D** (for **d**ividends) the percentage of the revenues being used to mint new tokens, **d** the corresponding fraction of the revenues (d=P*D) and **t** the number of new tokens minted. The entire amount d used to mint _FAIRs_ is saved in the _DAT_'s "buyback" reserve and the **t** _FAIRs_ minted are distributed to the current token holders according to their current holdings as well as their dividend bonus (see below). This distribution is like a dividend distribution but paid in _FAIRs_ rather than ETH.
 
-
-![alt_text](images/Introducing-Continuous8.png "image_tooltip")
-
-
-This way, the _DAT_ is made completely invisible for the customer (no change in UX) and the organization does **not **have to modify any of its highly optimized selling processes.
-
-Whenever the _DAT _receives a payment **P**, a fraction of the payment received is being used to _mint new FAIRs_. We'll call **D** (for _<span style="text-decoration:underline;">d</span>_ividends) the percentage of the revenues being used to mint new tokens, **d** the corresponding fraction of the revenues (
-
-<p id="gdcalert59" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert60">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-) and **t** the number of new tokens minted. The entire amount d used to mint _FAIRs_ is saved in the _DAT_'s "buyback" reserve and the **t** _FAIR_s minted are distributed to the current token holders according to their current holdings as well as their dividend bonus (see below). This distribution is like a dividend distribution but paid in _FAIR_s rather than ETH.
-
-
-
-<p id="gdcalert60" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous9.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert61">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Introducing-Continuous9.png "image_tooltip")
-
+<img src="images/Introducing-Continuous9.png" width="580" title="Revenues" alt="Revenues" />
 
 _Value flow when the CO relies on the DAT to perceive its payments_
 
-_Example_: Suppose 
-
-<p id="gdcalert61" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert62">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-, if the _Continuous Organization_ receives a payment of 100 ETH, 5 ETH will be used to mint _FAIR_s. The _FAIR_s are then distributed to existing token holders who can decide to either keep or sell them.
+_Example_: Suppose D=5%, if the _Continuous Organization_ receives a payment of 100 ETH, 5 ETH will be used to mint _FAIRs_. The _FAIRs_ are then distributed to existing token holders who can decide to either keep or sell them.
 
 <h5>🍯Pre-minted FAIR pool</h5>
 
-
-When the _DAT_ is being created (and **only** then because once created the _DAT_ becomes immutable), the organization can decide to "pre-mint" for itself and for free a number **PM** of _FAIR_s. That means that, instead of having the supply of _FAIRs_ of the _DAT_ starting from zero, it would start from PM.
+When the _DAT_ is being created (and **only** then because once created the _DAT_ becomes immutable), the organization can decide to "pre-mint" for itself and for free a number **PM** of _FAIRs_. That means that, instead of having the supply of _FAIRs_ of the _DAT_ starting from zero, it would start from PM.
 
 Pre-minting FAIRs can often make a lot of sense to the organization, be it to reward its founders or to pay its early employees or reward its early users etc… However, it is very important to realize that pre-creating FAIRs comes with a potentially high cost: Indeed, these "free" pre-minted _FAIR_s represent a selling pressure on the _DAT_ as they are _FAIR_s that got allocated "for free", without any contribution to the _DAT_ buyback reserve.
 
 Technically speaking, it means that the higher the number of FAIR tokens are pre-minted, the lower will sell curve be (i.e. the _s_ slope defined previously). So, concretely, if an organization decides to pre-mint a large number of FAIRs when setting up the DAT, it may want to be very careful not to pre-mint too many of them because it significantly increases the risk and financial reward of investors.
 
 
-
-<p id="gdcalert62" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous10.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert63">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Introducing-Continuous10.png "image_tooltip")
-
+<img src="images/Introducing-Continuous10.png" width="300" title="Pre-minted FAIR pool" alt="Pre-minted FAIR pool" />
 
 _Impact of pre-minted tokens, everything else being equal_
 
@@ -459,7 +401,7 @@ Even though it is not mandatory, it is highly recommended to have a vesting sche
 <h5>📄 Summary</h5>
 
 
-A _Continuous Organization_ is an organization that issues _FAIR securities_ by funneling part or all of its cash-flows to a specific type of smart-contract called _Decentralized Autonomous Trust_ (_DAT_). These _FAIR Securities_ represent a claim on the _DAT_'s future cash-flows. The organization, its investors and, potentially, its customers interact with the _DAT_ by sending ETH or _FAIR_s to it:
+A _Continuous Organization_ is an organization that issues _FAIR securities_ by funneling part or all of its cash-flows to a specific type of smart-contract called _Decentralized Autonomous Trust_ (_DAT_). These _FAIR Securities_ represent a claim on the _DAT_'s future cash-flows. The organization, its investors and, potentially, its customers interact with the _DAT_ by sending ETH or _FAIRs_ to it:
 
 
 <table>
