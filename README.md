@@ -419,7 +419,7 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
   <tr>
    <td>
        
-<img src="images/Introducing-Continuous11.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/Introducing-Continuous11.png" width="100" alt="Investment (buy)" title="Investment (buy)">
 
 <p style="align:center;"><em>Investment (buy)</em></p>
    </td>
