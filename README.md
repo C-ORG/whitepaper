@@ -71,7 +71,7 @@ Even though the "security" nature of _FAIR Securities_ (FAIR Securities undeniab
    1. [Front-running attack](#frontrunning)
 6. [Conclusion](#conclusion)
 
-<h3 id="context">Context [⬆](#toc)</h3>
+<h3 id="context">Context</h3>
 
 <h4 id="evolution">Organizations have evolved to adapt to the digital economy</h4>
 
