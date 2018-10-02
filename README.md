@@ -50,6 +50,11 @@ Even though the "security" nature of _FAIR Securities_ (FAIR Securities undeniab
 2. [Continuous Organizations](#continuousorganizations)
    1. [Understanding the token bonding curve model](#bondingcurve)
    2. [The Decentralized Autonomous Trust](#dat)
+      1. [Investment - Buy](#buy)
+      2. [Investment - Sell](#sell)
+      3. [Dividends](#dividends)
+      4. [Revenues](#revenues)
+      5. [Summary](#summary)
    3. [Properties and incentives of a Continuous Organization](#properties)
    4. [Benefits](#benefits)
 3. [Use cases](#usecases)
@@ -303,7 +308,7 @@ If you want your investors to have a lot of tokens, pick a very small value for 
 
 The function _S_ defines the price at which _FAIRs_ are bought back by the _DAT_. _S_ is a linear function as well and has a slope **_s_** such that `S(x)=s*x` where <img src="https://latex.codecogs.com/gif.latex?s\in&space;R" /> and `s>0`. However, in a _Continuous Organization,_ the value of _s_ increases discretely over time ie <img src="https://latex.codecogs.com/gif.latex?s_{t+1}\geqslant&space;s_{t}" />. To explain how the value of _s_ increases over time, it is important to understand that a _DAT_ receives and processes the cash-flows it receives.
 
-<h5>📈 Investments - Buy</h5>
+<h5 id="buy">📈 Investments - Buy</h5>
 
 The first (in "time", not in "proportion") source of cash-flow for a Continuous Organization are investors who want to invest in the _Continuous Organization_. Whenever an investor sends funds to the _DAT_, a fraction of the funds sent is being held in the "buyback" reserve by the _DAT_ and the rest of the funds are being transferred to the organization's wallet. We'll call **I** (for **i**nvest) the percentage of the funds being held with <img src="https://latex.codecogs.com/gif.latex?I=\frac{s_{0}}{b}" />. Please note that I is a function of s<sub>0</sub>, the slope of S at `t=0`, and not s<sub>t</sub> so I is constant.
 
@@ -319,7 +324,7 @@ The investors buying tokens are doing so to invest money in the underlying organ
 
 _Example_: let's say that an investor sends 10 ETH to the _DAT_, if I=10% then the _DAT_ will transfer 9 ETH to the organization's wallet and will keep 1 ETH in its "buyback" reserve.
 
-<h5>💰 Investments - Sell</h5>
+<h5 id="sell">💰 Investments - Sell</h5>
 
 Investors can at any time decide to sell their FAIRs to get ETH back. When the DAT receives _FAIRs_, it burns the received _FAIRs_ and sends ETH back to the selling investor according to a function **S** (for **s**ell). _S_ has a slope _s_ that increase discretely over time, every time the _DAT_ receives a payment. The ETH sent back to the investor is taken from the _DAT_ "buyback" reserve and does **not** affect the organization's cash reserve.
 
@@ -332,7 +337,7 @@ _Value flow when a FAIR sale occurs_
 
 _Impact on the Bonding Curve Contract of the DAT when an investor sells its tokens_
 
-<h5>💵 Dividends</h5>
+<h5 id="dividends">💵 Dividends</h5>
 
 
 The second source of cash-flow for the _DAT_ are dividends. At any point in time, the organization can decide to pay dividends to its _FAIRs_ holders. To do so, the organization sends ETH to the _dividend_ function of the _DAT_. Two things happen:
@@ -365,7 +370,7 @@ _Example_: Say I=10%, D=10% and b=1. Assume an investor buys the first 10 tokens
 
 Finally, to incentivize long term _FAIR_ holders, the _DAT_ also has a dividend bonus mechanism that enables long-term token holders to enjoy a higher dividend than short term token holders. The mechanism is the following: every month an investor holding a _FAIR _sees its dividend bonus increase until the maximum dividend bonus **M** is reached after holding your _FAIR_ for **H** months. When a FAIR is sold or transferred, M is reset to 0.
 
-<h5>💲 Revenues</h5>
+<h5 id="revenues">💲 Revenues</h5>
 
 For some _Continuous Organizations_ (_COs_ with no underlying legal entity for example), it can make sense to perceive their customers' payments (i.e. the _CO_'s revenues) through the _DAT_. It is important to note, that it is not mandatory to funnel the organization's revenues through the _DAT_ as the organization can also decide to _only_ reward _FAIR_s holders through dividends.
 
@@ -383,7 +388,7 @@ _Value flow when the CO relies on the DAT to perceive its payments_
 
 _Example_: Suppose D=5%, if the _Continuous Organization_ receives a payment of 100 ETH, 5 ETH will be used to mint _FAIRs_. The _FAIRs_ are then distributed to existing token holders who can decide to either keep or sell them.
 
-<h5>🍯Pre-minted FAIR pool</h5>
+<h5 id="pre-mint">🍯Pre-minted FAIR pool</h5>
 
 When the _DAT_ is being created (and **only** then because once created the _DAT_ becomes immutable), the organization can decide to "pre-mint" for itself and for free a number **PM** of _FAIRs_. That means that, instead of having the supply of _FAIRs_ of the _DAT_ starting from zero, it would start from PM.
 
@@ -398,7 +403,7 @@ _Impact of pre-minted tokens, everything else being equal_
 
 Even though it is not mandatory, it is highly recommended to have a vesting schedule for the _FAIR_s that are pre-minted in order to to commit their beneficiaries on the long-term and help them resist the temptation to sell at the first opportunity.
 
-<h5>📄 Summary</h5>
+<h5 id="summary">📄 Summary</h5>
 
 
 A _Continuous Organization_ is an organization that issues _FAIR securities_ by funneling part or all of its cash-flows to a specific type of smart-contract called _Decentralized Autonomous Trust_ (_DAT_). These _FAIR Securities_ represent a claim on the _DAT_'s future cash-flows. The organization, its investors and, potentially, its customers interact with the _DAT_ by sending ETH or _FAIRs_ to it:
