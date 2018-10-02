@@ -533,168 +533,133 @@ _Continuous Organizations_ provide many benefits over traditional organizations 
    </td>
   </tr>
   <tr>
-   <td><span style="font-size:40px;">🏃🏽‍</span>
-<p>
-<em>Founders</em>
+   <td>
+       🏃🏽‍<br/>
+       <em>Founders</em>
    </td>
-   <td>▪ Build solid incentives to grow and strengthen your community
-<p>
-▪ Recruit talents more easily anywhere in the world
-<p>
-▪ Keep long-term control of your organization
-<p>
-▪ Make your organization more resilient against business ups and downs
-<p>
-▪ Be less distracted (legal, fundraising) and focus more on execution.
-<p>
-▪ Get personal liquidity (once vested).
+   <td>
+       ▪ Build solid incentives to grow and strengthen your community<br/>
+       ▪ Recruit talents more easily anywhere in the world<br/>
+       ▪ Keep long-term control of your organization<br/>
+       ▪ Make your organization more resilient against business ups and downs<br/>
+       ▪ Be less distracted (legal, fundraising) and focus more on execution.<br/>
+       ▪ Get personal liquidity (once vested).
    </td>
   </tr>
   <tr>
-   <td>👩‍💻
-<p>
-<em>Employees</em>
+   <td>
+       👩‍💻<br/>
+       <em>Employees</em>
    </td>
-   <td>▪ Align your personal financial interest with that of the organization
-<p>
-▪ Sell your FAIRs when it makes sense for you
-   </td>
-  </tr>
-  <tr>
-   <td>🙋🏻‍
-<p>
-<em>The multitude</em>
-   </td>
-   <td>▪ Get a share of the value created if the organization is successful
-<p>
-▪ Enjoy the same long-term financial benefits as employees do
+   <td>
+       ▪ Align your personal financial interest with that of the organization
+       ▪ Sell your FAIRs when it makes sense for you
    </td>
   </tr>
   <tr>
-   <td>👩🏿‍💼
-<p>
-<em>Investors</em>
+   <td>
+       🙋🏻‍<br/>
+       <em>The multitude</em>
    </td>
-   <td>▪ Reduce your investment risk using the FAIRs liquidity
-<p>
-▪ Sell your FAIRs at public market price
-<p>
-▪ Sell your FAIRs at the pace you want
-<p>
-▪ Invest anywhere in the world
+   <td>
+       ▪ Get a share of the value created if the organization is successful
+       ▪ Enjoy the same long-term financial benefits as employees do
    </td>
   </tr>
   <tr>
-   <td>👨‍⚖️
-<p>
-<em>Regulators</em>
+   <td>
+       👩🏿‍💼<br/>
+       <em>Investors</em>
    </td>
-   <td>▪ Favor innovation in your jurisdiction to create new products and services
-<p>
-▪ Protect your citizens from scams with FAIR
-<p>
-▪ Collect taxes easily at the DAT level
+   <td>
+       ▪ Reduce your investment risk using the FAIRs liquidity
+       ▪ Sell your FAIRs at public market price
+       ▪ Sell your FAIRs at the pace you want
+       ▪ Invest anywhere in the world
    </td>
   </tr>
   <tr>
-   <td>🌎
-<p>
-<em>The planet</em>
+   <td>
+       👨‍⚖️<br/>
+       <em>Regulators</em>
    </td>
-   <td>▪ Founders can keep long-term control of their organization
-<p>
-▪ Investors are incentivized on the long-term
-<p>
-▪ Continuous Organizations are more inclusive than traditional organizations
+   <td>
+       ▪ Favor innovation in your jurisdiction to create new products and services
+       ▪ Protect your citizens from scams with FAIR
+       ▪ Collect taxes easily at the DAT level
+   </td>
+  </tr>
+  <tr>
+   <td>
+       🌎<br/>
+       <em>The planet</em>
+   </td>
+   <td>
+       ▪ Founders can keep long-term control of their organization
+       ▪ Investors are incentivized on the long-term
+       ▪ Continuous Organizations are more inclusive than traditional organizations
    </td>
   </tr>
 </table>
 
 
-<h3></h3>
-
-
-<h3>Use cases</h3>
+<h3 id="usecases">Use cases</h3>
 
 
 Ultimately, once the concept will be more mature, we believe that COs have the potential to become the de-facto standard form of organization for founders looking to start a new venture, be it nonprofit or for-profit. Until then, we think there are some use cases that could already make a lot of sense now, most notably:
 
 
+1.  **Long-term employee incentivisation**. Incentivizing employees is a key topic in any successful organization. Unfortunately, today's mechanisms are far from being perfect, especially for private organizations which shares are not publicly listed. Instead of giving employees equity directly or via stock options, an organization could use a _DAT_ to provide their employees with inalienable, liquid _FAIRs_ aligned to the success of the organization.
+2.  **Organizations with large contributive communities**. As of now, it is very difficult legally and technically to financially incentivize communities. If you have a platform business at a late stage (AirBnb, Uber, Yelp-like...) and wish to further engage your community in your platform, you start a _CO_ by setting up a _DAT_. Obviously, you would not funnel 100% of your revenues to the _CO_ immediately but maybe commit to buy every month a certain amount of tokens of the _DAT_. This way, you can very simply financially align your community to the success of your business. Plus, you can use the _FAIR_s to distribute them in the way you prefer to your community / employees etc... 
+3.  **Early startups bootstrapping their network effect**. Startup founders who develop marketplaces or any sort of 2-side networks always face a chicken-and-egg problem. By setting up a _CO_ and using _FAIRs_, they can solidly incentivize early adopters to join and contribute by aligning them to the long-term success of the project. Unlike today, FAIRs give early adopters the unique opportunity to get a fair part of the the upside of the platform value they contribute to create by joining and contributing early.
+4.  **Real estate tokenization**. Given that investors in a _Continuous Organizations_ are buying _FAIRs_ in anticipation of future cash-flows, it would make a lot of sense to use _CO_s to buy and tokenize real estate. Indeed, real estate is a well-known provider of steady and predictable cash-flows so such a project could create a CO to finance the acquisition of the real estate and provide its investors with predictable returns.
+5.  **Organization-less online communities**. You don't need a pre-existing organization to create a _CO_, nor do you need to incorporate one. Let's say you have a business idea and want to start a _CO_ out of a pure online community. The beneficiary of the _DAT_ could be simply a multisig wallet with the project leaders, the _DAT_ would pre-mint _FAIRs_ to distribute/incentivize the community and the **D** parameter of the _DAT_ would be set rather high to yield strong token dividends to the community when revenues are generated.
 
-1.  **Long-term employee incentivisation**. Incentivizing employees is a key topic in any successful organization. Unfortunately, today's mechanisms are far from being perfect, especially for private organizations which shares are not publicly listed. Instead of giving employees equity directly or via stock options, an organization could use a _DAT_ to provide their employees with inalienable, liquid _FAIR_s aligned to the success of the organization.
-1.  **Organizations with large contributive communities**. As of now, it is very difficult legally and technically to financially incentivize communities. If you have a platform business at a late stage (AirBnb, Uber, Yelp-like...) and wish to further engage your community in your platform, you start a _CO_ by setting up a _DAT_. Obviously, you would not funnel 100% of your revenues to the _CO_ immediately but maybe commit to buy every month a certain amount of tokens of the _DAT_. This way, you can very simply financially align your community to the success of your business. Plus, you can use the _FAIR_s to distribute them in the way you prefer to your community / employees etc... 
-1.  **Early startups bootstrapping their network effect**. Startup founders who develop marketplaces or any sort of 2-side networks always face a chicken-and-egg problem. By setting up a _CO_ and using _FAIR_s, they can solidly incentivize early adopters to join and contribute by aligning them to the long-term success of the project. Unlike today, FAIRs give early adopters the unique opportunity to get a fair part of the the upside of the platform value they contribute to create by joining and contributing early.
-1.  **Real estate tokenization**. Given that investors in a _Continuous Organizations_ are buying _FAIR_s in anticipation of future cash-flows, it would make a lot of sense to use _CO_s to buy and tokenize real estate. Indeed, real estate is a well-known provider of steady and predictable cash-flows so such a project could create a CO to finance the acquisition of the real estate and provide its investors with predictable returns.
-1.  **Organization-less online communities**. You don't need a pre-existing organization to create a _CO_, nor do you need to incorporate one. Let's say you have a business idea and want to start a _CO_ out of a pure online community. The beneficiary of the _DAT_ could be simply a multisig wallet with the project leaders, the _DAT_ would pre-mint _FAIR_s to distribute/incentivize the community and the **D** parameter of the _DAT_ would be set rather high to yield strong token dividends to the community when revenues are generated.
-
-<h3>Legal & Regulatory considerations</h3>
-
+<h3 id="legal">Legal & Regulatory considerations</h3>
 
 A _Continuous Organization_ rely on a _Decentralized Autonomous Trust_ (DAT) to operate so it is important to legally define this DAT and its various properties. Be careful about what is written in this section as it only reflects the author's opinion and is **definitely not** a legal opinion. If you have a legal opinion regarding your jurisdiction, please come and [engage with us](https://chat.c-org.co) in our discussion forum.
 
-<h4>DAT and assets</h4>
-
+<h4 id="assets">DAT and assets</h4>
 
 It is our belief that it should be pretty straightforward to transfer assets like intellectual property, shares, contracts etc... to a _DAT_. Having the ability to legally transfer assets to the _DAT_ would open the door to a lot more use cases and scenarios for _Continuous Organizations_.
 
-<h4>DAT and regulations</h4>
+<h4 id="regulations">DAT and regulations</h4>
 
+As a _Decentralized Autonomous Trust_ has no governance, it does not belong to anyone per se. To our knowledge, it has no equivalent in today's laws and is a new financial instrument. By spirit, it is close to an [_Irrevocable Trust_](https://www.investopedia.com/terms/i/irrevocabletrust.asp) with the code acting as the Trustee, the organization as the _Grantor_ and the _FAIRs_ holders as the _Beneficiaries_. On top, an _Irrevocable Trust_ has no legal entity, it is just a contract, like a DAT. However the comparison has its limit: Contrary to a _DAT_, an _Irrevocable Trust_ is not a vehicle in which investors can invest to receive securities on the Trust's assets.
 
-As a _Decentralized Autonomous Trust_ has no governance, it does not belong to anyone per se. To our knowledge, it has no equivalent in today's laws and is a new financial instrument. By spirit, it is close to an _Irrevocable Trust_[^27] with the code acting as the Trustee, the organization as the _Grantor_ and the _FAIR_s holders as the _Beneficiaries_. On top, an _Irrevocable Trust_ has no legal entity, it is just a contract, like a DAT. However the comparison has its limit: Contrary to a _DAT_, an _Irrevocable Trust_ is not a vehicle in which investors can invest to receive securities on the Trust's assets.
-
-To make it legally safe for organizations to use _DAT_s, we will likely have to work with regulators to have _DAT_s recognized and regulated as a new financial instrument. Even though it may sound difficult at first sight, we are confident that it is a reachable goal given the solid value proposition of _DAT_s for regulators (see the reasons in 
-
-<p id="gdcalert69" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Benefits"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert70">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Benefits](#heading=h.rpkk6jhnge3u)).
+To make it legally safe for organizations to use _DATs_, we will likely have to work with regulators to have _DATs_ recognized and regulated as a new financial instrument. Even though it may sound difficult at first sight, we are confident that it is a reachable goal given the solid value proposition of _DATs_ for regulators (see the reasons in [Benefits](#benefits))
 
 It is our belief that regulators will at least require a full KYC/AML for FAIRs holders as well as a reasonable tax withholding on the cash-flows that are managed by the _DAT_ (?). If you are a regulator or have strong knowledge and competencies in this area, please feel free to leave us a message [in our forum](https://chat.c-org.co), we are definitely wanting to work hand-in-hand with regulators around the world to make _Decentralized Autonomous Trusts_ a legal reality.
 
-<h3></h3>
 
+<h3 id="attacks">Attack vectors</h3>
 
-<h3>Attack vectors</h3>
+<h4 id="frontrunning">Front-running attack</h4>
 
+As perfectly stated in [Relevant's blog](https://blog.relevant.community/how-to-make-bonding-curves-for-continuous-token-models-3784653f8b17):
 
-<h4>Front-running attack</h4>
+> _«Bonding curves are susceptible to front-running attacks. This is when an adversary watches for a big buy order coming in and sends her own buy order with more gas to cut ahead of the original order. Once the original order is executed, the attacker sells her tokens at a guaranteed profit.»_
 
+One simple solution to these attacks is to set an upper limit on the amount of gas buyers and sellers can use in their transaction. Another, more robust but also more complex to implement, would be to implement a regular price fixing: Instead of the orders being executed immediately, they are instead batched into a pool of orders and, every _<interval>_ hours, the contract executes the trades taking into account the orders registered in the order book. It means that the trades are not executed immediately but it has the immense advantage of preventing front-running attacks. This is how the [Gnosis DutchX Decentralized exchange](https://blog.gnosis.pm/the-main-benefits-of-the-dutchx-mechanism-6fc2ef6ee8b4) works:
 
-As perfectly stated in Relevant's blog[^28]:
-
-
-    _«Bonding curves are susceptible to front-running attacks. This is when an adversary watches for a big buy order coming in and sends her own buy order with more gas to cut ahead of the original order. Once the original order is executed, the attacker sells her tokens at a guaranteed profit.»_
-
-One simple solution to these attacks is to set an upper limit on the amount of gas buyers and sellers can use in their transaction. Another, more robust but also more complex to implement, would be to implement a regular price fixing: Instead of the orders being executed immediately, they are instead batched into a pool of orders and, every _<interval>_ hours, the contract executes the trades taking into account the orders registered in the order book. It means that the trades are not executed immediately but it has the immense advantage of preventing front-running attacks. This is how the Gnosis DutchX Decentralized exchange works[^29]:
-
-
-    _«Hence, with batched orders entering the block at the time the auction clears with the same price for all bidders and sellers , neither miners nor the exchange itself, or other participants will be able to game the system.»_
+> _«Hence, with batched orders entering the block at the time the auction clears with the same price for all bidders and sellers , neither miners nor the exchange itself, or other participants will be able to game the system.»_
 
 Such a system would not penalize liquidity much if the price fixing is regular enough (every 6 hours in the case of DutchX) and has the huge advantage of preventing front-running.
 
-<h3>Conclusion</h3>
-
+<h3 id="conclusion">Conclusion</h3>
 
 Any type of organization, for-profit and nonprofit, can become a _Continuous Organizations_ by setting up a _Decentralized Autonomous Trust_ and funneling all or part of its cash-flows to it. _Continuous Organizations_ are a new type of internet-native organisations that are more efficient, stable and inclusive than traditional organisations. At the heart of _Continuous Organizations_ are fully digital liquid securities that align stakeholders' interests better than traditional organisations. _Continuous Organizations_ are easy to incorporate and their properties make them ideal to incentivize employees, grow and strengthen communities, create virtual online organisations.
 
 To continue the conversation and contribute, you are more than welcome to our [online forum](https://chat.c-org.co). You can also interact with us on [twitter](https://twitter.com/ContinuousOrg).
 
-<h2></h2>
 
-
-<h2>Annexes</h2>
+<h2 id="annexes">Annexes</h2>
 
 
 How to recalculate s, from R after each new transaction:
 
 
-
-<p id="gdcalert70" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous17.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert71">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Introducing-Continuous17.png "image_tooltip")
-
-
-
+<img src="images/proof.jpg" width="480" title="Proof" alt="Proof" />
 
 ## Notes
 
