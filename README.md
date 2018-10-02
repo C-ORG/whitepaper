@@ -12,7 +12,7 @@ Keywords: _FAIR Securities, Decentralized Autonomous Trust, Bonding Curve Smart-
 
 This research is financially supported by [The Family](https://www.thefamily.co/).
 
-Many thanks to those persons who have kindly contributed to this research through their valuable feedbacks and insights: Pierre-Louis Guhur (_Student - ENS Cachan_) ● Marie Ekeland (_Founder - Daphni_) ● Tonje Bakang (_Founder - Afrostream, Partner - The Family, Alumni - YC_) ● Solomon Hykes (_Founder - Docker, Partner - YC_) ● Andrea Luzzardi (_Software Engineer - Docker_) ● Samuel Alba (_Senior Director of Engineering - Docker_) ● Joris Delanoue (_Founder - Nexteem_) ● Oussama Ammar (_Founder - The Family_) ● Alexandre Obadia (_Research - Cambrial_) ● David Fauchier (_Founder - Cambrial_) ● Minh Ha Duong (_Principal - Cambrial_) ● Florent Artaud (_Founder - Ekwity_) ● Willy Braun (_Co-Founder - Daphni_) ● Franck Le Ouay (_Founder - Lifen_) ● Duc Ha Duong (_Founder - Officience_) ● Dimitri De Jonghe (_Founder - Ocean Protocol_) ● Jérôme de Tychey (Consensys) ● Kyle Hall (_Writer - The Family_).
+Many thanks to those persons who have kindly contributed to this research through their valuable feedbacks and insights: Pierre-Louis Guhur (_Student - ENS Cachan_) ● Marie Ekeland (_Founder - Daphni_) ● Tonje Bakang (_Founder - Afrostream, Partner - The Family, Alumni - YC_) ● Solomon Hykes (_Founder - Docker, Partner - YC_) ● Andrea Luzzardi (_Software Engineer - Docker_) ● Samuel Alba (_Senior Director of Engineering - Docker_) ● Joris Delanoue (_Founder - Nexteem_) ● Oussama Ammar (_Founder - The Family_) ● Alexandre Obadia (_Research - Cambrial_) ● David Fauchier (_Founder - Cambrial_) ● Minh Ha Duong (_Principal - Cambrial_) ● Florent Artaud (_Founder - Ekwity_) ● Willy Braun (_Co-Founder - Daphni_) ● Franck Le Ouay (_Founder - Lifen_) ● Duc Ha Duong (_Founder - Officience_) ● Dimitri De Jonghe (_Founder - Ocean Protocol_) ● Jérôme de Tychey (_Blockchain tech Lead - Consensys_) ● Kyle Hall (_Writer - The Family_).
 
 <h3>Abstract</h3>
 
@@ -635,10 +635,10 @@ Any type of organization, for-profit and non-profit, can become a _Continuous Or
 To continue the conversation and contribute, you are more than welcome to join our [online forum](https://chat.c-org.co). You can also interact with us on [Twitter](https://twitter.com/ContinuousOrg) or on our dedicated [Telegram channel](https://t.me/joinchat/BVqq1hHIqyWrIg_wCuIroQ).
 
 
-<h2 id="annexes">Annexes</h2>
+<h2 id="annexes">Annex</h2>
 
 
-How to recalculate s, from R after each new transaction:
+How to recalculate s from R after each new transaction:
 
 
 <img src="images/proof.jpg" width="480" title="Proof" alt="Proof" />
