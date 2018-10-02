@@ -418,7 +418,7 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
   </tr>
   <tr>
    <td>
-       <img src="images/Introducing-Continuous11.png" width="150" alt="Investment (buy)" title="Investment (buy)">
+       <img src="images/Introducing-Continuous11.png" width="250" alt="Investment (buy)" title="Investment (buy)">
        <p style="text-align:center;"><em>Investment (buy)</em></p>
    </td>
    <td>
@@ -429,7 +429,7 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
   </tr>
   <tr>
    <td>
-       <img src="images/Introducing-Continuous12.png" width="150" alt="Investment (sell)" title="Investment (sell)">
+       <img src="images/Introducing-Continuous12.png" width="250" alt="Investment (sell)" title="Investment (sell)">
        <p style="text-align:center;"><em>Investment (sell)</em></p>
    </td>
    <td>
@@ -440,7 +440,7 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
   </tr>
   <tr>
    <td>
-       <img src="images/Introducing-Continuous13.png" width="150" alt="Dividend payment" title="Dividend payment">
+       <img src="images/Introducing-Continuous13.png" width="300" alt="Dividend payment" title="Dividend payment">
        <p style="text-align:center;"><em>Dividend payment</em></p>
    </td>
    <td>
@@ -451,7 +451,7 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
   </tr>
   <tr>
    <td>
-       <img src="images/Introducing-Continuous14.png" width="150" alt="Revenues" title="Revenues">
+       <img src="images/Introducing-Continuous14.png" width="250" alt="Revenues" title="Revenues">
        <p style="text-align:center;"><em>Revenues</em></p>
    </td>
    <td>
