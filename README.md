@@ -418,72 +418,47 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
   </tr>
   <tr>
    <td>
-       
-<img src="images/Introducing-Continuous11.png" width="100" alt="Investment (buy)" title="Investment (buy)">
-
-<p style="align:center;"><em>Investment (buy)</em></p>
+       <img src="images/Introducing-Continuous11.png" width="150" alt="Investment (buy)" title="Investment (buy)">
+       <p style="text-align:center;"><em>Investment (buy)</em></p>
    </td>
-   <td>▪ The <em>DAT</em> receives ETH from the buying investor
-<p>
-▪ The <em>DAT</em> mints new FAIRs and send them to the buying investor.
-<p>
-▪ The sum invested is in part distributed to the beneficiary organization and in part saved in the <em>DAT</em> "buyback" reserve according to a pre-defined immutable function <strong>I</strong> (for <strong>i<em>nvestment</em></strong>).
+   <td>
+       ▪ The <em>DAT</em> receives ETH from the buying investor
+       ▪ The <em>DAT</em> mints new FAIRs and send them to the buying investor.
+       ▪ The sum invested is in part distributed to the beneficiary organization and in part saved in the <em>DAT</em> "buyback" reserve according to a pre-defined immutable function <strong>I</strong> (for <strong>i<em>nvestment</em></strong>).
    </td>
   </tr>
   <tr>
    <td>
-
-<p id="gdcalert64" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous12.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert65">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/Introducing-Continuous12.png" width="" alt="alt_text" title="image_tooltip">
-
-<p>
-<em>Investment (sell)</em>
+       <img src="images/Introducing-Continuous12.png" width="150" alt="Investment (sell)" title="Investment (sell)">
+       <p style="text-align:center;"><em>Investment (sell)</em></p>
    </td>
-   <td>▪ The <em>DAT</em> receives FAIR securities from the selling investor
-<p>
-▪ The <em>DAT</em> burns the received <em>FAIR</em>s and sends ETH back to the selling investor according to a function <strong>S</strong> (for <strong>s</strong>ell). <em>S</em> has a slope <em>s</em> that increase discretely over time, every time the <em>DAT</em> receives a payment.
-<p>
-▪ The ETH sent back to the investor is taken from the <em>DAT</em> "buyback" reserve and does <strong>not</strong> affect the organization's cash reserve.
+   <td>
+       ▪ The <em>DAT</em> receives FAIR securities from the selling investor
+       ▪ The <em>DAT</em> burns the received <em>FAIR</em>s and sends ETH back to the selling investor according to a function <strong>S</strong> (for <strong>s</strong>ell). <em>S</em> has a slope <em>s</em> that increase discretely over time, every time the <em>DAT</em> receives a payment.
+       ▪ The ETH sent back to the investor is taken from the <em>DAT</em> "buyback" reserve and does <strong>not</strong> affect the organization's cash reserve.
    </td>
   </tr>
   <tr>
    <td>
-
-<p id="gdcalert65" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous13.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert66">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/Introducing-Continuous13.png" width="" alt="alt_text" title="image_tooltip">
-
-<p>
-<em>Dividend payment</em>
+       <img src="images/Introducing-Continuous13.png" width="150" alt="Dividend payment" title="Dividend payment">
+       <p style="text-align:center;"><em>Dividend payment</em></p>
    </td>
-   <td>▪ the <em>DAT</em> receives ETH from the organization
-<p>
-▪ the <em>DAT</em> uses the funds to mint new <em>FAIR</em>s and distribute them to the current <em>FAIR</em> holders according to their holdings and their respective dividend bonuses.
-<p>
-▪ The funds used to mint the <em>FAIR</em>s are being saved in the <em>DAT</em> "buyback" reserve.
+   <td>
+       ▪ the <em>DAT</em> receives ETH from the organization
+       ▪ the <em>DAT</em> uses the funds to mint new <em>FAIR</em>s and distribute them to the current <em>FAIR</em> holders according to their holdings and their respective dividend bonuses.
+       ▪ The funds used to mint the <em>FAIR</em>s are being saved in the <em>DAT</em> "buyback" reserve.
    </td>
   </tr>
   <tr>
    <td>
-
-<p id="gdcalert66" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous14.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert67">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/Introducing-Continuous14.png" width="" alt="alt_text" title="image_tooltip">
-
-<p>
-<em>Revenues</em>
+       <img src="images/Introducing-Continuous14.png" width="150" alt="Revenues" title="Revenues">
+       <p style="text-align:center;"><em>Revenues</em></p>
    </td>
-   <td>▪ The <em>DAT</em> receives a payment from a customer
-<p>
-▪ The <em>DAT</em> transfers the revenues to the organization but retains a fraction <strong>D</strong> (for <strong>d<em>ividends</em></strong>) of the revenues to mint new <em>FAIR</em>s
-<p>
-▪ The new <em>FAIR</em>s are distributed among the existing <em>FAIR</em>s holders. 
-<p>
-▪ 100% of the funds used to mint the new <em>FAIR</em>s are saved in the <em>DAT</em> "buyback" reserve.
+   <td>
+       ▪ The <em>DAT</em> receives a payment from a customer
+       ▪ The <em>DAT</em> transfers the revenues to the organization but retains a fraction <strong>D</strong> (for <strong>d<em>ividends</em></strong>) of the revenues to mint new <em>FAIR</em>s
+       ▪ The new <em>FAIR</em>s are distributed among the existing <em>FAIR</em>s holders. 
+       ▪ 100% of the funds used to mint the new <em>FAIR</em>s are saved in the <em>DAT</em> "buyback" reserve.
    </td>
   </tr>
 </table>
@@ -491,68 +466,46 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
 
 Finally, a _DAT_ can be created with pre-minted FAIRs allocated to the organization that can then distribute them freely to stakeholders. However, it is important to note that these pre-minted FAIRs come at a cost as their are directly diluting future investors.
 
-<h4>Properties and incentives of a Continuous Organization</h4>
+<h4 id="properties">Properties and incentives of a Continuous Organization</h4>
 
+<h5 id="longterm">🌲 Long-term investment focus</h5>
 
-<h5>🌲 Long-term investment focus</h5>
+The spread that exists between the buy price and the sell price of _FAIR_s creates an incentive for investors to buy and hold _FAIRs_ until the _Continuous Organization_ starts generating revenues:
 
-
-The spread that exists between the buy price and the sell price of _FAIR_s creates an incentive for investors to buy and hold _FAIR_s until the _Continuous Organization_ starts generating revenues:
-
-
-
-1.  **Pre-revenue**. The price appreciation of _FAIR_s is due to investors' speculation as they anticipate future revenues.
-1.  **Post-revenues**. Once revenues begin to flow, the price appreciation of _FAIR_s starts being driven by the revenues generated by the organization as a fraction of the revenues is used to buy _FAIR_s and distribute them as dividends to the current token holders.
+1.  **Pre-revenue**. The price appreciation of _FAIRs_ is due to investors' speculation as they anticipate future revenues.
+2.  **Post-revenues**. Once revenues begin to flow, the price appreciation of _FAIRs_ starts being driven by the revenues generated by the organization as a fraction of the revenues is used to buy _FAIRs_ and distribute them as dividends to the current token holders.
 
 Combined with the dividend bonus described earlier, there is a clear incentive for investors to hold their tokens and act as long-term investors yet still retain liquidity power if they want to.
 
-<h5>🤝Secondary market</h5>
+<h5 id="secondary">🤝Secondary market</h5>
 
-
-The spread between the Buy and Sell curves also leaves space for a secondary market of _FAIR_s. If the current price of a newly minted _FAIR_ is 10, an investor would rather buy an already minted _FAIR_ from another investor willing to sell at a better price than the buyback price offered by the _DAT_.
+The spread between the Buy and Sell curves also leaves space for a secondary market of _FAIRs_. If the current price of a newly minted _FAIR_ is 10, an investor would rather buy an already minted _FAIR_ from another investor willing to sell at a better price than the buyback price offered by the _DAT_.
 
 Obviously, this secondary market is bounded in a dynamic price range imposed by the _DAT_: it would not make sense for a buyer to bid for a price higher than the current price proposed by the _DAT_. Likewise, it would not make sense for a seller to ask for a price lower than the price proposed by the _DAT_. 
 
-
-
-<p id="gdcalert67" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous15.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert68">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Introducing-Continuous15.png "image_tooltip")
-
+<img src="images/Introducing-Continuous15.png" width="300" alt="Secondary market" title="Secondary market">
 
 Said otherwise, an investor will always be better off buying or selling its _FAIRs_ in the secondary market, as the price will likely be better than the price proposed by the _DAT_.
 
-<h5>💧Guaranteed liquidity</h5>
+<h5 id="liquidity">💧Guaranteed liquidity</h5>
 
+One of the most valuable property of a _Continuous Organization_ is that the liquidity of _FAIRs_ is immediate and guaranteed. If an investor does not find a buyer or a seller in the secondary market, he can always buy or sell tokens to the _DAT_. By construction, the _DAT_ always has the funds to buyback _FAIRs_ at a price defined by the _S_ function. The _DAT_ really acts as the organization's central bank, minting new tokens when demand exceeds available supply and contracting the token supply when sellers outnumber buyers.
 
-One of the most valuable property of a _Continuous Organization_ is that the liquidity of _FAIR_s is immediate and guaranteed. If an investor does not find a buyer or a seller in the secondary market, he can always buy or sell tokens to the _DAT_. By construction, the _DAT_ always has the funds to buyback _FAIR_s at a price defined by the _S_ function. The _DAT_ really acts as the organization's central bank, minting new tokens when demand exceeds available supply and contracting the token supply when sellers outnumber buyers.
+In the proposed bonding curve model the buyback price (defined by the _S_ function) at a given supply is very low compared to the buy price (the _B_ function). So one could argue that, even if there is guaranteed liquidity, this liquidity has limited utility because investors would likely take a loss by selling to the _DAT_. This is true only if an investor buys _FAIRs_ and sell them back to the _DAT_ short after after.
 
-In the proposed bonding curve model the buyback price (defined by the _S_ function) at a given supply is very low compared to the buy price (the _B_ function). So one could argue that, even if there is guaranteed liquidity, this liquidity has limited utility because investors would likely take a loss by selling to the _DAT_. This is true only if an investor buys _FAIR_s and sell them back to the _DAT_ short after after.
+However, if the investors has more patience and if the organization develops well:
 
-However, if the investors has more patience and if the organization develops well::
-
-
-
-1.  more investors will buy _FAIR_s, thus increasing both the buy and the sell price to where the investor will turn a profit by selling its _FAIR_s back to the _DAT_.
-1.  the organization will start generating revenues, thus automatically distributing token dividends (using the mechanism described previously).
-1.  the organization can also start distributing dividends directly if it is doing well and sees an interest in doing so.
-
-Distributing token dividends has a double effect:
-
-
-
-    1.  significantly increasing sell price because these dividend tokens are bought from the _DAT_ and the funds are 100% saved in the buyback reserve, thus increasing the value of _s_ and with it the minimum sell price.
-    1.  increasing the investor's return on investment (ROI) as the investors can decide to immediately sell back the dividend tokens he received to cash them out.
+1.  more investors will buy _FAIRs_, thus increasing both the buy and the sell price to where the investor will turn a profit by selling its _FAIRs_ back to the _DAT_.
+2.  the organization will start generating revenues, thus automatically distributing token dividends (using the mechanism described previously).
+3.  the organization can also start distributing dividends directly if it is doing well and sees an interest in doing so. Distributing token dividends has a double effect:
+   1.  significantly increasing sell price because these dividend tokens are bought from the _DAT_ and the funds are 100% saved in the buyback reserve, thus increasing the value of _s_ and with it the minimum sell price.
+   2.  increasing the investor's return on investment (ROI) as the investors can decide to immediately sell back the dividend tokens he received to cash them out.
 
 Finally, it is good to keep in mind that the _DAT_ is only the last resort buyer. For a given supply, it is very likely that an investor could sell his tokens at a higher price than the price of the _DAT_ on the secondary market.
 
-<h5>💰 Continuous fundraising</h5>
+<h5 id="fundraising">💰 Continuous fundraising</h5>
 
-
-By construct, a _Continuous Organization_ is continuously fundraising as investors can permission-lessly buy and sell _FAIR_s of the organization at any time:
-
-
+By construct, a _Continuous Organization_ is continuously fundraising as investors can permission-lessly buy and sell _FAIRs_ of the organization at any time:
 
 *   Any increase in _FAIR_ supply (i.e. a _FAIR_ that is being minted by the _DAT_, not bought on the secondary market) directly translates into funding for the organization.
 *   Any decrease in _FAIR_ supply (i.e. a _FAIR_ that is being sold to the _DAT_, not sold on the secondary market) is being paid by the buyback reserve of the _DAT_ and does not affect the treasury of the organization.
@@ -561,13 +514,7 @@ Whereas in the traditional VC financing model, fundraising defocuses the entrepr
 
 To illustrate this, let's take the example of a _Continuous Organization_ which token price as measured by the buy function of the DAT follows the following very volatile curve **over time**:
 
- 
-
-<p id="gdcalert68" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous16.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert69">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/Introducing-Continuous16.png "image_tooltip")
-
 
 The zones in **blue** correspond to upward trends of the _FAIR_ price, which translates into the _Continuous Organization_ raising funds. Alternatively, the white zones are downward trends which translates into the _DAT_ (**not** the organization) buying back the _FAIR_s that are being sent to it using its buyback reserve.
 
