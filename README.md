@@ -73,7 +73,7 @@ Even though the "security" nature of _FAIR Securities_ (FAIR Securities undeniab
 
 <h3 id="context">Context</h3>
 
-[up⬆](#toc)
+[⬆](#toc)
 
 <h4 id="evolution">Organizations have evolved to adapt to the digital economy</h4>
 
