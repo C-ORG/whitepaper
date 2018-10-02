@@ -514,10 +514,9 @@ Whereas in the traditional VC financing model, fundraising defocuses the entrepr
 
 To illustrate this, let's take the example of a _Continuous Organization_ which token price as measured by the buy function of the DAT follows the following very volatile curve **over time**:
 
-![alt_text](images/Introducing-Continuous16.png "image_tooltip")
+<img src="images/vitality.png" width="400" title="Volatility" alt="Volatility" />
 
-The zones in **blue** correspond to upward trends of the _FAIR_ price, which translates into the _Continuous Organization_ raising funds. Alternatively, the white zones are downward trends which translates into the _DAT_ (**not** the organization) buying back the _FAIR_s that are being sent to it using its buyback reserve.
-
+The zones in **blue** correspond to upward trends of the _FAIR_ price, which translates into the _Continuous Organization_ raising funds. Alternatively, the white zones are downward trends which translates into the _DAT_ (**not** the organization) buying back the _FAIRs_ that are being sent to it using its buyback reserve.
 
 
 <h3>Benefits</h3>
@@ -534,7 +533,7 @@ _Continuous Organizations_ provide many benefits over traditional organizations 
    </td>
   </tr>
   <tr>
-   <td>🏃🏽‍
+   <td><span style="font-size:40px;">🏃🏽‍</span>
 <p>
 <em>Founders</em>
    </td>
