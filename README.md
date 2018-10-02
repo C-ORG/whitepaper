@@ -56,9 +56,15 @@ Even though the "security" nature of _FAIR Securities_ (FAIR Securities undeniab
       4. [Revenues](#revenues)
       5. [Summary](#summary)
    3. [Properties and incentives of a Continuous Organization](#properties)
+      1. [Long-term investment focus](#longterm)
+      2. [Secondary market](#secondary)
+      3. [Guaranteed liquidity](#liquidity)
+      4. [Continuous fundraising](#fundraising)
    4. [Benefits](#benefits)
 3. [Use cases](#usecases)
 4. [Legal & Regulatory considerations](#legal)
+   1. [DAT and assets](#assets)
+   2. [DAT and regulations](#regulations)
 5. [Attack vectors](#attacks)
    1. [Front-running attack](#frontrunning)
 6. [Conclusion](#conclusion)
@@ -552,7 +558,7 @@ _Continuous Organizations_ provide many benefits over traditional organizations 
        <em>Employees</em>
    </td>
    <td>
-       ▪ Align your personal financial interest with that of the organization
+       ▪ Align your personal financial interest with that of the organization<br/>
        ▪ Sell your FAIRs when it makes sense for you
    </td>
   </tr>
@@ -562,7 +568,7 @@ _Continuous Organizations_ provide many benefits over traditional organizations 
        <em>The multitude</em>
    </td>
    <td>
-       ▪ Get a share of the value created if the organization is successful
+       ▪ Get a share of the value created if the organization is successful<br/>
        ▪ Enjoy the same long-term financial benefits as employees do
    </td>
   </tr>
@@ -572,9 +578,9 @@ _Continuous Organizations_ provide many benefits over traditional organizations 
        <em>Investors</em>
    </td>
    <td>
-       ▪ Reduce your investment risk using the FAIRs liquidity
-       ▪ Sell your FAIRs at public market price
-       ▪ Sell your FAIRs at the pace you want
+       ▪ Reduce your investment risk using the FAIRs liquidity<br/>
+       ▪ Sell your FAIRs at public market price<br/>
+       ▪ Sell your FAIRs at the pace you want<br/>
        ▪ Invest anywhere in the world
    </td>
   </tr>
@@ -584,8 +590,8 @@ _Continuous Organizations_ provide many benefits over traditional organizations 
        <em>Regulators</em>
    </td>
    <td>
-       ▪ Favor innovation in your jurisdiction to create new products and services
-       ▪ Protect your citizens from scams with FAIR
+       ▪ Favor innovation in your jurisdiction to create new products and services<br/>
+       ▪ Protect your citizens from scams with FAIR<br/>
        ▪ Collect taxes easily at the DAT level
    </td>
   </tr>
@@ -595,8 +601,8 @@ _Continuous Organizations_ provide many benefits over traditional organizations 
        <em>The planet</em>
    </td>
    <td>
-       ▪ Founders can keep long-term control of their organization
-       ▪ Investors are incentivized on the long-term
+       ▪ Founders can keep long-term control of their organization<br/>
+       ▪ Investors are incentivized on the long-term<br/>
        ▪ Continuous Organizations are more inclusive than traditional organizations
    </td>
   </tr>
