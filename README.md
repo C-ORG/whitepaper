@@ -2,9 +2,11 @@
 
 _**Aligning stakeholders’ financial interests in the Digital Economy**_
 
-* _Author: [Thibauld Favre](https://twitter.com/thibauld)_
-* _Version: 0.9_
-* _Keywords: FAIR Securities, Decentralized Autonomous Trust, Bonding Curve Smart-Contract, Multitude_
+Author: _[Thibauld Favre](https://twitter.com/thibauld)_
+
+Version: _0.9_
+
+Keywords: _FAIR Securities, Decentralized Autonomous Trust, Bonding Curve Smart-Contract, Multitude_
 
 <h3>Acknowledgments </h3>
 
