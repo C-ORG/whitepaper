@@ -422,8 +422,8 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
        <p style="text-align:center;"><em>Investment (buy)</em></p>
    </td>
    <td>
-       ▪ The <em>DAT</em> receives ETH from the buying investor
-       ▪ The <em>DAT</em> mints new FAIRs and send them to the buying investor.
+       ▪ The <em>DAT</em> receives ETH from the buying investor<br/>
+       ▪ The <em>DAT</em> mints new FAIRs and send them to the buying investor.<br/>
        ▪ The sum invested is in part distributed to the beneficiary organization and in part saved in the <em>DAT</em> "buyback" reserve according to a pre-defined immutable function <strong>I</strong> (for <strong>i<em>nvestment</em></strong>).
    </td>
   </tr>
@@ -433,19 +433,19 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
        <p style="text-align:center;"><em>Investment (sell)</em></p>
    </td>
    <td>
-       ▪ The <em>DAT</em> receives FAIR securities from the selling investor
-       ▪ The <em>DAT</em> burns the received <em>FAIR</em>s and sends ETH back to the selling investor according to a function <strong>S</strong> (for <strong>s</strong>ell). <em>S</em> has a slope <em>s</em> that increase discretely over time, every time the <em>DAT</em> receives a payment.
+       ▪ The <em>DAT</em> receives FAIR securities from the selling investor<br/>
+       ▪ The <em>DAT</em> burns the received <em>FAIR</em>s and sends ETH back to the selling investor according to a function <strong>S</strong> (for <strong>s</strong>ell). <em>S</em> has a slope <em>s</em> that increase discretely over time, every time the <em>DAT</em> receives a payment.<br/>
        ▪ The ETH sent back to the investor is taken from the <em>DAT</em> "buyback" reserve and does <strong>not</strong> affect the organization's cash reserve.
    </td>
   </tr>
   <tr>
    <td>
-       <img src="images/Introducing-Continuous13.png" width="300" alt="Dividend payment" title="Dividend payment">
+       <img src="images/Introducing-Continuous13.png" width="350" alt="Dividend payment" title="Dividend payment">
        <p style="text-align:center;"><em>Dividend payment</em></p>
    </td>
    <td>
-       ▪ the <em>DAT</em> receives ETH from the organization
-       ▪ the <em>DAT</em> uses the funds to mint new <em>FAIR</em>s and distribute them to the current <em>FAIR</em> holders according to their holdings and their respective dividend bonuses.
+       ▪ the <em>DAT</em> receives ETH from the organization<br/>
+       ▪ the <em>DAT</em> uses the funds to mint new <em>FAIR</em>s and distribute them to the current <em>FAIR</em> holders according to their holdings and their respective dividend bonuses.<br/>
        ▪ The funds used to mint the <em>FAIR</em>s are being saved in the <em>DAT</em> "buyback" reserve.
    </td>
   </tr>
@@ -455,9 +455,9 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
        <p style="text-align:center;"><em>Revenues</em></p>
    </td>
    <td>
-       ▪ The <em>DAT</em> receives a payment from a customer
-       ▪ The <em>DAT</em> transfers the revenues to the organization but retains a fraction <strong>D</strong> (for <strong>d<em>ividends</em></strong>) of the revenues to mint new <em>FAIR</em>s
-       ▪ The new <em>FAIR</em>s are distributed among the existing <em>FAIR</em>s holders. 
+       ▪ The <em>DAT</em> receives a payment from a customer<br/>
+       ▪ The <em>DAT</em> transfers the revenues to the organization but retains a fraction <strong>D</strong> (for <strong>d<em>ividends</em></strong>) of the revenues to mint new <em>FAIR</em>s<br/>
+       ▪ The new <em>FAIR</em>s are distributed among the existing <em>FAIR</em>s holders.<br/>
        ▪ 100% of the funds used to mint the new <em>FAIR</em>s are saved in the <em>DAT</em> "buyback" reserve.
    </td>
   </tr>
