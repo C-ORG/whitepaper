@@ -291,13 +291,13 @@ So, in our example: `C=10*10/2=50`.
 <h4 id="dat">The Decentralized Autonomous Trust</h4>
 
 
-In the case of _Continuous Organizations_, we introduce _cash-flow based bonding curve_: a bonding curve that uses 2 different functions, one for the buy curve and another for the sell curve: **B** (for _<span style="text-decoration:underline;">b</span>_uy) and **S** (for _<span style="text-decoration:underline;">s</span>_ell) with <img src="https://latex.codecogs.com/gif.latex?B(x)>S(x)&space;\forall&space;x&space;\in&space;[0;\infty[" />.
+In the case of _Continuous Organizations_, we introduce _cash-flow based bonding curve_: a bonding curve that uses 2 different functions, one for the buy curve and another for the sell curve: **B** (for **b**uy) and **S** (for **s**ell) with <img src="https://latex.codecogs.com/gif.latex?B(x)>S(x)&space;\forall&space;x&space;\in&space;[0;\infty[" />.
 
 <img src="images/Introducing-Continuous2.png" width="580" title="Buy and Sell curves" alt="Buy and Sell curves" />
 
 The bonding curve contract of a _Decentralized Autonomous Trust_ issues _FAIR Securities_ (_FAIRs_). These _FAIR Securities_ represent a claim on the _DAT_'s future cash-flows. It is important to note that, unlike a stock, a _FAIR_ does not represent a claim on the organization ownership, it only carries a financial right on the future cash-flows managed by the _DAT_.
 
-The function _B_ defines the price at which _FAIRs_ can be bought from the _DAT_. _B_ is a linear function and has a positive slope **_b_** such that `B(x)=b*x` where <img src="https://latex.codecogs.com/gif.latex?b\in&space;R" /> and `b>0`. The slope _b_ can be chosen arbitrarily. The higher _b is_, the more value unit tokens will have and vice-versa the lower _b is_, the less value unit tokens will have.
+The function _B_ defines the price at which _FAIRs_ can be bought from the _DAT_. _B_ is a linear function and has a positive slope **_b_** such that `B(x)=b*x` where <img src="https://latex.codecogs.com/gif.latex?b\in&space;R" /> and `b>0`. The slope _b_ can be chosen arbitrarily. The higher _b_ is, the more value unit tokens will have and vice-versa the lower _b_ is, the less value unit tokens will have.
 
 If you want your investors to have a lot of tokens, pick a very small value for b (like 1x10^(-9)). It has no financial impact, it only allows higher granularity for fractional ownership.
 
@@ -305,34 +305,13 @@ The function _S_ defines the price at which _FAIRs_ are bought back by the _DAT_
 
 <h5>📈 Investments - Buy</h5>
 
+The first (in "time", not in "proportion") source of cash-flow for a Continuous Organization are investors who want to invest in the _Continuous Organization_. Whenever an investor sends funds to the _DAT_, a fraction of the funds sent is being held in the "buyback" reserve by the _DAT_ and the rest of the funds are being transferred to the organization's wallet. We'll call **I** (for **i**nvest) the percentage of the funds being held with <img src="https://latex.codecogs.com/gif.latex?I=\frac{s_{0}}{b}" />. Please note that `I` is a function of `s<sub>0</sub>`, the slope of `S` at `t=0`, and not `s<sub>t</sub>` so `I` is constant.
 
-The first (in "time", not in "proportion") source of cash-flow for a Continuous Organization are investors who want to invest in the _Continuous Organization_. Whenever an investor sends funds to the _DAT_, a fraction of the funds sent is being held in the "buyback" reserve by the _DAT_ and the rest of the funds are being transferred to the organization's wallet. We'll call **I** (for **i**nvest) the percentage of the funds being held with 
-
-<p id="gdcalert32" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert33">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-. Please note that I is a function of s<sub>0</sub>, the slope of S at 
-
-<p id="gdcalert33" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert34">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-, and not s<sub>t</sub> so I is constant.
-
-
-
-<p id="gdcalert34" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous3.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert35">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Introducing-Continuous3.png "image_tooltip")
-
+<img src="images/Introducing-Continuous3.png" width="580" title="Investments - Buy" alt="Investments - Buy" />
 
 _Value flow when an investment occurs_
 
-
-
-<p id="gdcalert35" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Introducing-Continuous4.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert36">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Introducing-Continuous4.png "image_tooltip")
-
+<img src="images/Introducing-Continuous4.png" width="300" title="Investments - Buy - Impact on bonding curve" alt="Investments - Buy - Impact on bonding curve" />
 
 _Impact on the Bonding Curve Contract of the DAT when an investment occurs_
 
