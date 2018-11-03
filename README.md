@@ -237,7 +237,7 @@ Given the above, it is expected that most projects will fail and are [bad](https
 
 <h5 id="theugly">💩The Ugly</h5>
 
-At the time of writing this paper (September 2018), it has been now established that, unless an ICO takes place within the context of a reputable platform (i.e. CoinList, which is very selective or, to a lesser degree, TokenFoundry to a lesser degree...), odds are that the ICO is a scam and you should be very cautious before investing. Indeed, due to the legal uncertainty around ICOs, the most promising projects now raise money privately and only use ICOs (or pure Airdrops) as a way to boost their community-building efforts.
+At the time of writing this paper (September 2018), it has been now established that, unless an ICO takes place within the context of a reputable platform (i.e. CoinList, which is very selective or, to a lesser degree, TokenFoundry...), odds are that the ICO is a scam and you should be very cautious before investing. Indeed, due to the legal uncertainty around ICOs, the most promising projects now raise money privately and only use ICOs (or pure Airdrops) as a way to boost their community-building efforts.
 
 It is sad to see that many of the ICOs on the market are scams. In the best case scenario, they are promoted by well-intentioned founders who mistook an ICO for a Series A fundraising round. In the worst-case scenario, these ICOs are simply engineered by scammers trying to abuse unsophisticated investors to get rich quick. Needless to say that, in this context, it is hard not to see the ICO market for utility tokens [dying off](https://coincentral.com/multibillion-dollar-ico-market-down/).
 
