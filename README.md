@@ -346,7 +346,7 @@ so
 
  _(proof available in Annex)_ 
 
-_Example_: Say I=10%, D=10% and b=1. Assume an investor buys the first 10 tokens for 50 ETH, so the _DAT_ now has 50*10%=5 ETH in reserve. Then, the _DAT_ receives a payment of 10 ETH from revenues. From this payment, 10*10%=1 ETH is used to mint 0.0995 tokens (we'll leave this as an exercise for the reader. Hint: the equation to solve is <img src="https://latex.codecogs.com/gif.latex?x^{2}+20x-2=0" />), which gives s<sub>1</sub>=0.1176, which is indeed superior to I.
+_Example_: Say I=10%, D=10% and b=1. Assume an investor buys the first 10 tokens for 50 ETH, so the _DAT_ now has 50\*10%=5 ETH in reserve. Then, the _DAT_ receives a payment of 10 ETH from revenues. From this payment, 10\*10%=1 ETH is used to mint 0.0995 tokens (we'll leave this as an exercise for the reader. Hint: the equation to solve is <img src="https://latex.codecogs.com/gif.latex?x^{2}+20x-2=0" />), which gives s<sub>1</sub>=0.1176, which is indeed superior to I.
 
 <h6>Dividend bonus</h6>
 
