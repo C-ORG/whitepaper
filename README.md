@@ -336,7 +336,7 @@ The biggest difference between an investment cash-flow and a dividend cash-flow 
 1.  **investment**: an amount M contributes `I*M` to the _DAT_'s reserve while minting the value equivalent of M, thus a contribution ratio of `(I*M)/M=I` and by construction I<<100%
 2.  **dividend**: an amount M contributes `M` to the _DAT_'s reserve while minting the value equivalent of `M`, thus a contribution ratio of `M/M=100%`
 
-So we have <img src="https://latex.codecogs.com/gif.latex?I\leq&space;s_{t}\leq1" /> (remember from above that s<sub>t</sub> is the slope of the sell function at time _t_). As we saw that s<sub>0</sub>=I this means that everytime a dividend is received by the _DAT_, _s_ increases in value. After each transaction, _s_ can be recalculated from the amount in reserve R<sub>t</sub>:
+So we have <img src="https://latex.codecogs.com/gif.latex?I\leq&space;s_{t}\leq1" /> (remember from above that s<sub>t</sub> is the slope of the sell function at time _t_). As we saw that s<sub>0</sub>=I this means that everytime a dividend is received by the _DAT_, _s_ increases in value. After each transaction, _s_ can be recalculated from the amount in reserve R<sub>t</sub> (where d is the dividends amount in ETH and a the amount of tokens right before the dividends are paid):
 
 <img src="https://latex.codecogs.com/gif.latex?R_{t}=\int_{0}^{x}S_{t}(x)dx=\int_{0}^{x}s_{t}xdx=\frac{s_{t}x^{2}}{2}" />
 
