@@ -4,7 +4,9 @@ _**Aligning stakeholders’ financial interests in the Digital Economy**_
 
 Author: _[Thibauld Favre](https://twitter.com/thibauld)_
 
-Version: _0.9_
+Version: _1.0_
+
+Last update: _Jan 8th 2019_
 
 Keywords: _FAIR Securities, Decentralized Autonomous Trust, Bonding Curve Smart-Contract, Multitude_
 
@@ -37,12 +39,13 @@ Even though the "security" nature of _FAIR Securities_ (FAIR Securities undeniab
 
 1. [Context](#context)
    1. [Organizations have evolved and adapted to the digital economy](#evolution)
-   2. [The rise of the multitude](#multitude)
+   2. [The rise of the multitude](#multituderise)
    3. [New challenges](#challenges)
       1. [For founders](#founders)
       2. [For employees](#employees)
       3. [For the multitude](#multitude)
       4. [For investors](#investors)
+      5. [For regulators](#regulators)
       5. [For the planet](#planet)
    4. [ICOs: An initial (insufficient) answer to a real challenge](#ico)
       1. [The principle](#principle)
@@ -54,8 +57,8 @@ Even though the "security" nature of _FAIR Securities_ (FAIR Securities undeniab
    2. [The Decentralized Autonomous Trust](#dat)
       1. [Investment - Buy](#buy)
       2. [Investment - Sell](#sell)
-      3. [Dividends](#dividends)
-      4. [Revenues](#revenues)
+      3. [Revenues - Pay](#pay)
+      4. [Pre-minted FAIR pool](#pre-mint)
       5. [Summary](#summary)
    3. [Properties and incentives of a Continuous Organization](#properties)
       1. [Long-term investment focus](#longterm)
@@ -134,7 +137,7 @@ As the world transitions from the industrial age to the digital age, the legal s
 
 But despite this massive evolution of organizations, we still use the same type of legal entities to operate our businesses. These legal entities were designed within nation states to address the needs of organizations in the Industrial Age. They are ill-suited in the age of ubiquitous computing and networks, where organizations harness the power of the multitude to achieve increasing returns to scale, blurring the line between users and workers. To illustrate: an Uber driver is at the same time a user of Uber and a worker for Uber. Same goes for the renter of a flat on Airbnb. A Facebook user is also a (unpaid) Facebook worker etc...
 
-<h4 id="multitude">The rise of the multitude</h4>
+<h4 id="multituderise">The rise of the multitude</h4>
 
 [Nicolas Colin](https://www.ft.com/stream/3fd492f4-09b7-3f07-a744-b322b5bd015c), a colleague of mine at [The Family](https://thefamily.co/), succintly described the situation in his book "[Hedge](https://www.amazon.com/Hedge-Greater-Safety-Net-Entrepreneurial/dp/1718917082/)":
 
@@ -249,7 +252,7 @@ A _Continuous Organization_ is an organization that issues fully digital securit
 
 In the following examples, we are using ETH (the currency of the Ethereum blockchain) as the currency to interact with the DAT. ETH is the native currency for an Ethereum-based DAT. It does not mean that end users (individuals and organizations) will necessarily have to manipulate ETH to interact with DATs. One can envision a future where services are created to allow end users to use fiat currency like USD or EUR to interact with a DAT, greatly simplifying the user experience. 
 
-<h4>Understanding the token bonding curve model</h4>
+<h4 id="bondingcurve">Understanding the token bonding curve model</h4>
 
 Many individuals have explored [the](https://blog.oceanprotocol.com/introducing-the-equilibrium-bonding-market-e7db528e0eff) [bonding](https://tokeneconomy.co/token-bonding-curves-in-practice-3eb904720cb8) [curve](https://medium.com/@hayeah/code-analysis-of-fomo3d-pricing-and-dividends-6fb267bbf3a7) [model](https://medium.com/thoughtchains/on-single-bonding-curves-for-continuous-token-models-a167f5ffef89) since [Simon De La Rouvière](https://twitter.com/simondlr) first came up with [the idea](https://medium.com/@simondlr/tokens-2-0-curved-token-bonding-in-curation-markets-1764a2e0bee5) in 2017.
 
@@ -348,11 +351,7 @@ so
 
 _Example_: Say I=10%, D=10% and b=1. Assume an investor buys the first 10 tokens for 50 ETH, so the _DAT_ now has 50*10%=5 ETH in reserve. Then, the _DAT_ receives a payment of 10 ETH from revenues. From this payment, 10*10%=1 ETH is used to mint 0.0995 tokens (we'll leave this as an exercise for the reader. Hint: the equation to solve is <img src="https://latex.codecogs.com/gif.latex?x^{2}+20x-2=0" />), which gives s<sub>1</sub>=0.1176, which is indeed superior to I.
 
-<h6>Dividend bonus</h6>
-
-Finally, to incentivize long-term _FAIR_ holders, the _DAT_ also has a dividend bonus mechanism that enables long-term token holders to enjoy a higher dividend than short-term token holders. The mechanism is the following: each month an investor holding a _FAIR_ sees their dividend bonus increase until the maximum dividend bonus **M** is reached after holding the _FAIR_ for **H** months. When a FAIR is sold or transferred, M is reset to 0.
-
-<h5 id="revenues">💲 Revenues</h5>
+<h5 id="pay">💲 Pay</h5>
 
 For some _Continuous Organizations_ (_COs_ with no underlying legal entity, for example), it can make sense to receive their customers' payments (i.e. the _CO_'s revenues) through the _DAT_. It is important to note that it is not mandatory for the organization's revenues to funnel through the _DAT_ as the organization can also decide to _only_ reward _FAIRs_ holders through dividends.
 
@@ -483,7 +482,7 @@ However, if the investors have more patience and if the organization develops we
    1.  significantly increasing sell price because these dividend tokens are bought from the _DAT_ and the funds are 100% saved in the buyback reserve, thus increasing the value of _s_ and with it the minimum sell price.
    2.  increasing the investor's return on investment (ROI) as the investors can decide to immediately sell back the dividend tokens they received to cash them out.
 
-Finally, it is good to keep in mind that the _DAT_ is only the buyer-of-last-resort. For a given supply, it is very likely that an investor could sell their tokens at a higher price than the price of the _DAT_ on the secondary market.
+Finally, it is good to keep in mind that the _DAT_ is only the buyer-of-last-resort. It is very likely that an investor could sell their tokens on the secondary market at a higher price than the "buy-back price" offered by the _DAT_ for a given supply.
 
 <h5 id="fundraising">💰 Continuous fundraising</h5>
 
@@ -501,7 +500,7 @@ To illustrate this, let's take the example of a _Continuous Organization_ whose 
 The zones in **blue** correspond to upward trends of the _FAIR_ price, which translates into the _Continuous Organization_ raising funds. Alternatively, the white zones are downward trends which translates into the _DAT_ (**not** the organization) buying back the _FAIRs_ that are being sent to it using its buyback reserve.
 
 
-<h3>Benefits</h3>
+<h4 id="benefits">Benefits</h4>
 
 
 _Continuous Organizations_ provide many benefits over traditional organizations for all stakeholders, most notably:
