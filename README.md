@@ -250,7 +250,7 @@ A _Continuous Organization_ is an organization that issues fully digital securit
 
 **Important note about the currency used to interact with a DAT**
 
-In the following examples, we are using ETH (the currency of the Ethereum blockchain) as the currency to interact with the DAT. ETH is the native currency for an Ethereum-based DAT. It does not mean that end users (individuals and organizations) will necessarily have to manipulate ETH to interact with DATs. One can envision a future where services are created to allow end users to use fiat currency like USD or EUR to interact with a DAT, greatly simplifying the user experience. 
+In the following examples, we are using ETH (the currency of the Ethereum blockchain) as the currency to interact with the DAT. ETH is the native currency for an Ethereum-based DAT. It does not mean that end users (individuals and organizations) will necessarily have to manipulate ETH to interact with DATs. First, ETH can be replaced by a stablecoin (like [DAI](https://makerdao.com/dai/)) to remove the volatility associated with ETH. Second, one can also envision a future where services are created to allow end users to use fiat currency like USD or EUR to interact with a DAT, greatly simplifying the user experience. 
 
 <h4 id="bondingcurve">Understanding the token bonding curve model</h4>
 
@@ -277,9 +277,7 @@ It is important to note that in a bonding curve model, the x-axis represents the
 
 So, in our example: `C=10*10/2=50`.
 
-
 <h4 id="dat">The Decentralized Autonomous Trust</h4>
-
 
 In the case of _Continuous Organizations_, we introduce the _cash-flow-based bonding curve_: a bonding curve that uses 2 different functions, one for the buy curve and another for the sell curve: **B** (for **b**uy) and **S** (for **s**ell) with <img src="https://latex.codecogs.com/gif.latex?B(x)>S(x)&space;\forall&space;x&space;\in&space;[0;\infty[" />.
 
@@ -295,7 +293,7 @@ The function _S_ defines the price at which _FAIRs_ are bought back by the _DAT_
 
 <h5 id="buy">📈 Investments - Buy</h5>
 
-The first (in "time", not in "proportion") source of cash-flows for a Continuous Organization are investors who want to invest in the _Continuous Organization_. Whenever an investor sends funds to the _DAT_, a fraction of the funds sent is being held in the "buyback" reserve by the _DAT_ and the rest of the funds are being transferred to the organization's wallet. We'll call **I** (for **i**nvest) the percentage of the funds being held with <img src="https://latex.codecogs.com/gif.latex?I=\frac{s_{0}}{b}" />. Please note that I is a function of s<sub>0</sub>, the slope of S at t=0 so I is constant.
+The first (in "time", not in "proportion") source of cash-flows for a Continuous Organization are investors who want to invest in the _Continuous Organization_. They do that by calling the `buy()` function of the _DAT_. Whenever an "external" investor (as opposed to the organization itself) sends funds to the _DAT_, a fraction of the funds sent is being held in the "buyback" reserve by the _DAT_ and the rest of the funds are being transferred to the organization's wallet. We'll call **I** (for **i**nvest) the percentage of the funds being held in the buyback reserve. **I** is a constant.
 
 <img src="images/Introducing-Continuous3.png" width="580" title="Investments - Buy" alt="Investments - Buy" />
 
@@ -309,9 +307,67 @@ The investors buying tokens are doing so to invest money in the underlying organ
 
 _Example_: Let's say that an investor sends 10 ETH to the _DAT_, if I=10% then the _DAT_ will transfer 9 ETH to the organization's wallet and will keep 1 ETH in its "buyback" reserve.
 
+The rules described above do not apply if the investor is the beneficiary organization, that is, if the organization is technically _investing in itself_. In that case, I is always equal to 100%. It means that whenever an organization is investing in its _DAT_, 100% of the amount invested by the organization to buy _FAIRs_ goes to the buy-back reserve. For more information, see the <a href="#fairpurchase"><i>FAIRs purchase by the beneficiary organization</i></a> section below.
+
+<h6>Calculus</h6>
+
+When an investor buys _FAIRs_ for a cost `c`, he receives `x` _FAIRs_, with `x` being equal to:
+
+<img src="https://latex.codecogs.com/gif.latex?x=\sqrt{\frac{2c}{b}+a^2}-a" title="Number of FAIRs acquired for a cost c" /> (see proof in Annex)
+
+with `c` the amount used to buy _FAIRs_, `b` the sell slope and `a` the number of _FAIRs_ already in circulation before the transaction.
+
+<h5 id="fairpurchase">🏢 FAIRs purchase by the beneficiary organization</h5>
+
+At any time, the beneficiary organization can decide to buy _FAIRs_. To do that, the beneficiary organization calls the `buy()` function like any other investor, however, unlike external investors, the funds sent by the beneficiary organization to purchase _FAIRs_ are 100% funneled to the buyback reserve (i.e the contribution ratio `I` is equal to 100% when funds come from the beneficiary organization).
+
+This guarantees a total alignment of interests between all investors. Indeed, if the beneficiary organization was able to buy _FAIRs_ with the same investment ratio I than external investors, it would concretely mean that the beneficiary organization is able to buy _FAIRs_ for a fraction of the price compared to external investors (because the organization receives by definition `(1-I)%` of the amount invested). This difference could easily be abused by dishonest organizations and managers.
+
+Purchasing _FAIRs_ is also the way for the organization to reward _FAIRs_ holders. Indeed, when the beneficiary organization buys _FAIRs_, not only does it increase the buy-back reserve, it also increases the slope of the selling curve (see detailed explanation below).
+
+<img src="images/CO-token-buyback.PNG" width="380" title="FAIRs purchase flow" alt="FAIRs purchase flow" />
+
+_Value flow when the beneficiary organization purchases FAIRs_
+
+<img src="images/CO-token-buyback-curve.png" width="350" title="FAIRs purchase impact" alt="FAIRs purchase impact" />
+
+_Impact on the Bonding Curve when the beneficiary organization purchases FAIRs_
+
+The difference between an investment by an external investor and a _FAIRs_ purchase by the beneficiary organization is their respective _contribution ratio_ to the _DAT_'s reserve:
+
+1.  **investment by external investor**: an amount M contributes `I*M` to the _DAT_'s reserve while minting the value equivalent of M, thus a contribution ratio of `(I*M)/M=I` and by construction I<<100%
+2.  **FAIRs purchase by beneficiary organization**: an amount M contributes `M` to the _DAT_'s reserve while minting the value equivalent of `M`, thus a contribution ratio of `M/M=100%`
+
+After each transaction, _s_ can be recalculated from the amount in reserve R<sub>t</sub>:
+
+<img src="https://latex.codecogs.com/gif.latex?R_{t}=\int_{0}^{x}S_{t}(x)dx=\int_{0}^{x}s_{t}xdx=\frac{s_{t}x^{2}}{2}" />
+
+so 
+
+<img src="https://latex.codecogs.com/gif.latex?s_{t}=\frac{2R_{t}}{x^{2}}=\frac{2R}{\frac{2d}{b}+a^{2}}" /> &nbsp;&nbsp;_(see proof in Annex)_ 
+
+_Example_: Say I=10%, s<sub>0</sub>=0.1 and b=1. Assume an investor buys the first 10 tokens for 50 ETH, so the _DAT_ now has 50x10%=5 ETH in reserve. Then, the beneficiary organization buys _FAIRs_ for 1 ETH of value. This 1 ETH is used to mint 0.0995 tokens (we'll leave this as an exercise for the reader. Hint: the equation to solve is <img src="https://latex.codecogs.com/gif.latex?x^{2}+20x-2=0" />), which gives s<sub>1</sub>=0.1176. So, the operation increased value for _FAIRs_ holders as s<sub>1</sub>>s<sub>0</sub>, that is, they can now sell their _FAIRs_ at a higher value than before.
+
+<h5 id="burn">🔥 Burning _FAIRs_</h5>
+
+A _FAIRs_ holder can at anytime take the decision to burn its _FAIRs_ by calling the `burn()` function.
+
+Burning _FAIRs_ destroys them so that no one will ever be able to use them. If it makes little sense for an investor to do so with its _FAIRs_, but it does make sense for the beneficiary organization to be able to burn its _FAIRs_ (1) if it has no use of them or (2) if it wants to increase the value of all other _FAIRs_.
+
+Indeed, when a _FAIR_ is burnt, its lowest possible value is equally redistributed to all _FAIRs_ holders by modifying the sell function such as:
+
+<img src="https://latex.codecogs.com/gif.latex?S(x)=sx+z"/>&nbsp;where&nbsp;<img src="https://latex.codecogs.com/gif.latex?z=\frac{sx'^2}{2(x-x')}"/> (see proof in _Annex_)
+
+which gives <img src="https://latex.codecogs.com/gif.latex?S(x)=sx+\frac{sx'^2}{2(x-x')}"/>
+
+where `s` is the sell slope, `x` the number of _FAIRs_ in circulation and `x'` the number of _FAIRs_ burnt in total.
+
+<img src="images/CO-burn-impact.png" width="350" title="FAIRs burn impact" alt="FAIRs burn impact" />
+
+
 <h5 id="sell">💰 Investments - Sell</h5>
 
-Investors can at any time decide to sell their FAIRs to get ETH back. When the DAT receives _FAIRs_, it burns the received _FAIRs_ and sends ETH back to the selling investor according to a function **S** (for **s**ell). _S_ has a slope _s_ that increases discretely over time, every time the _DAT_ receives a payment. The ETH sent back to the investor is taken from the _DAT_ "buyback" reserve and does **not** affect the organization's cash reserve.
+Investors can at any time decide to sell their FAIRs to get ETH back. They do that by calling the `sell()` function of the _DAT_. When the _DAT_ receives _FAIRs_, it burns the received _FAIRs_ and sends ETH back to the selling investor according to a function **S** (for **s**ell). _S_ has a slope _s_ that increases discretely over time, every time the _DAT_ receives a payment. The ETH sent back to the investor is taken from the _DAT_ "buyback" reserve and does **not** affect the organization's cash reserve.
 
 
 <img src="images/Introducing-Continuous5.png" width="580" title="Investments - Sell" alt="Investments - Sell" />
@@ -322,67 +378,53 @@ _Value flow when a FAIR sale occurs_
 
 _Impact on the Bonding Curve Contract of the DAT when an investor sells its tokens_
 
-<h5 id="dividends">💵 Dividends</h5>
+<h6>calculus</h6>
 
+When an investor sells `x` _FAIRs_, assuming no _FAIRs_ were previously burnt, he receives an amount `c`, with `c` being equal to:
 
-The second source of cash-flow for the _DAT_ are dividends. At any point in time, the organization can decide to pay dividends to its _FAIRs_ holders. To do so, the organization sends ETH to the _dividend_ function of the _DAT_. Two things happen:
+<img src="https://latex.codecogs.com/gif.latex?c=axs-\frac{x^2s}{2}" title="amount perceived when selling x FAIRs (without burnt FAIRs)" /> (see proof in Annex)
 
-1.  **The _DAT_ buyback reserve is increased**. All the funds sent are used to mint new _FAIRs_ with a _contribution ratio_ of 100%, meaning that 100% of the funds sent are being saved in the _DAT_ buyback reserve, thus creating value for _FAIRs_ holders by increasing the slope of the selling curve (see detailed explanation below).
-2.  **_FAIRs_ holders receive dividends in _FAIRs_**. The newly minted FAIRs are distributed as dividends to the current _FAIRs_ holders as a pro-rata of their holdings and taking into account any "_dividend bonus_" they might have (see below for the definition of "_dividend bonus_").
+with `s` the sell slope and `a` the number of _FAIRs_ in circulation before the transaction.
 
-<img src="images/Introducing-Continuous7.png" width="380" title="Dividends" alt="Dividends" />
+In the case _FAIRs_ were burnt, the calculus becomes:
 
-_Value flow when a dividend payment occurs_
+<img src="https://latex.codecogs.com/gif.latex?c=axs-\frac{x^2s}{2}+\frac{sxx'^2}{2(x-x')}" title="amount perceived when selling x FAIRs" />
 
-The biggest difference between an investment cash-flow and a dividend cash-flow is their respective _contribution ratio_ to the _DAT_'s reserve:
-
-1.  **investment**: an amount M contributes `I*M` to the _DAT_'s reserve while minting the value equivalent of M, thus a contribution ratio of `(I*M)/M=I` and by construction I<<100%
-2.  **dividend**: an amount M contributes `M` to the _DAT_'s reserve while minting the value equivalent of `M`, thus a contribution ratio of `M/M=100%`
-
-So we have <img src="https://latex.codecogs.com/gif.latex?I\leq&space;s_{t}\leq1" /> (remember from above that s<sub>t</sub> is the slope of the sell function at time _t_). As we saw that s<sub>0</sub>=I this means that everytime a dividend is received by the _DAT_, _s_ increases in value. After each transaction, _s_ can be recalculated from the amount in reserve R<sub>t</sub>:
-
-<img src="https://latex.codecogs.com/gif.latex?R_{t}=\int_{0}^{x}S_{t}(x)dx=\int_{0}^{x}s_{t}xdx=\frac{s_{t}x^{2}}{2}" />
-
-so 
-
-<img src="https://latex.codecogs.com/gif.latex?s_{t}=\frac{2R_{t}}{x^{2}}=\frac{2R}{\frac{2d}{b}+a^{2}}" />
-
- _(proof available in Annex)_ 
-
-_Example_: Say I=10%, D=10% and b=1. Assume an investor buys the first 10 tokens for 50 ETH, so the _DAT_ now has 50*10%=5 ETH in reserve. Then, the _DAT_ receives a payment of 10 ETH from revenues. From this payment, 10*10%=1 ETH is used to mint 0.0995 tokens (we'll leave this as an exercise for the reader. Hint: the equation to solve is <img src="https://latex.codecogs.com/gif.latex?x^{2}+20x-2=0" />), which gives s<sub>1</sub>=0.1176, which is indeed superior to I.
+Where `x'` is the number of burnt _FAIRs_.
 
 <h5 id="pay">💲 Pay</h5>
 
-For some _Continuous Organizations_ (_COs_ with no underlying legal entity, for example), it can make sense to receive their customers' payments (i.e. the _CO_'s revenues) through the _DAT_. It is important to note that it is not mandatory for the organization's revenues to funnel through the _DAT_ as the organization can also decide to _only_ reward _FAIRs_ holders through dividends.
+A _Continuous Organization_ has the *option* to perceive its customer's payments directly through the _DAT_ by calling its `pay()` function.
 
-For organizations that already have a running business, they will very likely prefer to _first_ receive the payment from their customer in fiat (as they usually do, without changing their selling process) and will _then_ transfer a fraction D of their perceived revenues to the DAT in the form of dividends, as illustrated here:
-
-<img src="images/Introducing-Continuous8.png" width="400" title="Revenues for real organizations" alt="Revenues for real organizations" />
-
-This way, the _DAT_ is made completely invisible for the customer (no change in UX) and the organization does **not** have to modify any of its highly optimized selling processes.
-
-Whenever the _DAT_ receives a payment **P**, a fraction of the payment received is being used to _mint new FAIRs_. We'll call **D** (for **d**ividends) the percentage of the revenues being used to mint new tokens, **d** the corresponding fraction of the revenues (d=P*D) and **t** the number of new tokens minted. The entire amount d used to mint _FAIRs_ is saved in the _DAT_'s "buyback" reserve and the **t** _FAIRs_ minted are distributed to the current token holders according to their current holdings as well as their dividend bonus (see above). This distribution is like a dividend distribution but paid in _FAIRs_ rather than ETH.
+Whenever the _DAT_ receives a payment **P**, a fraction of the payment received is being funneled into the buyback reserve. We'll call **D** (for **D**istribution) the percentage of the revenues being funneled into the buyback reserve and **d** the corresponding fraction of the revenues (d=P*D). The entire amount `d` is saved in the _DAT_'s "buyback" reserve, thus increasing the value of _FAIRs_.
 
 <img src="images/Introducing-Continuous9.png" width="580" title="Revenues" alt="Revenues" />
 
 _Value flow when the CO relies on the DAT to receive its payments_
 
-_Example_: Suppose D=5%, if the _Continuous Organization_ receives a payment of 100 ETH, 5 ETH will be used to mint _FAIRs_. The _FAIRs_ are then distributed to existing token holders who can decide to either keep or sell them.
+_Example_: Suppose D=5%, if the _Continuous Organization_ receives a payment of 100 ETH, 5 ETH will be funneled to the buyback reserve, increased the collective value of _FAIRs_.
+
+_Note_: For some _Continuous Organizations_ (_COs_ with no underlying legal entity, for example), it can make sense to receive their customers' payments (i.e. the _CO_'s revenues) directly through the _DAT_. It is important to note that it is not mandatory for the organization's revenues to funnel through the _DAT_ as the organization can also decide to _only_ reward _FAIRs_ holders through _FAIRs_ purchase.
+
+For organizations that already have a running business, they will very likely prefer to _first_ receive a payment from their customer in fiat (as they usually do, without changing their selling process) and will _then_ purchase _FAIRs_ to transfer a fraction of their perceived revenues to the _DAT_ to increase the _FAIRs_ value, as illustrated here:
+
+<img src="images/Introducing-Continuous8.png" width="400" title="Revenues for real organizations" alt="Revenues for real organizations" />
+
+This way, the _DAT_ is made completely invisible for the customer (no change in UX) and the organization does **not** have to modify any of its highly optimized selling processes.
 
 <h5 id="pre-mint">🍯Pre-minted FAIR pool</h5>
 
 When the _DAT_ is being created (and **only** then because once created the _DAT_ becomes immutable), the organization can decide to "pre-mint" for itself and for free a number **PM** of _FAIRs_. That means that, instead of having the supply of _FAIRs_ of the _DAT_ start from zero, it would start from PM.
 
-Pre-minting FAIRs can often make a lot of sense to the organization, be it to reward its founders, to pay its early employees, to reward its early users, etc… However, it is very important to realize that pre-creating FAIRs comes with a potentially high cost, as these "free" pre-minted _FAIRs_ represent a selling pressure on the _DAT_ as they are _FAIR_s that got allocated "for free", without any contribution to the _DAT_ buyback reserve.
+Pre-minting FAIRs can often make a lot of sense to the organization, be it to reward its founders, to pay its early employees, to reward its early users, etc… However, it is very important to realize that pre-creating FAIRs comes with a potentially high cost, as these "free" pre-minted _FAIRs_ represent a selling pressure on the _DAT_ as they are _FAIRs_ that got allocated "for free", without any contribution to the _DAT_ buyback reserve.
 
-Technically speaking, it means that the greater the number of FAIR tokens that are pre-minted, the lower the sell curve will be (i.e., the _s_ slope defined previously). So concretely, if an organization decides to pre-mint a large number of FAIRs when setting up the DAT, it may want to be very careful not to pre-mint too many of them because it significantly increases the risk and financial reward of investors.
+Technically speaking, it means that the greater the number of FAIR tokens that are pre-minted, the lower the sell curve will be (i.e., the _s_ slope defined previously). So concretely, if an organization decides to pre-mint a large number of FAIRs when setting up the DAT, it may want to be very careful not to pre-mint too many of them because it could have a significant negative impact on the risk and financial reward of investors.
 
 
 <img src="images/Introducing-Continuous10.png" width="300" title="Pre-minted FAIR pool" alt="Pre-minted FAIR pool" />
 
 _Impact of pre-minted tokens, everything else being equal_
 
-Even though it is not mandatory, it is highly recommended to have a vesting schedule for the _FAIR_s that are pre-minted in order to commit their beneficiaries over the long term and help them resist the temptation to sell at the first opportunity.
 
 <h5 id="summary">📄 Summary</h5>
 
@@ -636,11 +678,23 @@ To continue the conversation and contribute, you are more than welcome to join o
 
 <h2 id="annexes">Annex</h2>
 
+<h3 id="sell-slope-proof">Sell slope calculus</h3>
 
-How to recalculate s from R after each new transaction:
-
+After each _FAIRs_ purchase from the beneficiary organization and each call of the `pay()` function, the sell slope `s` needs to be recalculated. Here is how to recalculate `s` from the size of the buyback reserve `R` after each new transaction:
 
 <img src="images/proof.jpg" width="480" title="Proof" alt="Proof" />
+
+<h3 id="buy-sell-proof">Buy/sell calculus</h3>
+
+When buying _FAIRs_, you need to perform a calculus to know how much _FAIRs_ you will get for the amount you are willing to invest. Likewise, when selling _FAIRs_, you need a calculus to know how much you will get back for the amount of _FAIRs_ you are willing to sell. Here are the calculus with their proofs:
+
+<img src="images/calculus-sell-buy.png" width="480" title="Proof 2" alt="Proof 2" />
+
+<h3 id="burn-factor-proof">Burn factor calculus</h3>
+
+When burning _FAIRs_, the lowest possible value of the burnt _FAIRs_ is redistributed to all _FAIRs_ holders. As such, it impacts the amount the get back when selling _FAIRs_ to the _DAT_.  Here are the calculus of the burn factor:
+
+<img src="images/burn-proof.jpg" width="480" title="Proof burn factor" alt="Proof burn factor" />
 
 ## Notes
 
