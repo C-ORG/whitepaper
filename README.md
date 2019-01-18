@@ -10,7 +10,7 @@ Last update: _Jan 17th 2019_
 
 Keywords: _FAIR Securities, Decentralized Autonomous Trust, Bonding Curve Smart-Contract, Multitude_
 
-<h3>Acknowledgments </h3>
+<h3>Acknowledgments</h3>
 
 This research is financially supported by [The Family](https://www.thefamily.co/).
 
@@ -454,7 +454,7 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
   </tr>
   <tr>
    <td>
-       <img src="images/fair-purchase.png" width="350" alt="Dividend payment" title="Dividend payment">
+       <img src="images/fair-purchase.png" width="350" alt="FAIRs purchase" title="FAIRs purchase">
        <p style="text-align:center;"><em>FAIR purchase (buy)</em></p>
    </td>
    <td>
@@ -644,10 +644,10 @@ Ultimately, once the concept matures, we believe that COs have the potential to 
 
 
 1.  **Long-term employee incentivization**. Incentivizing employees is a key topic in any successful organization. Unfortunately, today's mechanisms are far from being perfect, especially for private organizations whose shares are not publicly listed. Instead of directly giving employees equity or offering stock options, an organization could use a _DAT_ to provide their employees with inalienable, liquid _FAIRs_ aligned with the success of the organization.
-2.  **Organizations with large contributive communities**. As of now, it is very legally and technically difficult to financially incentivize communities. If you have a platform business at a late stage (Airbnb, Uber, Yelp-like...) and wish to further engage your community in your platform, you start a _CO_ by setting up a _DAT_. Obviously, you would not funnel 100% of your revenues to the _CO_ immediately but would instead perhaps commit to buying a certain amount of tokens of the _DAT_  every month. This way, you can very simply financially align your community with the success of your business. Plus, you can use the _FAIR_s to distribute them in the way you prefer to your community, employees etc... 
+2.  **Organizations with large contributive communities**. As of now, it is very legally and technically difficult to financially incentivize communities. If you have a platform business at a late stage (Airbnb, Uber, Yelp-like...) and wish to further engage your community in your platform, you start a _CO_ by setting up a _DAT_. Obviously, you would not funnel 100% of your revenues to the _CO_ immediately but would instead perhaps commit to buying a certain amount of tokens of the _DAT_  every month. This way, you can very simply financially align your community with the success of your business. Plus, you can use the _FAIRs_ to distribute them in the way you prefer to your community, employees etc...
 3.  **Early startups bootstrapping their network effect**. Startup founders who develop marketplaces or any kind of 2-sided network always face a chicken-and-egg problem. By setting up a _CO_ and using _FAIRs_, they can solidly incentivize early adopters to join and contribute by aligning them with the long-term success of the project. Unlike today, FAIRs give early adopters the opportunity to get a fair part of the platform's upside value that they create by joining and contributing early.
-4.  **Real estate tokenization**. Given that investors in _Continuous Organizations_ are buying _FAIRs_ in anticipation of future cash-flows, it would make a great deal of sense to use _CO_s to buy and tokenize real estate. Indeed, real estate is a well-known provider of steady and predictable cash-flows, and so such a project could create a CO to finance the acquisition of real estate and provide its investors with predictable returns.
-5.  **Organization-less online communities**. You don't need a pre-existing organization to create a _CO_, nor do you need to incorporate one. Let's say you have a business idea and want to start a _CO_ out of a purely online community. The beneficiary of the _DAT_ could simply be a multisig wallet with the project leaders, the _DAT_ would pre-mint _FAIRs_ to distribute/incentivize the community and the **D** parameter of the _DAT_ would be set rather high to yield strong token dividends to the community when revenues are generated.
+4.  **Real estate tokenization**. Given that investors in _Continuous Organizations_ are buying _FAIRs_ in anticipation of future cash-flows, it would make a great deal of sense to use _COs_ to buy and tokenize real estate. Indeed, real estate is a well-known provider of steady and predictable cash-flows, and so such a project could create a CO to finance the acquisition of real estate and provide its investors with predictable returns.
+5.  **Organization-less online communities**. You don't need a pre-existing organization to create a _CO_, nor do you need to incorporate one. Let's say you have a business idea and want to start a _CO_ out of a purely online community. The beneficiary of the _DAT_ could simply be a multisig wallet with the project leaders, the _DAT_ would pre-mint _FAIRs_ to distribute/incentivize the community and the **D** parameter of the _DAT_ would be set rather high to trigger significant rewards to the community when revenues are generated.
 
 <h3 id="legal">Legal & Regulatory considerations</h3>
 
