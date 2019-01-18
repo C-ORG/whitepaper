@@ -14,7 +14,7 @@ Keywords: _FAIR Securities, Decentralized Autonomous Trust, Bonding Curve Smart-
 
 This research is financially supported by [The Family](https://www.thefamily.co/).
 
-Many thanks to those persons who have kindly contributed to this research through their valuable feedbacks and insights: Pierre-Louis Guhur (_Student - ENS Cachan_) ● Marie Ekeland (_Founder - Daphni_) ● Tonje Bakang (_Founder - Afrostream, Partner - The Family, Alumni - YC_) ● Solomon Hykes (_Founder - Docker) ● Andrea Luzzardi (_Software Engineer - Docker_) ● Samuel Alba (_Senior Director of Engineering - Docker_) ● Joris Delanoue (_Founder - Nexteem_) ● Oussama Ammar (_Founder - The Family_) ● Alexandre Obadia (_Research - Cambrial_) ● David Fauchier (_Founder - Cambrial_) ● Minh Ha Duong (_Principal - Cambrial_) ● Florent Artaud (_Founder - Ekwity_) ● Willy Braun (_Co-Founder - Daphni_) ● Franck Le Ouay (_Founder - Lifen_) ● Duc Ha Duong (_Founder - Officience_) ● Dimitri De Jonghe (_Founder - Ocean Protocol_) ● Jérôme de Tychey (_Blockchain tech Lead - Consensys_) ● Kyle Hall (_Writer - The Family_).
+Many thanks to those persons who have kindly contributed to this research through their valuable feedbacks and insights: Pierre-Louis Guhur (_Student - ENS Cachan_) ● Marie Ekeland (_Founder - Daphni_) ● Tonje Bakang (_Founder - Afrostream, Partner - The Family, Alumni - YC_) ● Solomon Hykes (_Founder - Docker) ● Andrea Luzzardi (_Software Engineer - Docker_) ● Samuel Alba (_Senior Director of Engineering - Docker_) ● Joris Delanoue (_Founder - Nexteem_) ● Oussama Ammar (_Founder - The Family_) ● Alexandre Obadia (_Research - Cambrial_) ● David Fauchier (_Founder - Cambrial_) ● Minh Ha Duong (_Principal - Cambrial_) ● Florent Artaud (_Founder - Ekwity_) ● Willy Braun (_Co-Founder - Daphni_) ● Franck Le Ouay (_Founder - Lifen_) ● Duc Ha Duong (_Founder - Officience_) ● Dimitri De Jonghe (_Founder - Ocean Protocol_) ● Jérôme de Tychey (_Blockchain tech Lead - Consensys_) ● Kyle Hall (_Writer - The Family_) ● Billy Rennekamp ● Roxana Danila (_Fairmint_).
 
 <h3>Abstract</h3>
 
@@ -46,7 +46,7 @@ Even though the "security" nature of _FAIR Securities_ (FAIR Securities undeniab
       3. [For the multitude](#multitude)
       4. [For investors](#investors)
       5. [For regulators](#regulators)
-      5. [For the planet](#planet)
+      6. [For the planet](#planet)
    4. [ICOs: An initial (insufficient) answer to a real challenge](#ico)
       1. [The principle](#principle)
       2. [The good](#thegood)
@@ -55,11 +55,12 @@ Even though the "security" nature of _FAIR Securities_ (FAIR Securities undeniab
 2. [Continuous Organizations](#continuousorganizations)
    1. [Understanding the token bonding curve model](#bondingcurve)
    2. [The Decentralized Autonomous Trust](#dat)
-      1. [Investment - Buy](#buy)
-      2. [Investment - Sell](#sell)
-      3. [Revenues - Pay](#pay)
-      4. [Pre-minted FAIR pool](#pre-mint)
-      5. [Summary](#summary)
+      1. [Investment - buy()](#buy)
+      2. [Purchasing FAIRs - buy()](#fairpurchase)
+      3. [Burning FAIRs - burn()](#burn)
+      4. [Revenues - pay()](#pay)
+      5. [Pre-minted FAIR pool](#pre-mint)
+      6. [Summary](#summary)
    3. [Properties and incentives of a Continuous Organization](#properties)
       1. [Long-term investment focus](#longterm)
       2. [Secondary market](#secondary)
@@ -73,6 +74,7 @@ Even though the "security" nature of _FAIR Securities_ (FAIR Securities undeniab
 5. [Attack vectors](#attacks)
    1. [Front-running attack](#frontrunning)
 6. [Conclusion](#conclusion)
+7. [Annex](#annex)
 
 <h3 id="context">Context</h3>
 
@@ -291,7 +293,7 @@ If you want your investors to have a lot of tokens, pick a very small value for 
 
 The function _S_ defines the price at which _FAIRs_ are bought back by the _DAT_. _S_ is a linear function as well and has a slope **_s_** such that `S(x)=s*x` where <img src="https://latex.codecogs.com/gif.latex?s\in&space;R" /> and `s>0`. However, in a _Continuous Organization,_ the value of _s_ increases discretely over time, i.e., <img src="https://latex.codecogs.com/gif.latex?s_{t+1}\geqslant&space;s_{t}" />. To explain how the value of _s_ increases over time, it is important to understand that a _DAT_ receives and processes the cash-flows it receives.
 
-<h5 id="buy">📈 Investments - Buy</h5>
+<h5 id="buy">📈 Investments - buy()</h5>
 
 The first (in "time", not in "proportion") source of cash-flows for a Continuous Organization are investors who want to invest in the _Continuous Organization_. They do that by calling the `buy()` function of the _DAT_. Whenever an "external" investor (as opposed to the organization itself) sends funds to the _DAT_, a fraction of the funds sent is being held in the "buyback" reserve by the _DAT_ and the rest of the funds are being transferred to the organization's wallet. We'll call **I** (for **i**nvest) the percentage of the funds being held in the buyback reserve. **I** is a constant.
 
@@ -313,11 +315,11 @@ The rules described above do not apply if the investor is the beneficiary organi
 
 When an investor buys _FAIRs_ for a cost `c`, he receives `x` _FAIRs_, with `x` being equal to:
 
-<img src="https://latex.codecogs.com/gif.latex?x=\sqrt{\frac{2c}{b}+a^2}-a" title="Number of FAIRs acquired for a cost c" /> (see proof in Annex)
+<img src="https://latex.codecogs.com/gif.latex?x=\sqrt{\frac{2c}{b}+a^2}-a" title="Number of FAIRs acquired for a cost c" /> (see proof in <a href="annex">Annex</a>)
 
 with `c` the amount used to buy _FAIRs_, `b` the sell slope and `a` the number of _FAIRs_ already in circulation before the transaction.
 
-<h5 id="fairpurchase">🏢 FAIRs purchase by the beneficiary organization</h5>
+<h5 id="fairpurchase">🏢 FAIRs purchase by the beneficiary organization - buy()</h5>
 
 At any time, the beneficiary organization can decide to buy _FAIRs_. To do that, the beneficiary organization calls the `buy()` function like any other investor, however, unlike external investors, the funds sent by the beneficiary organization to purchase _FAIRs_ are 100% funneled to the buyback reserve (i.e the contribution ratio `I` is equal to 100% when funds come from the beneficiary organization).
 
@@ -344,11 +346,11 @@ After each transaction, _s_ can be recalculated from the amount in reserve R<sub
 
 so 
 
-<img src="https://latex.codecogs.com/gif.latex?s_{t}=\frac{2R_{t}}{x^{2}}=\frac{2R}{\frac{2d}{b}+a^{2}}" /> &nbsp;&nbsp;_(see proof in Annex)_ 
+<img src="https://latex.codecogs.com/gif.latex?s_{t}=\frac{2R_{t}}{x^{2}}=\frac{2R}{\frac{2d}{b}+a^{2}}" /> &nbsp;&nbsp;_(see proof in <a href="annex">Annex</a>)_ 
 
 _Example_: Say I=10%, s<sub>0</sub>=0.1 and b=1. Assume an investor buys the first 10 tokens for 50 ETH, so the _DAT_ now has 50x10%=5 ETH in reserve. Then, the beneficiary organization buys _FAIRs_ for 1 ETH of value. This 1 ETH is used to mint 0.0995 tokens (we'll leave this as an exercise for the reader. Hint: the equation to solve is <img src="https://latex.codecogs.com/gif.latex?x^{2}+20x-2=0" />), which gives s<sub>1</sub>=0.1176. So, the operation increased value for _FAIRs_ holders as s<sub>1</sub>>s<sub>0</sub>, that is, they can now sell their _FAIRs_ at a higher value than before.
 
-<h5 id="burn">🔥 Burning _FAIRs_</h5>
+<h5 id="burn">🔥 Burning FAIRs - burn()</h5>
 
 A _FAIRs_ holder can at anytime take the decision to burn its _FAIRs_ by calling the `burn()` function.
 
@@ -356,7 +358,7 @@ Burning _FAIRs_ destroys them so that no one will ever be able to use them. If i
 
 Indeed, when a _FAIR_ is burnt, its lowest possible value is equally redistributed to all _FAIRs_ holders by modifying the sell function such as:
 
-<img src="https://latex.codecogs.com/gif.latex?S(x)=sx+z"/>&nbsp;where&nbsp;<img src="https://latex.codecogs.com/gif.latex?z=\frac{sx'^2}{2(x-x')}"/> (see proof in _Annex_)
+<img src="https://latex.codecogs.com/gif.latex?S(x)=sx+z"/>&nbsp;where&nbsp;<img src="https://latex.codecogs.com/gif.latex?z=\frac{sx'^2}{2(x-x')}"/> (see proof in <a href="annex">Annex</a>)
 
 which gives <img src="https://latex.codecogs.com/gif.latex?S(x)=sx+\frac{sx'^2}{2(x-x')}"/>
 
@@ -365,7 +367,7 @@ where `s` is the sell slope, `x` the number of _FAIRs_ in circulation and `x'` t
 <img src="images/CO-burn-impact.png" width="350" title="FAIRs burn impact" alt="FAIRs burn impact" />
 
 
-<h5 id="sell">💰 Investments - Sell</h5>
+<h5 id="sell">💰 Investments - sell()</h5>
 
 Investors can at any time decide to sell their FAIRs to get ETH back. They do that by calling the `sell()` function of the _DAT_. When the _DAT_ receives _FAIRs_, it burns the received _FAIRs_ and sends ETH back to the selling investor according to a function **S** (for **s**ell). _S_ has a slope _s_ that increases discretely over time, every time the _DAT_ receives a payment. The ETH sent back to the investor is taken from the _DAT_ "buyback" reserve and does **not** affect the organization's cash reserve.
 
@@ -382,17 +384,17 @@ _Impact on the Bonding Curve Contract of the DAT when an investor sells its toke
 
 When an investor sells `x` _FAIRs_, assuming no _FAIRs_ were previously burnt, he receives an amount `c`, with `c` being equal to:
 
-<img src="https://latex.codecogs.com/gif.latex?c=axs-\frac{x^2s}{2}" title="amount perceived when selling x FAIRs (without burnt FAIRs)" /> (see proof in Annex)
+<img src="https://latex.codecogs.com/gif.latex?c=axs-\frac{x^2s}{2}" title="amount perceived when selling x FAIRs (without burnt FAIRs)" /> (see proof in <a href="annex">Annex</a>)
 
 with `s` the sell slope and `a` the number of _FAIRs_ in circulation before the transaction.
 
-In the case _FAIRs_ were burnt, the calculus becomes:
+In the case _FAIRs_ were burnt (see <a href="#burn">previous section</a>), the calculus becomes:
 
 <img src="https://latex.codecogs.com/gif.latex?c=axs-\frac{x^2s}{2}+\frac{sxx'^2}{2(x-x')}" title="amount perceived when selling x FAIRs" />
 
 Where `x'` is the number of burnt _FAIRs_.
 
-<h5 id="pay">💲 Pay</h5>
+<h5 id="pay">💲 Revenues - pay()</h5>
 
 A _Continuous Organization_ has the *option* to perceive its customer's payments directly through the _DAT_ by calling its `pay()` function.
 
@@ -429,7 +431,7 @@ _Impact of pre-minted tokens, everything else being equal_
 <h5 id="summary">📄 Summary</h5>
 
 
-A _Continuous Organization_ is an organization that issues _FAIR securities_ by funneling part or all of its cash-flows to a specific type of smart-contract called _Decentralized Autonomous Trust_ (_DAT_). These _FAIR Securities_ represent a claim on the _DAT_'s future cash-flows. The organization, its investors and, potentially, its customers interact with the _DAT_ by sending ETH or _FAIRs_ to it:
+A _Continuous Organization_ is an organization that issues _FAIR securities_ by funneling part or all of its cash-flows to a specific type of smart-contract called _Decentralized Autonomous Trust_ (_DAT_). These _FAIR securities_ represent a claim on the _DAT_'s future cash-flows. The organization, its investors and, potentially, its customers interact with the _DAT_ by sending ETH or _FAIRs_ to it:
 
 
 <table>
@@ -452,6 +454,28 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
   </tr>
   <tr>
    <td>
+       <img src="images/fair-purchase.png" width="350" alt="Dividend payment" title="Dividend payment">
+       <p style="text-align:center;"><em>FAIR purchase (buy)</em></p>
+   </td>
+   <td>
+       ▪ the <em>DAT</em> receives ETH **from the beneficiary organization**<br/>
+       ▪ the <em>DAT</em> uses the funds to mint new <em>FAIR</em>s and sends them back to the beneficiary organization.<br/>
+       ▪ The funds used to mint the <em>FAIR</em>s are entirely funneled in the <em>DAT</em> "buyback" reserve.
+   </td>
+  </tr>
+  <tr>
+   <td>
+       <img src="images/fair-burn.PNG" width="250" alt="FAIR burn (burn)" title="FAIR burn (burn)">
+       <p style="text-align:center;"><em>FAIR burn (burn)</em></p>
+   </td>
+   <td>
+       ▪ The <em>DAT</em> receives FAIRs<br/>
+       ▪ The <em>DAT</em> destroys the received <em>FAIR</em>s<br/>
+       ▪ The lowest value of the burnt <em>FAIR</em>s is being reaffected equally to all _FAIRs_ holders via the `sell()` function.
+   </td>
+  </tr>
+  <tr>
+   <td>
        <img src="images/Introducing-Continuous12.png" width="250" alt="Investment (sell)" title="Investment (sell)">
        <p style="text-align:center;"><em>Investment (sell)</em></p>
    </td>
@@ -463,37 +487,24 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
   </tr>
   <tr>
    <td>
-       <img src="images/Introducing-Continuous13.png" width="350" alt="Dividend payment" title="Dividend payment">
-       <p style="text-align:center;"><em>Dividend payment</em></p>
-   </td>
-   <td>
-       ▪ the <em>DAT</em> receives ETH from the organization<br/>
-       ▪ the <em>DAT</em> uses the funds to mint new <em>FAIR</em>s and distribute them to the current <em>FAIR</em> holders according to their holdings and their respective dividend bonuses.<br/>
-       ▪ The funds used to mint the <em>FAIR</em>s are being saved in the <em>DAT</em> "buyback" reserve.
-   </td>
-  </tr>
-  <tr>
-   <td>
        <img src="images/Introducing-Continuous14.png" width="250" alt="Revenues" title="Revenues">
-       <p style="text-align:center;"><em>Revenues</em></p>
+       <p style="text-align:center;"><em>Revenues (pay)</em></p>
    </td>
    <td>
-       ▪ The <em>DAT</em> receives a payment from a customer<br/>
-       ▪ The <em>DAT</em> transfers the revenues to the organization but retains a fraction <strong>D</strong> (for <strong>d<em>ividends</em></strong>) of the revenues to mint new <em>FAIR</em>s<br/>
-       ▪ The new <em>FAIR</em>s are distributed among the existing <em>FAIR</em>s holders.<br/>
-       ▪ 100% of the funds used to mint the new <em>FAIR</em>s are saved in the <em>DAT</em> "buyback" reserve.
+       ▪ The <em>DAT</em> receives a payment from a customer.<br/>
+       ▪ The <em>DAT</em> transfers the revenues to the organization but retains a fraction <strong>D</strong> (for <strong>d<em>istribution</em></strong>) of the revenues that are funneled to the "buyback" reserve.<br/>
    </td>
   </tr>
 </table>
 
 
-Finally, a _DAT_ can be created with pre-minted FAIRs allocated to the organization that can then distribute them freely to stakeholders. However, it is important to note that these pre-minted FAIRs come at a cost as they are directly diluting future investors.
+Finally, a _DAT_ can be created with pre-minted FAIRs for the organization that can then distribute them freely to stakeholders. However, it is important to note that these pre-minted FAIRs come at a cost as they are directly diluting future investors.
 
 <h4 id="properties">Properties and incentives of a Continuous Organization</h4>
 
 <h5 id="longterm">🌲 Long-term investment focus</h5>
 
-The spread that exists between the buy price and the sell price of _FAIR_s creates an incentive for investors to buy and hold _FAIRs_ until the _Continuous Organization_ starts generating revenues:
+The spread that exists between the buy price and the sell price of _FAIRs_ creates an incentive for investors to buy and hold _FAIRs_ until the _Continuous Organization_ starts generating revenues:
 
 1.  **Pre-revenue**. The price appreciation of _FAIRs_ is due to investors' speculation as they anticipate future revenues.
 2.  **Post-revenues**. Once revenues begin to flow, the price appreciation of _FAIRs_ starts being driven by the revenues generated by the organization, as a fraction of the revenues is used to buy _FAIRs_ and distribute them as dividends to the current token holders.
@@ -676,7 +687,7 @@ Any type of organization, for-profit and non-profit, can become a _Continuous Or
 To continue the conversation and contribute, you are more than welcome to join our [online forum](https://chat.c-org.co). You can also interact with us on [Twitter](https://twitter.com/ContinuousOrg) or on our dedicated [Telegram channel](https://t.me/joinchat/BVqq1hHIqyWrIg_wCuIroQ).
 
 
-<h2 id="annexes">Annex</h2>
+<h2 id="annex">Annex</h2>
 
 <h3 id="sell-slope-proof">Sell slope calculus</h3>
 
@@ -688,7 +699,7 @@ After each _FAIRs_ purchase from the beneficiary organization and each call of t
 
 When buying _FAIRs_, you need to perform a calculus to know how much _FAIRs_ you will get for the amount you are willing to invest. Likewise, when selling _FAIRs_, you need a calculus to know how much you will get back for the amount of _FAIRs_ you are willing to sell. Here are the calculus with their proofs:
 
-<img src="images/calculus-sell-buy.png" width="480" title="Proof 2" alt="Proof 2" />
+<img src="images/calculus-sell-buy.jpg" width="480" title="Proof 2" alt="Proof 2" />
 
 <h3 id="burn-factor-proof">Burn factor calculus</h3>
 
