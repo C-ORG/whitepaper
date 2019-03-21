@@ -14,7 +14,7 @@ Keywords: _FAIR Securities, Decentralized Autonomous Trust, Bonding Curve Smart-
 
 This research is financially supported by [The Family](https://www.thefamily.co/).
 
-Many thanks to those persons who have kindly contributed to this research through their valuable feedbacks and insights: Pierre-Louis Guhur (_Student - ENS Cachan_) ● Marie Ekeland (_Founder - Daphni_) ● Tonje Bakang (_Founder - Afrostream, Partner - The Family, Alumni - YC_) ● Solomon Hykes (_Founder - Docker_) ● Andrea Luzzardi (_Software Engineer - Docker_) ● Samuel Alba (_Senior Director of Engineering - Docker_) ● Joris Delanoue (_Founder - Nexteem_) ● Oussama Ammar (_Founder - The Family_) ● Alexandre Obadia (_Research - Cambrial_) ● David Fauchier (_Founder - Cambrial_) ● Minh Ha Duong (_Principal - Cambrial_) ● Florent Artaud (_Founder - Ekwity_) ● Willy Braun (_Co-Founder - Daphni_) ● Franck Le Ouay (_Founder - Lifen_) ● Duc Ha Duong (_Founder - Officience_) ● Dimitri De Jonghe (_Founder - Ocean Protocol_) ● Jérôme de Tychey (_Blockchain tech Lead - Consensys_) ● Kyle Hall (_Writer - The Family_) ● Billy Rennekamp ● Roxana Danila (_Fairmint_).
+Many thanks to those persons who have kindly contributed to this research through their valuable feedbacks and insights: Joris Delanoue (_Founder - Fairmint_) ● Pierre-Louis Guhur (_Student - ENS Cachan_) ● Marie Ekeland (_Founder - Daphni_) ● Tonje Bakang (Partner - The Family) ● Solomon Hykes (_Founder - Docker_) ● Andrea Luzzardi (_Software Engineer - Docker_) ● Samuel Alba (_Senior Director of Engineering - Docker_) ● Oussama Ammar (_Founder - The Family_) ● Alexandre Obadia (_Research - Cambrial_) ● David Fauchier (_Founder - Cambrial_) ● Minh Ha Duong (_Principal - Cambrial_) ● Florent Artaud (_Founder - Ekwity_) ● Willy Braun (_Co-Founder - Daphni_) ● Franck Le Ouay (_Founder - Lifen_) ● Duc Ha Duong (_Founder - Officience_) ● Dimitri De Jonghe (_Founder - Ocean Protocol_) ● Jérôme de Tychey (_Blockchain tech Lead - Consensys_) ● Kyle Hall (_Writer - The Family_) ● Billy Rennekamp ● Roxana Danila (_Fairmint_).
 
 <h3>Abstract</h3>
 
@@ -316,7 +316,7 @@ The rules described above do not apply if the investor is the beneficiary organi
 
 When an investor buys _FAIRs_ for a cost `c`, he receives `x` _FAIRs_, with `x` being equal to:
 
-<img src="https://latex.codecogs.com/gif.latex?x=\sqrt{\frac{2c}{b}+a^2}-a" title="Number of FAIRs acquired for a cost c" /> (see proof in <a href="annex">Annex</a>)
+<img src="https://latex.codecogs.com/gif.latex?x=\sqrt{\frac{2c}{b}+a^2}-a" title="Number of FAIRs acquired for a cost c" /> (see proof in <a href="#annex">Annex</a>)
 
 with `c` the amount used to buy _FAIRs_, `b` the sell slope and `a` the number of _FAIRs_ already in circulation before the transaction.
 
@@ -347,7 +347,7 @@ After each transaction, _s_ can be recalculated from the amount in reserve R<sub
 
 so 
 
-<img src="https://latex.codecogs.com/gif.latex?s_{t}=\frac{2R_{t}}{x^{2}}=\frac{2R}{\frac{2d}{b}+a^{2}}" /> &nbsp;&nbsp;_(see proof in <a href="annex">Annex</a>)_ 
+<img src="https://latex.codecogs.com/gif.latex?s_{t}=\frac{2R_{t}}{x^{2}}=\frac{2R}{\frac{2d}{b}+a^{2}}" /> &nbsp;&nbsp;_(see proof in <a href="#annex">Annex</a>)_ 
 
 _Example_: Say I=10%, s<sub>0</sub>=0.1 and b=1. Assume an investor buys the first 10 tokens for 50 ETH, so the _DAT_ now has 50x10%=5 ETH in reserve. Then, the beneficiary organization buys _FAIRs_ for 1 ETH of value. This 1 ETH is used to mint 0.0995 tokens (we'll leave this as an exercise for the reader. Hint: the equation to solve is <img src="https://latex.codecogs.com/gif.latex?x^{2}+20x-2=0" />), which gives s<sub>1</sub>=0.1176. So, the operation increased value for _FAIRs_ holders as s<sub>1</sub>>s<sub>0</sub>, that is, they can now sell their _FAIRs_ at a higher value than before.
 
@@ -359,7 +359,7 @@ Burning _FAIRs_ destroys them so that no one will ever be able to use them. If i
 
 Indeed, when a _FAIR_ is burnt, its lowest possible value is equally redistributed to all _FAIRs_ holders by modifying the sell function such as:
 
-<img src="https://latex.codecogs.com/gif.latex?S(x)=sx+z"/>&nbsp;where&nbsp;<img src="https://latex.codecogs.com/gif.latex?z=\frac{sx'^2}{2(x-x')}"/> (see proof in <a href="annex">Annex</a>)
+<img src="https://latex.codecogs.com/gif.latex?S(x)=sx+z"/>&nbsp;where&nbsp;<img src="https://latex.codecogs.com/gif.latex?z=\frac{sx'^2}{2(x-x')}"/> (see proof in <a href="#annex">Annex</a>)
 
 which gives <img src="https://latex.codecogs.com/gif.latex?S(x)=sx+\frac{sx'^2}{2(x-x')}"/>
 
@@ -385,13 +385,13 @@ _Impact on the Bonding Curve Contract of the DAT when an investor sells its toke
 
 When an investor sells `x` _FAIRs_, assuming no _FAIRs_ were previously burnt, he receives an amount `c`, with `c` being equal to:
 
-<img src="https://latex.codecogs.com/gif.latex?c=axs-\frac{x^2s}{2}" title="amount perceived when selling x FAIRs (without burnt FAIRs)" /> (see proof in <a href="annex">Annex</a>)
+<img src="https://latex.codecogs.com/gif.latex?c=axs-\frac{x^2s}{2}" title="amount perceived when selling x FAIRs (without burnt FAIRs)" /> (see proof in <a href="#annex">Annex</a>)
 
 with `s` the sell slope and `a` the number of _FAIRs_ in circulation before the transaction.
 
 In the case _FAIRs_ were burnt (see <a href="#burn">previous section</a>), the calculus becomes:
 
-<img src="https://latex.codecogs.com/gif.latex?c=axs-\frac{x^2s}{2}+\frac{sxx'^2}{2(x-x')}" title="amount perceived when selling x FAIRs" />
+<img src="https://latex.codecogs.com/gif.latex?c=axs-\frac{x^2s}{2}+\frac{sxx'^2}{2(a-x')}" title="amount perceived when selling x FAIRs" />
 
 where `x'` is the number of burnt _FAIRs_.
 
