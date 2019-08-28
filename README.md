@@ -318,7 +318,7 @@ When an investor buys _FAIRs_ for a cost `c`, he receives `x` _FAIRs_, with `x` 
 
 <img src="https://latex.codecogs.com/gif.latex?x=\sqrt{\frac{2c}{b}+a^2}-a" title="Number of FAIRs acquired for a cost c" /> (see proof in <a href="#annex">Annex</a>)
 
-with `c` the amount used to buy _FAIRs_, `b` the sell slope and `a` the number of _FAIRs_ already in circulation before the transaction.
+with `c` the amount used to buy _FAIRs_, `b` the buy slope and `a` the number of _FAIRs_ already in circulation before the transaction.
 
 <h5 id="fairpurchase">🏢 FAIRs purchase by the beneficiary organization - buy()</h5>
 
