@@ -4,17 +4,19 @@ _**Aligning stakeholders’ financial interests in the Digital Economy**_
 
 Author: _[Thibauld Favre](https://twitter.com/thibauld)_
 
-Version: _1.0_
+Version: _1.2_
 
-Last update: _Jan 17th 2019_
+Last update: _Oct 17th 2019_
 
-Keywords: _FAIR Securities, Decentralized Autonomous Trust, Bonding Curve Smart-Contract, Multitude_
+Keywords: _FAIR Securities, Continuous Securities Offering, Decentralized Autonomous Trust, Bonding Curve Smart-Contract, Multitude_
 
 <h3>Acknowledgments</h3>
 
-This research is financially supported by [The Family](https://www.thefamily.co/).
+A special acknowledgement to [Joris Delanoue](https://twitter.com/Joris_DLN), my co-founder at Fairmint who relentlessly challenged the model since version 1.0 was published. Version 1.2 of this whitepaper really reflects the results of those sometimes heated but always fruitful discussions.
 
-Many thanks to those persons who have kindly contributed to this research through their valuable feedbacks and insights: Joris Delanoue (_Founder - Fairmint_) ● Pierre-Louis Guhur (_Student - ENS Cachan_) ● Marie Ekeland (_Founder - Daphni_) ● Tonje Bakang (Partner - The Family) ● Solomon Hykes (_Founder - Docker_) ● Andrea Luzzardi (_Software Engineer - Docker_) ● Samuel Alba (_Senior Director of Engineering - Docker_) ● Oussama Ammar (_Founder - The Family_) ● Alexandre Obadia (_Research - Cambrial_) ● David Fauchier (_Founder - Cambrial_) ● Minh Ha Duong (_Principal - Cambrial_) ● Florent Artaud (_Founder - Ekwity_) ● Willy Braun (_Co-Founder - Daphni_) ● Franck Le Ouay (_Founder - Lifen_) ● Duc Ha Duong (_Founder - Officience_) ● Dimitri De Jonghe (_Founder - Ocean Protocol_) ● Jérôme de Tychey (_Blockchain tech Lead - Consensys_) ● Kyle Hall (_Writer - The Family_) ● Billy Rennekamp ● Roxana Danila (_Fairmint_).
+This research is financially supported by [Fairmint](https://fairmint.co) & [The Family](https://www.thefamily.co/).
+
+Finally, many thanks to those persons who have kindly contributed to this research through their valuable feedbacks and insights: Pierre-Louis Guhur (_Student - ENS Cachan_) ● Marie Ekeland (_Founder - Daphni_) ● Tonje Bakang (Partner - The Family) ● Solomon Hykes (_Founder - Docker_) ● Andrea Luzzardi (_Software Engineer - Docker_) ● Samuel Alba (_Senior Director of Engineering - Docker_) ● Oussama Ammar (_Founder - The Family_) ● Alexandre Obadia (_Research - Cambrial_) ● David Fauchier (_Founder - Cambrial_) ● Minh Ha Duong (_Principal - Cambrial_) ● Florent Artaud (_Founder - Ekwity_) ● Willy Braun (_Co-Founder - Daphni_) ● Franck Le Ouay (_Founder - Lifen_) ● Duc Ha Duong (_Founder - Officience_) ● Dimitri De Jonghe (_Founder - Ocean Protocol_) ● Jérôme de Tychey (_Blockchain tech Lead - Consensys_) ● Kyle Hall (_Writer - The Family_) ● Billy Rennekamp ● Roxana Danila (_Fairmint_).
 
 <h3>Abstract</h3>
 
