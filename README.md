@@ -56,7 +56,8 @@ It goes without saying that the "security" nature of _FAIR Securities_ (FAIR Sec
       4. [The ugly](#theugly)
 2. [Continuous Organizations](#continuousorganizations)
    1. [Understanding the token bonding curve model](#bondingcurve)
-   2. [The Decentralized Autonomous Trust](#dat)
+   2. [Continuous Securities Offering (CSO)](#cso)
+   3. [The Decentralized Autonomous Trust](#dat)
       1. [Investment - buy()](#buy)
       2. [Purchasing FAIRs - buy()](#fairpurchase)
       3. [Burning FAIRs - burn()](#burn)
@@ -64,20 +65,21 @@ It goes without saying that the "security" nature of _FAIR Securities_ (FAIR Sec
       5. [Revenues - pay()](#pay)
       6. [Pre-minted FAIR pool](#pre-mint)
       7. [Summary](#summary)
-   3. [Properties and incentives of a Continuous Organization](#properties)
+   4. [Lifecyle of a Continuous Organization](#lifecycle)
+      1. [Initialization](#initialization)
+      2. [Closing](#closing)
+   5. [Properties and incentives of a Continuous Organization](#properties)
       1. [Long-term investment focus](#longterm)
       2. [Secondary market](#secondary)
       3. [Guaranteed liquidity](#liquidity)
       4. [Continuous fundraising](#fundraising)
-   4. [Benefits](#benefits)
-3. [Use cases](#usecases)
-4. [Legal & Regulatory considerations](#legal)
-   1. [DAT and assets](#assets)
-   2. [DAT and regulations](#regulations)
-5. [Attack vectors](#attacks)
-   1. [Front-running attack](#frontrunning)
-6. [Conclusion](#conclusion)
-7. [Annex](#annex)
+   6. [Benefits](#benefits)
+3. [Implementation](#implementations)
+4. [Use cases](#usecases)
+5. [Legal & Regulatory considerations](#legal)
+6. [Attack vectors](#attacks)
+7. [Conclusion](#conclusion)
+8. [Annex](#annex)
 
 <h3 id="context">Context</h3>
 
@@ -257,14 +259,13 @@ A _Continuous Organization_ refers to any organization that set up a _Continuous
 
 <h4 id="cso">Continuous Securities Offering (CSO)</h4>
 
-A _Continuous Securities Offering_ (_CSO_) is a novel way for organizations to receive financing without releasing any equity or any governance rights. A CSO uses an organization's realized revenues (i.e. revenues for which a payment has been made) to create a fully digital security called _FAIR Securities_ (_FAIRs_)
+A _Continuous Securities Offering_ (_CSO_) is a novel way for organizations to receive financing without releasing any equity or any governance rights. A CSO uses an organization's realized revenues (i.e. revenues for which a payment has been made) as a collateral to back fully digital securities (called _FAIR Securities_ or _FAIRs_) that anyone can buy or sell to speculate on the organization's future revenues.
 
-
- A XXXX by funneling part or all of its realized revenues into a _Decentralized Autonomous Trust_ (_DAT_). A _DAT_ is a smart-contract that automatically mints, burns and distributes fully digital securities called _FAIR Securities_ (_FAIRs_) following a token [bonding curve contract](https://medium.com/@justingoro/token-bonding-curves-explained-7a9332198e0e) with [sponsored burning](https://medium.com/@avsa/sponsored-burning-for-tcr-c0ab08eef9d4).
+To create a _Continuous Securities Offering_, an organization would agree to build a collateral of value using a fixed percentage of its realized revenues during a pre-defined minimum period of time. This is done concretely by funneling the said fixed percentage of revenues into a _Decentralized Autonomous Trust_ (_DAT_). A _DAT_ is a smart-contract that automatically issues and buy back _FAIRs_ to meet market demand from investors using a token [bonding curve contract](https://medium.com/@justingoro/token-bonding-curves-explained-7a9332198e0e) with [sponsored burning](https://medium.com/@avsa/sponsored-burning-for-tcr-c0ab08eef9d4).
 
 **Important note about the currency used to interact with a DAT**
 
-In the following examples, we are using ETH (the currency of the Ethereum blockchain) as the currency to interact with the DAT. ETH is the native currency for an Ethereum-based DAT. It does not mean that end users (individuals and organizations) will necessarily have to manipulate ETH to interact with DATs. First, ETH can be replaced by a stablecoin (like [DAI](https://makerdao.com/dai/)) to remove the volatility associated with ETH. Second, one can also envision a future where services are created to allow end users to use fiat currency like USD or EUR to interact with a DAT, greatly simplifying the user experience. 
+In the following examples, we are using ETH (the currency of the Ethereum blockchain) as the currency to interact with the DAT. ETH is the native currency for an Ethereum-based DAT. It does not mean that end users (individuals and organizations) will necessarily have to manipulate ETH to interact with DATs. First, ETH can be replaced by a stablecoin (like [DAI](https://makerdao.com/dai/) or [USDC](https://www.centre.io/usdc)) to remove the volatility associated with ETH.
 
 <h4 id="bondingcurve">Understanding the token bonding curve model</h4>
 
@@ -293,21 +294,21 @@ So, in our example: `C=10*10/2=50`.
 
 <h4 id="dat">The Decentralized Autonomous Trust</h4>
 
-In the case of _Continuous Organizations_, we introduce the _cash-flow-based bonding curve_: a bonding curve that uses 2 different functions, one for the buy curve and another for the sell curve: **B** (for **b**uy) and **S** (for **s**ell) with <img src="https://latex.codecogs.com/gif.latex?B(x)>S(x)&space;\forall&space;x&space;\in&space;[0;\infty[" />.
+In the case of _Continuous Organizations_, we introduce the _revenue-based bonding curve_: a bonding curve that uses 2 different functions, one for the buy curve and another for the sell curve: **B** (for **b**uy) and **S** (for **s**ell) with <img src="https://latex.codecogs.com/gif.latex?B(x)>S(x)&space;\forall&space;x&space;\in&space;[0;\infty[" />.
 
 <img src="images/Introducing-Continuous2.png" width="580" title="Buy and Sell curves" alt="Buy and Sell curves" />
 
-The bonding curve contract of a _Decentralized Autonomous Trust_ issues _FAIR Securities_ (_FAIRs_). These _FAIR Securities_ represent a claim on the _DAT_'s future cash-flows. It is important to note that, unlike a stock, a _FAIR_ does not represent a claim on the organization's ownership, it only carries a financial right to the future cash-flows managed by the _DAT_.
+The bonding curve contract of a _Decentralized Autonomous Trust_ issues _FAIR Securities_ (_FAIRs_). These _FAIRs_ represent a claim on the _DAT_'s cash reserve. It is important to note that, unlike a stock, a _FAIR_ does not represent a claim on the organization's ownership, it only carries a financial right to the cash reserve managed by the _DAT_. And the _DAT_'s cash reserve is a function of the organization's revenues. So, by buying _FAIRs_, an investor gets a financial exposure on the organization's future revenues.
 
 The function _B_ defines the price at which _FAIRs_ can be bought from the _DAT_. _B_ is a linear function and has a positive slope **_b_** such that `B(x)=b*x` where <img src="https://latex.codecogs.com/gif.latex?b\in&space;R" /> and `b>0`. The slope _b_ can be chosen arbitrarily. The higher _b_ is, the more value unit tokens will have, and vice-versa, as the lower _b_ is, the less value unit tokens will have.
 
 If you want your investors to have a lot of tokens, pick a very small value for b (like 1x10^(-9)). It has no financial impact, simply allowing more granularity for fractional rights.
 
-The function _S_ defines the price at which _FAIRs_ are bought back by the _DAT_. _S_ is a linear function as well and has a slope **_s_** such that `S(x)=s*x` where <img src="https://latex.codecogs.com/gif.latex?s\in&space;R" /> and `s>0`. However, in a _Continuous Organization,_ the value of _s_ increases discretely over time, i.e., <img src="https://latex.codecogs.com/gif.latex?s_{t+1}\geqslant&space;s_{t}" />. To explain how the value of _s_ increases over time, it is important to understand that a _DAT_ receives and processes the cash-flows it receives.
+The function _S_ defines the price at which _FAIRs_ are bought back by the _DAT_. _S_ is a linear function as well and has a slope **_s_** such that `S(x)=s*x` where <img src="https://latex.codecogs.com/gif.latex?s\in&space;R" /> and `s>0`. However, in a _Continuous Organization,_ the value of _s_ changes over time. To explain how the value of _s_ changes over time, it is important to understand how a _DAT_ receives and processes the cash it receives.
 
 <h5 id="buy">📈 Investments - buy()</h5>
 
-The first (in "time", not in "proportion") source of cash-flows for a Continuous Organization are investors who want to invest in the _Continuous Organization_. They do that by calling the `buy()` function of the _DAT_. Whenever an "external" investor (as opposed to the organization itself) sends funds to the _DAT_, a fraction of the funds sent is being held in the "buyback" reserve by the _DAT_ and the rest of the funds are being transferred to the organization's wallet. We'll call **I** (for **i**nvest) the percentage of the funds being held in the buyback reserve. **I** is a constant.
+The first (in "time", not in "proportion") source of cash-flows for a _DAT__ are investors who want to invest in the _Continuous Organization_. They do that by calling the `buy()` function of the _DAT_. Whenever an "external" investor (as opposed to the organization itself) sends funds to the _DAT_, a fraction of the funds sent is being held in the cash reserve by the _DAT_ and the rest of the funds are being transferred to the organization's wallet. We'll call **I** (for **i**nvest) the percentage of the funds being held in the cash reserve. **I** is a constant.
 
 <img src="images/Introducing-Continuous3.png" width="580" title="Investments - Buy" alt="Investments - Buy" />
 
@@ -317,11 +318,11 @@ _Value flow when an investment occurs_
 
 _Impact on the Bonding Curve Contract of the DAT when an investment occurs_
 
-The investors buying tokens are doing so to invest money in the underlying organization. Investors don't want their money to be held in reserve by the _DAT_, they want their money to be put to good use by the organization. Consequently, the value of _s_ must be an order of magnitude lower than _b_.
+The investors buying _FAIRs_ are doing so to invest money in the underlying organization. Investors don't want their money to be held in reserve by the _DAT_, they want their money to be put to good use by the organization. Consequently, the value of _s_ must be an order of magnitude lower than _b_, which means that **I** should ideally be low. **I** could also be `0` if the organization's characteristics (revenues, growth...) can justify it.
 
-_Example_: Let's say that an investor sends 10 ETH to the _DAT_, if I=10% then the _DAT_ will transfer 9 ETH to the organization's wallet and will keep 1 ETH in its "buyback" reserve.
+_Example_: Let's say that an investor sends 10 ETH to the _DAT_, if I=10% then the _DAT_ will transfer 9 ETH to the organization's wallet and will keep 1 ETH in its cash reserve.
 
-The rules described above do not apply if the investor is the beneficiary organization, that is, if the organization is technically _investing in itself_. In that case, I is always equal to 100%. It means that whenever an organization is investing in its _DAT_, 100% of the amount invested by the organization to buy _FAIRs_ goes to the buy-back reserve. For more information, see the <a href="#fairpurchase"><i>FAIRs purchase by the beneficiary organization</i></a> section below.
+The rules described above do not apply if the investor is the beneficiary organization, that is, if the organization is technically _investing in itself_. In that case, **I** is always equal to `100%`. It means that whenever an organization is investing in its _DAT_, 100% of the amount invested by the organization to buy _FAIRs_ goes to the buy-back reserve. For more information, see the <a href="#fairpurchase"><i>FAIRs purchase by the beneficiary organization</i></a> section below.
 
 <h6>Calculus</h6>
 
@@ -337,7 +338,9 @@ At any time, the beneficiary organization can decide to buy _FAIRs_. To do that,
 
 This guarantees a total alignment of interests between all investors. Indeed, if the beneficiary organization was able to buy _FAIRs_ with the same investment ratio I than external investors, it would concretely mean that the beneficiary organization is able to buy _FAIRs_ for a fraction of the price compared to external investors (because the organization receives by definition `(1-I)%` of the amount invested). This difference could easily be abused by dishonest organizations and managers.
 
-Purchasing _FAIRs_ is also the way for the organization to reward _FAIRs_ holders. Indeed, when the beneficiary organization buys _FAIRs_, not only does it increase the buy-back reserve, it also increases the slope of the selling curve (see detailed explanation below).
+Purchasing _FAIRs_ is also how the organization can reward _FAIRs_ holders. Indeed, when the beneficiary organization buys _FAIRs_, not only does it increase the buy-back reserve, it also increases the slope of the selling curve (see detailed explanation below).
+
+As a consequence, in the case of an organization with off-chain revenues, buying _FAIRs_ is how the organization actually funnels its revenues to the _DAT_. That means that, the more revenues the organization generates, the more _FAIRs_ it accrues over time and can use to further incentivize its key stakeholders. Of course, the organization can also simply decide to `burn()` its _FAIRs_ if it wants to maximize the reward to _FAIR_ holders.
 
 <img src="images/CO-token-buyback.PNG" width="380" title="FAIRs purchase flow" alt="FAIRs purchase flow" />
 
@@ -360,28 +363,27 @@ so
 
 <img src="https://latex.codecogs.com/gif.latex?s_{t}=\frac{2R_{t}}{x^{2}}=\frac{2R}{\frac{2d}{b}+a^{2}}" /> &nbsp;&nbsp;_(see proof in <a href="#annex">Annex</a>)_ 
 
-_Example_: Say I=10%, s<sub>0</sub>=0.1 and b=1. Assume an investor buys the first 10 tokens for 50 ETH, so the _DAT_ now has 50x10%=5 ETH in reserve. Then, the beneficiary organization buys _FAIRs_ for 1 ETH of value. This 1 ETH is used to mint 0.0995 tokens (we'll leave this as an exercise for the reader. Hint: the equation to solve is <img src="https://latex.codecogs.com/gif.latex?x^{2}+20x-2=0" />), which gives s<sub>1</sub>=0.1176. So, the operation increased value for _FAIRs_ holders as s<sub>1</sub>>s<sub>0</sub>, that is, they can now sell their _FAIRs_ at a higher value than before.
+_Example_: Say I=10%,s<sub>0</sub>=0.1 and b=1. Assume an investor buys the first 10 tokens for 50 ETH, so the _DAT_ now has 50x10%=5 ETH in reserve. Then, the beneficiary organization buys _FAIRs_ for 1 ETH of value. This 1 ETH is used to mint 0.0995 tokens (we'll leave this as an exercise for the reader. Hint: the equation to solve is <img src="https://latex.codecogs.com/gif.latex?x^{2}+20x-2=0" />), which gives s<sub>1</sub>=0.1176. So, the operation increased value for _FAIRs_ holders as s<sub>1</sub>>s<sub>0</sub>, that is, they can now sell their _FAIRs_ at a higher value than before.
 
 <h5 id="burn">🔥 Burning FAIRs - burn()</h5>
 
 A _FAIRs_ holder can at anytime take the decision to burn its _FAIRs_ by calling the `burn()` function.
 
-Burning _FAIRs_ destroys them so that no one will ever be able to use them. If it makes little sense for an investor to do so with its _FAIRs_, but it does make sense for the beneficiary organization to be able to burn its _FAIRs_ (1) if it has no use of them or (2) if it wants to increase the value of all other _FAIRs_.
+Burning _FAIRs_ does not technically destroys them (the total supply of _FAIRs_, including burnt _FAIRs_ remains the same) but it makes sure that no one will ever be able to use them so that their marginal value can be redistributed equally to other _FAIR_ holders.
 
-Indeed, when a _FAIR_ is burnt, its lowest possible value is equally redistributed to all _FAIRs_ holders by modifying the sell function such as:
+It makes little sense for an investor to do so with its _FAIRs_, but it does make sense for the beneficiary organization to be able to burn its _FAIRs_ (1) if it has no use of them or (2) if it wants to increase the value of all other _FAIRs_.
 
-<img src="https://latex.codecogs.com/gif.latex?S(x)=sx+z"/>&nbsp;where&nbsp;<img src="https://latex.codecogs.com/gif.latex?z=\frac{sx'^2}{2(x-x')}"/> (see proof in <a href="#annex">Annex</a>)
+Indeed, when a _FAIR_ is burnt, its lowest possible value is equally redistributed to all _FAIRs_ holders so that, when an investor sells its _FAIRs_, he receives a fraction of the cash reserve + a pro-rata of the value locked in burnt _FAIRs_. See <a href="#sell">sell()</a> section below for the exact calculus.
 
-which gives <img src="https://latex.codecogs.com/gif.latex?S(x)=sx+\frac{sx'^2}{2(x-x')}"/>
-
-where `s` is the sell slope, `x` the number of _FAIRs_ in circulation and `x'` the number of _FAIRs_ burnt in total.
+The direct consequence of this is that there is never value locked forever in the cash reserve: selling 100% of the non-burnt _FAIRs_ will deplete the cash reserve from 100% of its value.
 
 <img src="images/CO-burn-impact.png" width="350" title="FAIRs burn impact" alt="FAIRs burn impact" />
 
+_Representation of the impact of burning FAIRs on the Bonding Curve_
 
 <h5 id="sell">💰 Investments - sell()</h5>
 
-Investors can at any time decide to sell their FAIRs to get ETH back. They do that by calling the `sell()` function of the _DAT_. When the _DAT_ receives _FAIRs_, it burns the received _FAIRs_ and sends ETH back to the selling investor according to a function **S** (for **s**ell). _S_ has a slope _s_ that increases discretely over time, every time the _DAT_ receives a payment. The ETH sent back to the investor is taken from the _DAT_ "buyback" reserve and does **not** affect the organization's cash reserve.
+Investors can at any time decide to sell their FAIRs to get ETH back. They do that by calling the `sell()` function of the _DAT_. When the _DAT_ receives _FAIRs_, it burns the received _FAIRs_ and sends ETH back to the selling investor according to a function **S** (for **s**ell). _S_ has a slope _s_ that increases discretely over time, every time the _DAT_ receives a payment. The ETH sent back to the investor is taken from the _DAT_ "buyback" cash reserve and does **not** affect the organization's treasury.
 
 
 <img src="images/Introducing-Continuous5.png" width="580" title="Investments - Sell" alt="Investments - Sell" />
@@ -410,19 +412,27 @@ where `x'` is the number of burnt _FAIRs_.
 
 A _Continuous Organization_ has the *option* to perceive its customer's payments directly through the _DAT_ by calling its `pay()` function.
 
-Whenever the _DAT_ receives a payment **P**, a fraction of the payment received is being funneled into the buyback reserve. We'll call **D** (for **D**istribution) the percentage of the revenues being funneled into the buyback reserve and **d** the corresponding fraction of the revenues (d=P*D). The entire amount `d` is saved in the _DAT_'s "buyback" reserve, thus increasing the value of _FAIRs_.
+Whenever the _DAT_ receives a payment **P**, a fraction of the payment received is being funneled into the cash reserve. We'll call **D** (for **D**istribution) the percentage of the revenues being funneled into the cash reserve and **d** the corresponding fraction of the revenues (d=P*D). The entire amount `d` is saved in the _DAT_'s cash reserve, thus increasing the value of _FAIRs_.
 
-<img src="images/Introducing-Continuous9.png" width="580" title="Revenues" alt="Revenues" />
+It is important to note that calling `pay()` will also trigger the issuance of new _FAIRs_. The number of _FAIRs_ issued is equivalent to the number of _FAIRs_ that would be created if `buy(d)` was called. By default, these newly minted _FAIRs_ are sent to the organization like showed on the following graph:
+
+<img src="images/customer-pays-org.png" width="580" title="pay() function value flow" alt="pay() function value flow" />
 
 _Value flow when the CO relies on the DAT to receive its payments_
 
-_Example_: Suppose D=5%, if the _Continuous Organization_ receives a payment of 100 ETH, 5 ETH will be funneled to the buyback reserve, increased the collective value of _FAIRs_.
+Optionally, the customer can specify a parameter of the `pay()` function to sent the newly minted _FAIRs_ to an address of his choice (most likely the address of his wallet) in which case the value flow would look like this:
+
+<img src="images/customer-pays-to.png" width="580" title="pay() function value flow" alt="pay() function value flow" />
+
+_Value flow when the customer specifies his wallet address to pay()_
+
+_Example_: Suppose D=5%, if the _Continuous Organization_ receives a payment of 100 ETH, 5 ETH will be funneled to the "buyback" cash reserve, increasing the collective value of _FAIRs_.
 
 _Note_: For some _Continuous Organizations_ (_COs_ with no underlying legal entity, for example), it can make sense to receive their customers' payments (i.e. the _CO_'s revenues) directly through the _DAT_. It is important to note that it is not mandatory for the organization's revenues to funnel through the _DAT_ as the organization can also decide to _only_ reward _FAIRs_ holders through _FAIRs_ purchase.
 
 For organizations that already have a running business, they will very likely prefer to _first_ receive a payment from their customer in fiat (as they usually do, without changing their selling process) and will _then_ purchase _FAIRs_ to transfer a fraction of their perceived revenues to the _DAT_ to increase the _FAIRs_ value, as illustrated here:
 
-<img src="images/Introducing-Continuous8.png" width="400" title="Revenues for real organizations" alt="Revenues for real organizations" />
+<img src="images/buy-offchain-revenues.png" width="400" title="Revenues for real organizations" alt="Revenues for real organizations" />
 
 This way, the _DAT_ is made completely invisible for the customer (no change in UX) and the organization does **not** have to modify any of its highly optimized selling processes.
 
@@ -430,21 +440,23 @@ This way, the _DAT_ is made completely invisible for the customer (no change in 
 
 When the _DAT_ is being created (and **only** then because once created the _DAT_ becomes immutable), the organization can decide to "pre-mint" for itself and for free a number **PM** of _FAIRs_. That means that, instead of having the supply of _FAIRs_ of the _DAT_ start from zero, it would start from PM.
 
-Pre-minting FAIRs can often make a lot of sense to the organization, be it to reward its founders, to pay its early employees, to reward its early users, etc… However, it is very important to realize that pre-creating FAIRs comes with a potentially high cost, as these "free" pre-minted _FAIRs_ represent a selling pressure on the _DAT_ as they are _FAIRs_ that got allocated "for free", without any contribution to the _DAT_ buyback reserve.
+Pre-minting FAIRs can often make a lot of sense to the organization, be it to reward its founders, to pay its early employees, to reward its early users or to secure a liquidity pool for the secondary market.
+
+However, it is very important to realize that pre-creating FAIRs comes with a potentially high cost, as these "free" pre-minted _FAIRs_ represent a selling pressure on the _DAT_ as they are _FAIRs_ that got allocated "for free", without any contribution to the _DAT_ "buyback" cash reserve.
 
 Technically speaking, it means that the greater the number of FAIR tokens that are pre-minted, the lower the sell curve will be (i.e., the _s_ slope defined previously). So concretely, if an organization decides to pre-mint a large number of FAIRs when setting up the DAT, it may want to be very careful not to pre-mint too many of them because it could have a significant negative impact on the risk and financial reward of investors.
-
 
 <img src="images/Introducing-Continuous10.png" width="300" title="Pre-minted FAIR pool" alt="Pre-minted FAIR pool" />
 
 _Impact of pre-minted tokens, everything else being equal_
 
+ So, as an organization, you might have good reasons to pre-mint some _FAIRs_ but beware because pre-minting too much will make your _FAIRs_ become less attractive for investors. A good rule here is to only pre-mint the _FAIRs_ needed before generating revenues. Once revenues starts rolling in, the organization will accrue _FAIRs_ naturally, through the funneling of its revenues to the _DAT_.
+
 
 <h5 id="summary">📄 Summary</h5>
 
 
-A _Continuous Organization_ is an organization that issues _FAIR securities_ by funneling part or all of its cash-flows to a specific type of smart-contract called _Decentralized Autonomous Trust_ (_DAT_). These _FAIR securities_ represent a claim on the _DAT_'s future cash-flows. The organization, its investors and, potentially, its customers interact with the _DAT_ by sending ETH or _FAIRs_ to it:
-
+A _Continuous Organization_ is an organization that issues _FAIR securities_ through a _Continuous Securities Offering_ by funneling part or all of its realized revenues to a specific type of smart-contract called _Decentralized Autonomous Trust_ (_DAT_). These _FAIR securities_ represent a claim on the _DAT_'s present and future cash reserve and allow investors to speculate on the revenue growth of the organization. The organization, its investors and, potentially, its customers interact with the _DAT_ by sending ETH or _FAIRs_ to it:
 
 <table>
   <tr>
@@ -494,7 +506,7 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
    <td>
        ▪ The <em>DAT</em> receives FAIR securities from the selling investor<br/>
        ▪ The <em>DAT</em> burns the received <em>FAIR</em>s and sends ETH back to the selling investor according to a function <strong>S</strong> (for <strong>s</strong>ell). <em>S</em> has a slope <em>s</em> that increases discretely over time, every time the <em>DAT</em> receives a payment.<br/>
-       ▪ The ETH sent back to the investor is taken from the <em>DAT</em> "buyback" reserve and does <strong>not</strong> affect the organization's cash reserve.
+       ▪ The ETH sent back to the investor is taken from the <em>DAT</em> cash reserve and does <strong>not</strong> affect the organization's treasury.
    </td>
   </tr>
   <tr>
@@ -504,13 +516,35 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ by 
    </td>
    <td>
        ▪ The <em>DAT</em> receives a payment from a customer.<br/>
-       ▪ The <em>DAT</em> transfers the revenues to the organization but retains a fraction <strong>D</strong> (for <strong>d<em>istribution</em></strong>) of the revenues that are funneled to the "buyback" reserve.<br/>
+       ▪ The <em>DAT</em> transfers the revenues to the organization but retains a fraction <strong>D</strong> (for <strong>d<em>istribution</em></strong>) of the revenues that are funneled to the cash reserve, issuing new _FAIRs_.<br/>
+       ▪ The organization (or optionally the customer) receives the newly minted _FAIRs_.<br/>
    </td>
   </tr>
 </table>
 
-
 Finally, a _DAT_ can be created with pre-minted FAIRs for the organization that can then distribute them freely to stakeholders. However, it is important to note that these pre-minted FAIRs come at a cost as they are directly diluting future investors.
+
+<h4 id="lifecycle">Lifecycle of a Continuous Securities Offering</h4>
+
+<h5 id="initialization">Initialization</h5>
+
+The initialization phase of a _CSO_ is specific in that it does not use the bonding curve. Indeed, to kickoff a _CSO_, the beneficiary organization needs to set an minimal funding goal (_MFG_). This MFG is the amount of investment required for the bonding curve to start. All investors investing before the MFG is reached (using the `buy()` function) receive _FAIRs_ at the same average price.
+
+<img src="images/initialization.png" width="300" title="Initialization phase" alt="Initialization phase" />
+
+_Initialization phase of a Continuous Securities Offering_
+
+Until the MFG is reached, all funds are escrowed and investors can decide to withdraw their investment at any time (by calling the `sell()` function) and will receive 100% of their investment back. Once the MFG is reached, the bonding curve starts, a fraction **I** of the MFG is funneled to the cash reserve and the complement (`MFG*(1-I)1) is being transfered to the beneficiary organization.
+
+Also, before the MFG is reached, the beneficiary organization can unilateraly decide to cancel the _CSO_ in which case investors can then withdraw 100% of the funds they individually invested.
+
+It's important to note that once the MFG is reached, then the organization cannot cancel the _CSO_ anymore and it will now continue to be live for a minimum period of time (defined in the smart-contract by the organization). Equally, after MFG is reached, investors cannot withdraw their funds anymore as the bonding curve started. They can now only call the `sell()` function will operates as described in the previous section.
+
+The MFG protects investors and the organization. It protects the investors because if there is low appeal from investors, the MFG won't be reached and investors can withdraw their money. Plus, the fact that all early investors get averaged priced _FAIRs_ means that no early investors will get unreasonably low price _FAIRs_. But the MFG also protects the organization as the organization can use it to gauge the market appetance for its _CSO_ and can decide to cancel it if investors interest is below its expectations. 
+
+The organization should not set the MFG too high though, otherwise it would have the effect of transforming the _CSO_ into a simple crowdfunding campaign and defeat the purpose of the _CSO_. In other words, the _CSO_ must reflect the **minimum** amount the organization expects to validate its _CSO_. It should definitely not be set to the entire value an organization expects to raise.
+
+<h5 id="closing">Closing</h5>
 
 <h4 id="properties">Properties and incentives of a Continuous Organization</h4>
 
@@ -527,11 +561,13 @@ There is a clear incentive for investors to hold their FAIRs and act as long-ter
 
 The spread between the Buy and Sell curves also leaves space for a secondary market of _FAIRs_. If the current price of a newly minted _FAIR_ is 10, an investor would rather buy an already-minted _FAIR_ from another investor willing to sell at a better price than the buyback price offered by the _DAT_.
 
-Obviously, this secondary market is bounded in a dynamic price range imposed by the _DAT_: it would not make sense for a buyer to bid a price higher than the current price proposed by the _DAT_. Likewise, it would not make sense for a seller to ask for a price lower than the price proposed by the _DAT_. 
+Obviously, this secondary market is bounded in a dynamic price range imposed by the _DAT_: it would not make sense for a buyer to bid a price higher than the current price proposed by the _DAT_. Likewise, it would not make sense for a seller to ask for a price lower than the price proposed by the _DAT_.
 
 <img src="images/Introducing-Continuous15.png" width="300" alt="Secondary market" title="Secondary market">
 
 Said otherwise, an investor will always be better off buying or selling their _FAIRs_ in the secondary market, as the price will likely be better than the price proposed by the _DAT_.
+
+Interestingly, the recent rise of automated market mechanisms for secondary markets (like [Uniswap](https://uniswap.exchange) or [Kyber network](https://kyber.network)) means that one could completely blend the primary market (the _DAT_) and the secondary market together from a UX perspective: a user would enter the value of _FAIRs_ he wants to buy and his trade could be automatically optimized between the primary and secondary market. This is a feature [Fairmint](https://fairmint.co) provides, which is important to reduce price volatility and maximize investors' returns.
 
 <h5 id="liquidity">💧Guaranteed liquidity</h5>
 
@@ -547,7 +583,7 @@ However, if the investors have more patience and if the organization develops we
    1.  significantly increasing sell price because these _FAIRs_ are bought from the _DAT_ and the funds are 100% saved in the buyback reserve, thus increasing the value of _s_ and with it the minimum sell price.
    2.  increasing the investor's return on investment (ROI) as the investors can decide to immediately sell back the _FAIRs_ they received to cash them out.
 
-Finally, it is good to keep in mind that the _DAT_ is only the buyer-of-last-resort. It is very likely that an investor could sell their _FAIRs_ on the secondary market at a higher price than the "buy-back price" offered by the _DAT_ for a given supply.
+Finally, it is good to keep in mind that the _DAT_ is only the buyer-of-last-resort. It is very likely that an investor could sell their _FAIRs_ on the secondary market at a higher price than the "buy-back price" offered by the cash reserve of the _DAT_ for a given supply.
 
 <h5 id="fundraising">💰 Continuous fundraising</h5>
 
@@ -564,12 +600,9 @@ To illustrate this, let's take the example of a _Continuous Organization_ whose 
 
 The zones in **blue** correspond to upward trends of the _FAIR_ price, which translates into the _Continuous Organization_ raising funds. Alternatively, the white zones are downward trends which translates into the _DAT_ (**not** the organization) buying back the _FAIRs_ that are being sent to it using its buyback reserve.
 
-
 <h4 id="benefits">Benefits</h4>
 
-
 _Continuous Organizations_ provide many benefits over traditional organizations for all stakeholders, most notably:
-
 
 <table>
   <tr>
@@ -648,12 +681,15 @@ _Continuous Organizations_ provide many benefits over traditional organizations 
   </tr>
 </table>
 
+<h3 id="implementations">Implementations</h3>
+
+The _Continuous Organization_ model is blockchain agnostic but requires a turing-complete smart-contract language to be implemented. The availability of stablecoins are not necessarily a requirement but they definitely improve the UX of _Continuous Organizations_.
+
+A reference implementation for the Ethereum blockchain has been [specified](https://github.com/fairmint/c-org/wiki) and [implemented](https://github.com/fairmint/c-org) (in Vyper language) by [Fairmint](https://fairmint.co). The contracts are currently being audited by [Consensys Diligence](https://diligence.consensys.net) and the results of the audit will be made public as soon as it is finalized.
 
 <h3 id="usecases">Use cases</h3>
 
-
 Ultimately, once the concept matures, we believe that COs have the potential to become the de-facto standard form of organization for founders looking to start a new venture, be it non-profit or for-profit. Until then, we think there are some use cases that already make a lot of sense, most notably:
-
 
 1.  **Long-term employee incentivization**. Incentivizing employees is a key topic in any successful organization. Unfortunately, today's mechanisms are far from being perfect, especially for private organizations whose shares are not publicly listed. Instead of directly giving employees equity or offering stock options, an organization could use a _DAT_ to provide their employees with inalienable, liquid _FAIRs_ aligned with the success of the organization.
 2.  **Organizations with large contributive communities**. As of now, it is very legally and technically difficult to financially incentivize communities. If you have a platform business at a late stage (Airbnb, Uber, Yelp-like...) and wish to further engage your community in your platform, you start a _CO_ by setting up a _DAT_. Obviously, you would not funnel 100% of your revenues to the _CO_ immediately but would instead perhaps commit to buying a certain amount of _FAIRs_ of the _DAT_  every month. This way, you can very simply financially align your community with the success of your business. Plus, you can use the _FAIRs_ to distribute them in the way you prefer to your community, employees etc...
@@ -663,26 +699,17 @@ Ultimately, once the concept matures, we believe that COs have the potential to 
 
 <h3 id="legal">Legal & Regulatory considerations</h3>
 
-A _Continuous Organization_ relies on a _Decentralized Autonomous Trust_ (DAT) to operate, and so it is important to legally define this DAT and its various properties. Be careful about what is written in this section as it only reflects the author's opinion and is **absolutely not** a legal opinion. If you have a legal opinion regarding your jurisdiction, please come and [engage with us](https://chat.c-org.co) in our discussion forum.
+**DISCLAIMER**: What is written in this section as it only reflects the author's opinion and does **not** constitute a legal opinion. Please consult a lawyer specialized in Securities law in your jurisdiction for a legal opinion.
 
-<h4 id="assets">DAT and assets</h4>
+A _Continuous Organization_ requires the setup of a _Continuous Securities Offering_ (CSO). Apart from the _continuous_ aspect of the offering, which is novel, a CSO is simply another type of Securities Offering. As such, a _Continuous Organization_ will very likely need to comply with the securities law in its jurisdiction.
 
-It is our belief that it should be relatively straightforward to transfer assets like intellectual property, shares, contracts, etc,... to a _DAT_. Having the ability to legally transfer assets to the _DAT_ would open the door to a lot more use cases and scenarios for _Continuous Organizations_.
+In the USA for example, it is likely that a CSO can be conducted using the Reg D 4(a)(2) Rule 506(c) exemption. Ask your securities lawyer for legal advice before proceeding.
 
-<h4 id="regulations">DAT and regulations</h4>
-
-As a _Decentralized Autonomous Trust_ has no governance, it does not belong to anyone per se. To our knowledge, it has no equivalent in today's laws and is a new financial instrument. In spirit, it is close to an [_Irrevocable Trust_](https://www.investopedia.com/terms/i/irrevocabletrust.asp) with the code acting as the Trustee, the organization as the _Grantor_ and the _FAIRs_ holders as the _Beneficiaries_. Additionally, an _Irrevocable Trust_ has no legal entity, it is simply a contract, just like a DAT. However, the comparison has its limits: Contrary to a _DAT_, an _Irrevocable Trust_ is not a vehicle in which investors can invest to receive securities on the Trust's assets.
-
-To make it legally safe for organizations to use _DATs_, we will likely have to work with regulators to have _DATs_ recognized and regulated as a new financial instrument. Even though it may sound difficult at first glance, we are confident that it is a reachable goal given the solid value proposition of _DATs_ for regulators (see the reasons in [Benefits](#benefits))
-
-It is our belief that regulators will at least require a full KYC/AML for FAIRs holders as well as a reasonable tax withholding on the cash-flows that are managed by the _DAT_. If you are a regulator or have strong knowledge and competencies in this area, please feel free to leave us a message [in our forum](https://chat.c-org.co), we want to work hand-in-hand with regulators around the world to make _Decentralized Autonomous Trusts_ a legal reality.
-
+In some jurisdictions, like France for example, we think the legal framework might be significantly more favorable with _FAIRs_ very likely falling under the new "jeton" category of the recently enacted "Loi Pacte" (which means that a _FAIR_ might not be treated as a security ("instrument financier") in France). Again, ask your preferred securities lawyer before proceeding to any offering.
 
 <h3 id="attacks">Attack vectors</h3>
 
-<h4 id="frontrunning">Front-running attack</h4>
-
-As perfectly stated in [Relevant's blog](https://blog.relevant.community/how-to-make-bonding-curves-for-continuous-token-models-3784653f8b17):
+**Front-running attacks**. As perfectly stated in [Relevant's blog](https://blog.relevant.community/how-to-make-bonding-curves-for-continuous-token-models-3784653f8b17):
 
 > _"Bonding curves are susceptible to front-running attacks. This is when an adversary watches for a big buy order coming in and sends her own buy order with more gas to cut ahead of the original order. Once the original order is executed, the attacker sells her tokens at a guaranteed profit."_
 
@@ -692,9 +719,17 @@ One simple solution to these attacks is to set an upper limit on the amount of g
 
 Such a system would not penalize liquidity much if the price fixing is regular enough (every 6 hours in the case of DutchX) and has the huge advantage of preventing front-running.
 
+It is also important to note that, most likely, investors in _FAIRs_ will have to be KYCed so it will be easy to trace back potential front-running attacks to the individual responsible for them.
+
 <h3 id="conclusion">Conclusion</h3>
 
-Any type of organization, for-profit and non-profit, can become a _Continuous Organization_ by setting up a _Decentralized Autonomous Trust_ and funneling all or part of its cash-flows to it. _Continuous Organizations_ are a new type of internet-native organisation that are more efficient, stable and inclusive than traditional organizations. At the heart of _Continuous Organizations_ are fully digital liquid securities that align stakeholders' interests better than traditional organizations. _Continuous Organizations_ are easy to incorporate and their properties make them ideal to incentivize employees, grow and strengthen communities, and create virtual online organizations.
+Any type of organization, for-profit and non-profit, can become a _Continuous Organization_ by setting up a _Continuous Securities Offering_.
+
+A _Continuous Securities Offering_ (_CSO_) is a novel way for organizations to receive financing without releasing any equity or any governance rights. A _CSO_ uses an organization's realized revenues as a collateral to back fully digital securities called _FAIRs_ that anyone can buy or sell to speculate on the organization's future revenues.
+
+To create a _Continuous Securities Offering_, an organization agrees to build a collateral of value using a fixed percentage of its realized revenues during a pre-defined minimum period of time. This is done concretely by funneling the said fixed percentage of revenues into a _Decentralized Autonomous Trust_ (_DAT_), a smart-contract that automatically issues and buy back _FAIRs_ to meet market demand from investors.
+
+_Continuous Organizations_ are a new type of internet-native organisation that are more efficient, stable and inclusive than traditional organizations. Thanks to their fully digital liquid FAIR securities, _Continuous Organizations_ are able to align stakeholders' interests better than traditional organizations. On top, they are easy to incorporate and their properties make them ideal to incentivize employees, grow and strengthen communities, and create virtual online organizations.
 
 To continue the conversation and contribute, you are more than welcome to join our [online forum](https://chat.c-org.co). You can also interact with us on [Twitter](https://twitter.com/ContinuousOrg) or on our dedicated [Telegram channel](https://t.me/joinchat/BVqq1hHIqyWrIg_wCuIroQ).
 
