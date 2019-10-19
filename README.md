@@ -546,6 +546,18 @@ The organization should not set the MFG too high though, otherwise it would have
 
 <h5 id="closing">Closing</h5>
 
+A _CSO_ can continue indefinitely but it doesn't have to: the beneficiary organization can decide to close it at anytime *after* the minimum period of time expired.
+
+In order to give some necessary visibility to investors, the beneficiary organization has to commit to keep its CSO running for a minimum period of time (3 years, 5 years, 10 years...). After this minimum period of time has passed, the organization does not have to close its _CSO_ but it can. Also, at any single time, the organization can increase the minimum period of time it commits to keep its _CSO_ running to give increased visibility to investors.
+
+Closing a _CSO_ is not free. To close its _CSO_, the beneficiary organization will have to pay an _exit fee_. The price of this exit fee is equal to the current issuance (`buy`) price of FAIR multiplied by the number of FAIRs outstanding. Once the exit fee is paid, the organization can close its _CSO_ which allows every single investor to then sell their _FAIRs_ at the same price: the current `buy` price (and hopefully the highest).
+
+<img src="images/exit_fee.png" width="600" title="Initialization phase" alt="Initialization phase" />
+
+_Visualization of the exit fee required to close a Continuous Securities Offering_
+
+By doing this, it means that the last investor will make a white operation (bought at `buy` price and sold at the same price moments after) while early investors will hopefully turn a profit (it is obviously not guaranteed as the last issuance price is not necessarily the highest price).
+
 <h4 id="properties">Properties and incentives of a Continuous Organization</h4>
 
 <h5 id="longterm">🌲 Long-term investment focus</h5>
