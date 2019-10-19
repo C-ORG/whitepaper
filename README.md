@@ -65,7 +65,7 @@ It goes without saying that the "security" nature of _FAIR Securities_ (FAIR Sec
       5. [Revenues - pay()](#pay)
       6. [Pre-minted FAIR pool](#pre-mint)
       7. [Summary](#summary)
-   4. [Lifecyle of a Continuous Organization](#lifecycle)
+   4. [Lifecycle of a Continuous Organization](#lifecycle)
       1. [Initialization](#initialization)
       2. [Closing](#closing)
    5. [Properties and incentives of a Continuous Organization](#properties)
@@ -472,8 +472,8 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ thr
    </td>
    <td>
        ▪ The <em>DAT</em> receives ETH from the buying investor<br/>
-       ▪ The <em>DAT</em> mints new FAIRs and send them to the buying investor.<br/>
-       ▪ The sum invested is in part distributed to the beneficiary organization and in part saved in the <em>DAT</em> "buyback" reserve according to a pre-defined immutable function <strong>I</strong> (for <strong>i<em>nvestment</em></strong>).
+       ▪ The <em>DAT</em> mints new <em>FAIRs</em> and send them to the buying investor.<br/>
+       ▪ The sum invested is in part distributed to the beneficiary organization and in part saved in the <em>DAT</em> cash reserve according to a pre-defined immutable function <strong>I</strong> (for <strong>i<em>nvestment</em></strong>).
    </td>
   </tr>
   <tr>
@@ -484,7 +484,7 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ thr
    <td>
        ▪ the <em>DAT</em> receives ETH **from the beneficiary organization**<br/>
        ▪ the <em>DAT</em> uses the funds to mint new <em>FAIR</em>s and sends them back to the beneficiary organization.<br/>
-       ▪ The funds used to mint the <em>FAIR</em>s are entirely funneled in the <em>DAT</em> "buyback" reserve.
+       ▪ The funds used to mint the <em>FAIR</em>s are entirely funneled in the <em>DAT</em> cash reserve.
    </td>
   </tr>
   <tr>
@@ -495,7 +495,7 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ thr
    <td>
        ▪ The <em>DAT</em> receives FAIRs<br/>
        ▪ The <em>DAT</em> destroys the received <em>FAIR</em>s<br/>
-       ▪ The lowest value of the burnt <em>FAIR</em>s is being reaffected equally to all _FAIRs_ holders via the `sell()` function.
+       ▪ The lowest value of the burnt <em>FAIR</em>s is being reaffected equally to all <em>FAIRs</em> holders via the `sell()` function.
    </td>
   </tr>
   <tr>
@@ -516,8 +516,8 @@ A _Continuous Organization_ is an organization that issues _FAIR securities_ thr
    </td>
    <td>
        ▪ The <em>DAT</em> receives a payment from a customer.<br/>
-       ▪ The <em>DAT</em> transfers the revenues to the organization but retains a fraction <strong>D</strong> (for <strong>d<em>istribution</em></strong>) of the revenues that are funneled to the cash reserve, issuing new _FAIRs_.<br/>
-       ▪ The organization (or optionally the customer) receives the newly minted _FAIRs_.<br/>
+       ▪ The <em>DAT</em> transfers the revenues to the organization but retains a fraction <strong>D</strong> (for <strong>d<em>istribution</em></strong>) of the revenues that are funneled to the cash reserve, issuing new <em>FAIRs</em>.<br/>
+       ▪ The organization (or optionally the customer) receives the newly minted <em>FAIRs</em>.<br/>
    </td>
   </tr>
 </table>
@@ -528,29 +528,29 @@ Finally, a _DAT_ can be created with pre-minted FAIRs for the organization that 
 
 <h5 id="initialization">Initialization</h5>
 
-The initialization phase of a _CSO_ is specific in that it does not use the bonding curve. Indeed, to kickoff a _CSO_, the beneficiary organization needs to set an minimal funding goal (_MFG_). This MFG is the amount of investment required for the bonding curve to start. All investors investing before the MFG is reached (using the `buy()` function) receive _FAIRs_ at the same average price.
+The initialization phase of a _CSO_ is specific in that it does not use the bonding curve. Indeed, to kickoff a _CSO_, the beneficiary organization needs to set an minimal funding goal (_MFG_). This _MFG_ is the amount of investment required for the bonding curve to start. All investors investing before the _MFG_ is reached (using the `buy()` function) receive _FAIRs_ at the same average price.
 
 <img src="images/initialization.png" width="300" title="Initialization phase" alt="Initialization phase" />
 
 _Initialization phase of a Continuous Securities Offering_
 
-Until the MFG is reached, all funds are escrowed and investors can decide to withdraw their investment at any time (by calling the `sell()` function) and will receive 100% of their investment back. Once the MFG is reached, the bonding curve starts, a fraction **I** of the MFG is funneled to the cash reserve and the complement (`MFG*(1-I)1) is being transfered to the beneficiary organization.
+Until the _MFG_ is reached, all funds are escrowed and investors can decide to withdraw their investment at any time (by calling the `sell()` function) and will receive 100% of their investment back. Once the _MFG_ is reached, the bonding curve starts, a fraction **I** of the MFG is funneled to the cash reserve and the complement (`MFG*(1-I)`) is being transfered to the beneficiary organization.
 
-Also, before the MFG is reached, the beneficiary organization can unilateraly decide to cancel the _CSO_ in which case investors can then withdraw 100% of the funds they individually invested.
+Also, before the _MFG_ is reached, the beneficiary organization can unilateraly decide to cancel the _CSO_ in which case investors can then withdraw 100% of the funds they individually invested.
 
-It's important to note that once the MFG is reached, then the organization cannot cancel the _CSO_ anymore and it will now continue to be live for a minimum period of time (defined in the smart-contract by the organization). Equally, after MFG is reached, investors cannot withdraw their funds anymore as the bonding curve started. They can now only call the `sell()` function will operates as described in the previous section.
+It's important to note that once the _MFG_ is reached, then the organization cannot cancel the _CSO_ anymore and it will now continue to be live for a minimum period of time (defined in the smart-contract by the organization). Equally, after _MFG_ is reached, investors cannot withdraw their funds anymore as the bonding curve started. They can now only call the `sell()` function will operates as described in the previous section.
 
-The MFG protects investors and the organization. It protects the investors because if there is low appeal from investors, the MFG won't be reached and investors can withdraw their money. Plus, the fact that all early investors get averaged priced _FAIRs_ means that no early investors will get unreasonably low price _FAIRs_. But the MFG also protects the organization as the organization can use it to gauge the market appetance for its _CSO_ and can decide to cancel it if investors interest is below its expectations. 
+The _MFG_ protects both investors and the organization. It protects the investors because if there is low appeal from investors, the _MFG_ won't be reached and investors can withdraw their money. Plus, the fact that all early investors get averaged priced _FAIRs_ means that no early investors will get unreasonably low price _FAIRs_. But the _MFG_ also protects the organization as the organization can use it to gauge the market appetance for its _CSO_ and can decide to cancel it if investors interest is below its expectations. 
 
-The organization should not set the MFG too high though, otherwise it would have the effect of transforming the _CSO_ into a simple crowdfunding campaign and defeat the purpose of the _CSO_. In other words, the _CSO_ must reflect the **minimum** amount the organization expects to validate its _CSO_. It should definitely not be set to the entire value an organization expects to raise.
+The organization should not set the _MFG_ too high though, otherwise it would have the effect of transforming the _CSO_ into a simple crowdfunding campaign and defeat the purpose of the _CSO_. In other words, the _CSO_ must reflect the **minimum** amount the organization expects to validate its _CSO_. It should definitely not be set to the entire value an organization expects to raise.
 
 <h5 id="closing">Closing</h5>
 
 A _CSO_ can continue indefinitely but it doesn't have to: the beneficiary organization can decide to close it at anytime *after* the minimum period of time expired.
 
-In order to give some necessary visibility to investors, the beneficiary organization has to commit to keep its CSO running for a minimum period of time (3 years, 5 years, 10 years...). After this minimum period of time has passed, the organization does not have to close its _CSO_ but it can. Also, at any single time, the organization can increase the minimum period of time it commits to keep its _CSO_ running to give increased visibility to investors.
+In order to give some necessary visibility to investors, the beneficiary organization has to commit to keep its _CSO_ running for a minimum period of time (3 years, 5 years, 10 years...). After this minimum period of time has passed, the organization does not have to close its _CSO_ but it can. Also, at any single time, the organization can increase the minimum period of time it commits to keep its _CSO_ running to give increased visibility to investors.
 
-Closing a _CSO_ is not free. To close its _CSO_, the beneficiary organization will have to pay an _exit fee_. The price of this exit fee is equal to the current issuance (`buy`) price of FAIR multiplied by the number of FAIRs outstanding. Once the exit fee is paid, the organization can close its _CSO_ which allows every single investor to then sell their _FAIRs_ at the same price: the current `buy` price (and hopefully the highest).
+Closing a _CSO_ is not free. To close its _CSO_, the beneficiary organization will have to pay an _exit fee_. The price of this exit fee is equal to the current issuance (`buy`) price of _FAIR_ multiplied by the number of _FAIRs_ outstanding. Once the exit fee is paid, the organization can close its _CSO_ which allows every single investor to then sell their _FAIRs_ at the same price: the current `buy` price (and hopefully the highest).
 
 <img src="images/exit_fee.png" width="600" title="Initialization phase" alt="Initialization phase" />
 
@@ -715,7 +715,7 @@ Ultimately, once the concept matures, we believe that COs have the potential to 
 
 A _Continuous Organization_ requires the setup of a _Continuous Securities Offering_ (CSO). Apart from the _continuous_ aspect of the offering, which is novel, a CSO is simply another type of Securities Offering. As such, a _Continuous Organization_ will very likely need to comply with the securities law in its jurisdiction.
 
-In the USA for example, it is likely that a CSO can be conducted using the Reg D 4(a)(2) Rule 506(c) exemption. Ask your securities lawyer for legal advice before proceeding.
+In the USA for example, it is likely that a CSO can be conducted using the Reg D 4(a)(2) Rule 506(c) exemption. Using this exemption means the _CSO_ is issuing restricted securities which, in most cases, require a 1 year lockup before being transferable. Ask your securities lawyer for legal advice before proceeding.
 
 In some jurisdictions, like France for example, we think the legal framework might be significantly more favorable with _FAIRs_ very likely falling under the new "jeton" category of the recently enacted "Loi Pacte" (which means that a _FAIR_ might not be treated as a security ("instrument financier") in France). Again, ask your preferred securities lawyer before proceeding to any offering.
 
