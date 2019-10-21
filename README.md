@@ -748,23 +748,63 @@ To continue the conversation and contribute, you are more than welcome to join o
 
 <h2 id="annex">Annex</h2>
 
-<h3 id="sell-slope-proof">Sell slope calculus</h3>
+<h3 id="buy-calculus-proof">Buy() calculus</h3>
 
-After each _FAIRs_ purchase from the beneficiary organization and each call of the `pay()` function, the sell slope `s` needs to be recalculated. Here is how to recalculate `s` from the size of the buyback reserve `R` after each new transaction:
+When buying _FAIRs_, you need to perform a calculus to know how much _FAIRs_ you will get for the amount you are willing to invest.
 
-<img src="images/proof.jpg" width="480" title="Proof" alt="Proof" />
+<img src="images/buy-calculus.png" width="450" title="Proof" alt="Proof" />
 
-<h3 id="buy-sell-proof">Buy/sell calculus</h3>
+Let's calculate the number of _FAIRs_ `x` received when `d` is invested when `a` _FAIRs_ have already been minted. We have the following:
 
-When buying _FAIRs_, you need to perform a calculus to know how much _FAIRs_ you will get for the amount you are willing to invest. Likewise, when selling _FAIRs_, you need a calculus to know how much you will get back for the amount of _FAIRs_ you are willing to sell. Here are the calculus with their proofs:
+<img src="images/buy-calculus-formula-1.png" title="Proof" alt="Proof" />
 
-<img src="images/calculus-sell-buy.jpg" width="480" title="Proof 2" alt="Proof 2" />
+So the number of tokens minted for an investment `d` is:
 
-<h3 id="burn-factor-proof">Burn factor calculus</h3>
+<img src="images/buy-calculus-formula-2.png" title="Proof" alt="Proof" />
 
-When burning _FAIRs_, the lowest possible value of the burnt _FAIRs_ is redistributed to all _FAIRs_ holders. As such, it impacts the amount the get back when selling _FAIRs_ to the _DAT_.  Here are the calculus of the burn factor:
+<h3 id="sell-calculus-proof">Sell() calculus</h3>
 
-<img src="images/burn-proof.jpg" width="480" title="Proof burn factor" alt="Proof burn factor" />
+When selling _FAIRs_, you need a calculus to know how much you will get back for the amount of _FAIRs_ you are willing to sell.
+
+<img src="images/sell-calculus.png" width="450" title="Proof" alt="Proof" />
+
+Let's calculate the number value `M` received when `x` _FAIRs_ are sold when `a` _FAIRs_ have already been minted. We have the following:
+
+<img src="images/sell-calculus-formula-1.png" title="Proof" alt="Proof" />
+
+Which gives:
+
+<img src="images/sell-calculus-formula-2.png" title="Proof" alt="Proof" />
+
+As `s` is easy to calculate:
+
+<img src="images/sell-calculus-formula-3.png" title="Proof" alt="Proof" />
+
+We ultimately get:
+
+<img src="images/sell-calculus-formula-4.png" title="Proof" alt="Proof" />
+
+<h4 id="burn-factor-proof">The burn factor</h4>
+
+Now the sell calculus show above is right only when no _FAIRs_ are burnt. If _FAIRs_ are burnt, the burnt value is redistributed proportionally at each `sell()`. Here is how it works in a scenario where we have `x'` burnt tokens and `x` tokens in circulation. We have a theoretical burnt value of `R'` as shown in the following graph:
+
+<img src="images/burn-factor-1.png" width="450" title="Proof" alt="Proof" />
+
+We have:
+
+<img src="images/sell-calculus-formula-5.png" title="Proof" alt="Proof" />
+
+Now, we do not want this value `R'` locked forever. We want to redistribute it to current _FAIRs_ holder so let's "spread" `R'` accross all current _FAIRs_ holders:
+
+<img src="images/burn-factor-2.png" width="450" title="Proof" alt="Proof" />
+
+We have:
+
+<img src="images/sell-calculus-formula-6.png" title="Proof" alt="Proof" />
+
+Which means we can now express the complete `sell()` function, including the burn factor:
+
+<img src="images/sell-calculus-formula-7.png" title="Proof" alt="Proof" />
 
 ## Notes
 
