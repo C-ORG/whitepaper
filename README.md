@@ -530,7 +530,7 @@ Finally, a _DAT_ can be created with pre-minted FAIRs for the organization that 
 
 The initialization phase of a _CSO_ is specific in that it does not use the bonding curve. Indeed, to kickoff a _CSO_, the beneficiary organization needs to set an minimal funding goal (_MFG_). This _MFG_ is the amount of investment required for the bonding curve to start. All investors investing before the _MFG_ is reached (using the `buy()` function) receive _FAIRs_ at the same average price.
 
-<img src="images/initialization.png" width="300" title="Initialization phase" alt="Initialization phase" />
+<img src="images/initialization-mfg.png" width="300" title="Initialization phase" alt="Initialization phase" />
 
 _Initialization phase of a Continuous Securities Offering_
 
