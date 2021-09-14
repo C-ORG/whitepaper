@@ -10,6 +10,10 @@ Last update: _Oct 17th 2019_
 
 Keywords: _FAIR Securities, Continuous Securities Offering, Decentralized Autonomous Trust, Bonding Curve Smart-Contract, Multitude_
 
+<h3>Important information</h3>
+
+This whitepaper was written in 2018. Since then, we created Fairmint to bring our vision for more accessible, community-friendly equity to life. While we started by implementing this whitepaper, we've learned A LOT and interated many times to finally give birth to the Rolling SAFE, a simple yet powerful model to let founders raise money from all of their stakeholders, all over the world. You can download the legal [template for the Rolling SAFE here](https://www.rollingsafe.co). And if you're a founder wanting to implement a Rolling SAFE, hit us up on [fairmint.co](https://fairmint.co).
+
 <h3>Acknowledgments</h3>
 
 A special acknowledgement to [Joris Delanoue](https://twitter.com/Joris_DLN), my co-founder at Fairmint who relentlessly challenged the model since version 1.0 was published. Version 1.2 of this whitepaper really reflects the results of those sometimes heated but always fruitful discussions.
